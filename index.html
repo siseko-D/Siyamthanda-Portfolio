@@ -1,0 +1,1461 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siyamthanda Dlakavu Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/Siyamthanda.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="tailwind" content="none" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/index.css" />
+</head>
+
+<body class="antialiased">
+    <!-- Mobile Menu Overlay -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <header id="navbar-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between md:justify-center relative">
+            <!-- Desktop Navigation (centered) -->
+            <div class="hidden md:flex space-x-4 md:space-x-8">
+                <a href="#about" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">About</a>
+                <a href="#skills" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Skills</a>
+                <a href="#projects"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Projects</a>
+                <a href="#contact" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Contact</a>
+            </div>
+
+            <!-- Mobile Navigation - Empty div for spacing on left -->
+            <div class="md:hidden"></div>
+
+            <!-- SIMPLIFIED Hamburger Button (always on right) -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none relative z-60"
+                aria-label="Toggle navigation">
+                <div
+                    class="hamburger-premium w-12 h-12 rounded-xl bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] border border-[#87CEEB]/30 shadow-lg hover:shadow-[#87CEEB]/20 hover:border-[#87CEEB]/50 transition-all duration-300 flex items-center justify-center">
+                    <div class="hamburger w-6 h-5 relative">
+                        <span class="hamburger-line hamburger-line-top"></span>
+                        <span class="hamburger-line hamburger-line-middle"></span>
+                        <span class="hamburger-line hamburger-line-bottom"></span>
+                    </div>
+                </div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-sm bg-gradient-to-b from-[#1a1a1a] via-[#222222] to-[#1a1a1a] backdrop-blur-2xl shadow-2xl transform translate-x-full duration-500 ease-out z-50 border-l border-[#87CEEB]/20 overflow-hidden">
+
+        <div class="flex justify-end p-4">
+            <button id="close-menu"
+                class="close-button w-10 h-10 rounded-lg bg-gradient-to-br from-[#333333] to-[#2a2a2a] border border-[#87CEEB]/20 flex items-center justify-center text-white hover:text-[#87CEEB] text-2xl transition-all duration-300 hover:rotate-90 hover:border-[#87CEEB]/40 hover:shadow-lg">
+                &times;
+            </button>
+        </div>
+
+        <!-- Menu Links -->
+        <div class="flex flex-col space-y-2 p-6">
+            <a href="#home" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                </div>
+                <span class="link-text">Home</span>
+                <span class="link-arrow">→</span>
+            </a>
+
+            <a href="#about" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </div>
+                <span class="link-text">About Me</span>
+                <span class="link-arrow">→</span>
+            </a>
+
+            <a href="#skills" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m12 8 4 4-4 4M8 12h8" />
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                    </svg>
+                </div>
+                <span class="link-text">Skills</span>
+                <span class="link-arrow">→</span>
+            </a>
+
+            <a href="#projects" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                        <line x1="8" x2="16" y1="21" y2="21" />
+                        <line x1="12" x2="12" y1="17" y2="21" />
+                    </svg>
+                </div>
+                <span class="link-text">Projects</span>
+                <span class="link-arrow">→</span>
+            </a>
+
+            <a href="#contact" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </div>
+                <span class="link-text">Contact</span>
+                <span class="link-arrow">→</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="pt-20">
+        <section id="home"
+            class="relative h-screen flex items-center justify-center bg-gradient-to-br from-[#333333] to-[#1a1a1a] text-white overflow-hidden">
+            <canvas class="webgl"></canvas>
+
+            <div class="relative z-10 text-center px-4 md:px-8">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Siyamthanda Dlakavu</h1>
+                <p class="text-xl md:text-2xl font-light mb-8">Junior Full Stack Developer | AI Integration | Angular |
+                    C# + .NET</p>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
+                    <a href="#projects"
+                        class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#6abfe1] transition duration-300 transform hover:scale-105">View
+                        Projects</a>
+                    <a href="#contact"
+                        class="inline-block bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:text-[#333333] transition duration-300 transform hover:scale-105">Get
+                        in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-header">About Me</h2>
+
+                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 mt-12">
+                    <!-- Left Column - Profile Image (Mid Centered) -->
+                    <div class="lg:w-1/3 flex flex-col items-center justify-center lg:pt-16">
+                        <div class="w-64 h-64 rounded-full overflow-hidden shadow-xl glowing-border-animation">
+                            <img src="/images/Siyamthanda.jpg" alt="Siyamthanda Dlakavu"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Split Content -->
+                    <div class="lg:w-2/3">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0">
+                            <!-- Introduction - Left Half -->
+                            <div
+                                class="bg-gradient-to-br from-[#3a3a3a] to-[#404040] p-6 md:p-8 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none border-b md:border-b-0 border-r-0 md:border-r border-[#87CEEB]/30">
+                                <div class="mb-4">
+                                    <span class="text-sm uppercase tracking-wider text-[#87CEEB] font-semibold">01 —
+                                        About</span>
+                                    <h3 class="text-2xl font-bold text-white mt-2">Introduction</h3>
+                                </div>
+                                <p class="text-gray-200 leading-relaxed text-sm md:text-base">
+                                    As a Junior Full Stack Developer, I combine that infrastructure mindset with modern
+                                    development skills. <br /><br /> I build responsive frontends using Angular,
+                                    TypeScript, HTML,
+                                    and CSS, and I'm expanding into backend development with .NET and ASP.NET Core to
+                                    create complete, end-to-end web solutions. <br /> My time managing Microsoft Azure
+                                    environments means I think about deployment, scalability, and security from day one
+                                    of a project. <br /><br /> I'm a lifelong learner who thrives in collaborative
+                                    teams. Whether it's debugging a tricky API response or optimizing a frontend
+                                    component, I approach every problem with patience, curiosity, and a drive to find
+                                    the best solution
+                                </p>
+                            </div>
+
+                            <!-- Professional Biography - Right Half -->
+                            <div
+                                class="bg-gradient-to-br from-[#404040] to-[#3a3a3a] p-6 md:p-8 rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
+                                <div class="mb-4">
+                                    <span class="text-sm uppercase tracking-wider text-[#87CEEB] font-semibold">02 —
+                                        Goals</span>
+                                    <h3 class="text-2xl font-bold text-white mt-2">Career Objectives</h3>
+                                </div>
+                                <p class="text-gray-200 leading-relaxed text-sm md:text-base">
+                                    My goal is to secure a full-time position as a Full Stack Developer, where I can
+                                    continue to learn and grow. Currently, I'm focused on:<br /><br />
+                                    • Building SPAs with Angular and managing state with RxJS.<br />
+                                    • Developing RESTful APIs with .NET and documenting them with Swagger.<br />
+                                    • Designing databases in SQL Server and MySQL.<br />
+                                    • Testing APIs with Postman and writing clean, maintainable code.
+                                </p>
+
+                                <!-- Divider -->
+                                <div class="my-6 border-t border-[#87CEEB]/20"></div>
+
+                                <!-- Quick Stats -->
+                                <div class="flex justify-between">
+                                    <div>
+                                        <span class="block text-xl md:text-2xl font-bold text-[#87CEEB]">5+</span>
+                                        <span class="text-xs text-gray-400">Projects</span>
+                                    </div>
+                                    <div>
+                                        <span class="block text-xl md:text-2xl font-bold text-[#87CEEB]">∞</span>
+                                        <span class="text-xs text-gray-400">Learning</span>
+                                    </div>
+                                    <div>
+                                        <span class="block text-xl md:text-2xl font-bold text-[#87CEEB]">2026</span>
+                                        <span class="text-xs text-gray-400">Ready</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Quote -->
+                        <div
+                            class="mt-6 text-center italic text-gray-300 border-l-4 border-[#87CEEB] pl-4 bg-[#3a3a3a] bg-opacity-50 p-4 rounded-r-lg">
+                            "Passionate about creating innovative solutions through AI and clean code."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 bg-gradient-to-br from-[#252525] to-[#2f2f2f] text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-header">Technical Skills & Competencies</h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-16">
+                    <!-- Artificial Intelligence -->
+                    <div class="group relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 mb-4 relative">
+                                    <div
+                                        class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                    </div>
+                                    <div
+                                        class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <path
+                                                d="M14 6a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4z" />
+                                            <path d="M12 2v2" />
+                                            <path d="M12 20v2" />
+                                            <path d="M22 12h-2" />
+                                            <path d="M4 12h-2" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-white mb-1 group-hover:text-[#87CEEB] transition-colors">
+                                    Artificial Intelligence</h3>
+                                <div class="flex flex-wrap gap-1 justify-center mt-2">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">NLP</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">ML</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">LLM</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Deep
+                                        Learning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Programming -->
+                    <div class="group relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 mb-4 relative">
+                                    <div
+                                        class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                    </div>
+                                    <div
+                                        class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <polyline points="16 18 22 12 16 6" />
+                                            <polyline points="8 6 2 12 8 18" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-white mb-1 group-hover:text-[#87CEEB] transition-colors">
+                                    Programming</h3>
+                                <div class="flex flex-wrap gap-1 justify-center mt-2">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">HTML</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">CSS</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">JS</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">C#</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">TypeScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deployment -->
+                    <div class="group relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 mb-4 relative">
+                                    <div
+                                        class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                    </div>
+                                    <div
+                                        class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+                                            <path d="M12 12v9" />
+                                            <path d="m8 16 4-4 4 4" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-white mb-1 group-hover:text-[#87CEEB] transition-colors">
+                                    Deployment</h3>
+                                <div class="flex flex-wrap gap-1 justify-center mt-2">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Netlify</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Vercel</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Render</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="group relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 mb-4 relative">
+                                    <div
+                                        class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                    </div>
+                                    <div
+                                        class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <rect width="7" height="9" x="3" y="3" rx="1" />
+                                            <rect width="7" height="5" x="14" y="3" rx="1" />
+                                            <rect width="7" height="9" x="14" y="12" rx="1" />
+                                            <rect width="7" height="5" x="3" y="16" rx="1" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-white mb-1 group-hover:text-[#87CEEB] transition-colors">
+                                    Frameworks</h3>
+                                <div class="flex flex-wrap gap-1 justify-center mt-2">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Bootstrap</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Tailwind</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Node.js</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Angular</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="soft-skills" class="py-20 bg-gradient-to-br from-[#252525] to-[#2f2f2f] text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-header">Soft Skills & Competencies</h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-16">
+                    <!-- Team Collaboration -->
+                    <div class="group relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 mb-4 relative">
+                                    <div
+                                        class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                    </div>
+                                    <div
+                                        class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <path d="m12 10 2 2 4-4" />
+                                            <path
+                                                d="M18 10a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H9.8l-2.4 2.4c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2.1L7.8 14H18z" />
+                                            <path d="m2 20 2 2 4-4" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-white mb-2 group-hover:text-[#87CEEB] transition-colors">
+                                    Collaboration</h3>
+                                <div class="flex flex-wrap gap-1 justify-center mt-1">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Communication</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Diverse
+                                        Groups</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Cooperation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Communication -->
+                    <div class="group relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 mb-4 relative">
+                                    <div
+                                        class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                    </div>
+                                    <div
+                                        class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-white mb-2 group-hover:text-[#87CEEB] transition-colors">
+                                    Communication</h3>
+                                <div class="flex flex-wrap gap-1 justify-center mt-1">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Clear</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Articulate</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Technical</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Active
+                                        Listener</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Continuous Learning -->
+                    <div class="group relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 mb-4 relative">
+                                    <div
+                                        class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                    </div>
+                                    <div
+                                        class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                                            <polyline points="16 7 22 7 22 13" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-white mb-2 group-hover:text-[#87CEEB] transition-colors">
+                                    Up-skilling</h3>
+                                <div class="flex flex-wrap gap-1 justify-center mt-1">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Adaptable</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Curious</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Self-motivated</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Problem Solving -->
+                    <div class="group relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 mb-4 relative">
+                                    <div
+                                        class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                    </div>
+                                    <div
+                                        class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M12 16v-4" />
+                                            <path d="M12 8h.01" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-white mb-2 group-hover:text-[#87CEEB] transition-colors">
+                                    Problem Solving</h3>
+                                <div class="flex flex-wrap gap-1 justify-center mt-1">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Analytical</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Creative</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Resourceful</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-header">Featured AI Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+
+                    <!-- ZenAI Card - Enhanced Version -->
+                    <div
+                        class="bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full">
+                        <img src="images/ZenAI.PNG" srcset="images/ZenAI.PNG 1x, images/ZenAI.PNG 2x"
+                            alt="Screenshot of the Zen AI project" class="w-full h-auto" loading="lazy" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">Zen AI - AI Insights for Inner Peace</h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">
+                                Zen AI is a comprehensive mental wellness application designed to harmonize artificial
+                                intelligence with
+                                human-centric emotional support. By merging AI-powered behavioral insights with
+                                community networking and
+                                reflective journaling, the platform empowers users to proactively manage their emotional
+                                wellbeing and
+                                connect with professional resources.
+                            </p>
+
+                            <!-- Key Achievements -->
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">AI-powered behavioral insights</span> with
+                                        predictive wellness recommendations</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Multi-tiered support ecosystem</span> connecting
+                                        users with psychologists, peers, and AI chatbot</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Sophisticated mood tracking</span> with automated
+                                        historical reporting and trend detection</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Secure digital journaling</span> with intuitive
+                                        organization and date-based retrieval</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Offline-first architecture</span> with local
+                                        storage queuing and sync conflict resolution</li>
+                                    <li>✅ <span class="text-[#87CEEB]">AA Standard accessibility</span> with 44pt
+                                        minimum touch targets</li>
+                                </ul>
+                            </div>
+
+                            <!-- Live Demo & Documentation Buttons -->
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://www.figma.com/proto/DapO9DD1rwjZznHEF0JMp9/AI-Powered-Mental-Health-Assistant?node-id=1-137&starting-point-node-id=1%3A137"
+                                    target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300"
+                                    aria-label="Figma Prototype of Zen AI">
+                                    🎨 Figma Prototype
+                                </a>
+                                <a href="documents/Zen AI - AI Insights for Inner Peace.pdf" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300"
+                                    aria-label="Documentation">
+                                    📄 Product Spec
+                                </a>
+                            </div>
+
+                            <!-- Tech Stack -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Figma</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Prompt Engineering</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">UI/UX Design</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">AI/ML</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Data Analytics</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Behavioral Insights</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">User Research</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Wireframing</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Prototyping</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">User Testing</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Accessibility</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Offline-first</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">OAuth</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">LocalStorage</span>
+                            </div>
+
+                            <!-- Status Badge -->
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Prototype Design Complete & Deployed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bias Audit Report Card - Enhanced Version -->
+                    <div
+                        class="bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full">
+                        <img src="images/Bias.PNG" srcset="images/Bias.PNG 1x, images/Bias.PNG 2x"
+                            alt="Screenshot of the Bias Audit Report project" class="w-full h-auto" loading="lazy" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">
+                                Bias Audit Report - Ethical Analysis of Machine Learning Systems
+                            </h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">
+                                AI Bias Audit Tool that detects biases in datasets and ML models. It analyzes data
+                                fairness,
+                                model disparities, and suggests mitigation strategies to ensure ethical AI deployment
+                                and
+                                regulatory compliance.
+                            </p>
+
+                            <!-- Key Achievements -->
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">Comprehensive bias detection</span> across
+                                        multiple demographic dimensions and intersectional analysis</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Real-time fairness metrics</span> including
+                                        disparate impact, equal opportunity difference, and demographic parity</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Interactive visualizations</span> with D3.js
+                                        showing bias patterns and model disparities</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Automated mitigation strategies</span> with
+                                        reweighting, threshold adjustments, and fairness constraints</li>
+                                    <li>✅ <span class="text-[#87CEEB]">GDPR and EEOC compliance reporting</span> for
+                                        regulatory documentation</li>
+                                    <li>✅ <span class="text-[#87CEEB]">GitHub Actions CI/CD pipeline</span> for
+                                        automated testing and deployment</li>
+                                </ul>
+                            </div>
+
+                            <!-- Live Demo & Documentation Buttons -->
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://bias-audit-report.netlify.app/" target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300"
+                                    aria-label="Live Demo of Bias Audit Report">
+                                    🚀 Live Demo
+                                </a>
+                                <a href="https://github.com/siseko-d/BiasAuditReport" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300"
+                                    aria-label="GitHub Repository">
+                                    📂 GitHub
+                                </a>
+                                <a href="documents/Bias Audit Report.pdf" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300"
+                                    aria-label="Documentation">
+                                    📄 Docs
+                                </a>
+                            </div>
+
+                            <!-- Tech Stack -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">React</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">TypeScript</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">D3.js</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Chart.js</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Tailwind CSS</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Python</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">scikit-learn</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">pandas</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">NumPy</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">AIF360</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">GitHub Actions</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Netlify</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">REST API</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Jest</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">ESLint</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Fairness Metrics</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">ML Ethics</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">GDPR Compliance</span>
+                            </div>
+
+                            <!-- Status Badge -->
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Live & Fully Operational</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sentiment Dashboard Card -->
+                    <div
+                        class="bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full">
+                        <img src="/images/sentiment.png" srcset="images/Sentiment.PNG 1x, images/Sentiment.PNG 2x"
+                            alt="Screenshot of the Sentiment Dashboard project" class="w-full h-auto" loading="lazy" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">Sentiment Analyzer Dashboard</h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">
+                                A full-stack sentiment analysis application that uses VADER (Valence Aware Dictionary
+                                and sEntiment Reasoner) to analyze emotional tone in text. Features real-time analysis,
+                                emotion intensity charts, batch processing, and comparative text analysis. Deployed with
+                                Flask backend on Render and static frontend hosting.
+                            </p>
+
+                            <!-- Key Achievements -->
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">Zero-cost deployment</span> using Render's free
+                                        tier</li>
+                                    <li>✅ <span class="text-[#87CEEB]">95% accuracy</span> in sentiment classification
+                                        using NLTK's VADER</li>
+                                    <li>✅ Handles <span class="text-[#87CEEB]">20+ texts per batch</span> with real-time
+                                        processing</li>
+                                    <li>✅ <span class="text-[#87CEEB]">6 emotion dimensions</span> visualized with
+                                        Chart.js</li>
+                                    <li>✅ <span class="text-[#87CEEB]">CORS-configured</span> for secure cross-origin
+                                        requests</li>
+                                </ul>
+                            </div>
+
+                            <!-- Live Demo & Documentation Buttons -->
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://sentiment-analyzer-frontend-ijud.onrender.com" target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300"
+                                    aria-label="Live Demo of Sentiment Analyzer">
+                                    🚀 Live Demo
+                                </a>
+                                <a href="https://github.com/siseko-d/SentimentV3" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300"
+                                    aria-label="GitHub Repository">
+                                    📂 GitHub
+                                </a>
+                                <a href="documents/Sentiment Analyzer Documentation.pdf" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300"
+                                    aria-label="Documentation">
+                                    📄 Docs
+                                </a>
+                            </div>
+
+                            <!-- Tech Stack -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Flask</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Python</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">NLTK/VADER</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Chart.js</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Tailwind CSS</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Render</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">CORS</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">REST API</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Flask-CORS</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">gunicorn</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">NLP</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Real-time</span>
+                            </div>
+
+                            <!-- Status Badge -->
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Live & Fully Operational</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TeachiQ Card - Enhanced Version with Maintenance Status -->
+                    <div
+                        class="bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full">
+                        <div class="relative">
+                            <img src="images/TeachiQ.png" srcset="images/TeachiQ.png 1x, images/TeachiQ.png 2x"
+                                alt="Screenshot of the TeachiQ project" class="w-full h-auto" loading="lazy" />
+                            <!-- Under Maintenance Overlay -->
+                            <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                                <div class="text-center transform rotate-[-5deg]">
+                                    <span
+                                        class="inline-block bg-yellow-500 text-[#333333] font-bold text-2xl py-3 px-6 rounded-lg shadow-lg border-2 border-yellow-400">
+                                        ⚠️ UNDER MAINTENANCE ⚠️
+                                    </span>
+                                    <p class="text-white text-sm mt-3 font-semibold">Updating to improve your experience
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">
+                                TeachiQ - Empowering educators and learners with AI-powered content generation tools
+                            </h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">
+                                A specialized AI content generation tool that creates high-quality educational materials
+                                including
+                                lesson plans, study guides, quizzes, and interactive learning content. Built with
+                                Next.js and the
+                                OpenAI API to provide educators with instant, curriculum-aligned resources.
+                            </p>
+
+                            <!-- Key Achievements -->
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">AI-powered lesson plan generation</span> aligned
+                                        with CAPS and international curriculum standards</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Interactive content creation</span> for quizzes,
+                                        worksheets, and study guides in seconds</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Multi-subject support</span> including
+                                        Mathematics, Science, Languages, and Humanities</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Grade-level adaptation</span> from primary to
+                                        tertiary education with appropriate complexity</li>
+                                    <li>✅ <span class="text-[#87CEEB]">OpenAI API integration</span> with prompt
+                                        engineering for educational accuracy</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Vercel deployment</span> with serverless
+                                        functions for scalable API handling</li>
+                                </ul>
+                            </div>
+
+                            <!-- Live Demo & Documentation Buttons -->
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://edugenius-f21g13qbe-siyamthanda-dlakavus-projects.vercel.app/"
+                                    target="_blank"
+                                    class="inline-block bg-yellow-500 text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-yellow-400 transition duration-300 opacity-75 cursor-not-allowed relative group"
+                                    aria-label="Live Demo - Under Maintenance" onclick="return false;">
+                                    🚧 Live Demo (Under Maintenance)
+                                    <span
+                                        class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-[#333333] text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Currently being updated
+                                    </span>
+                                </a>
+                                <a href="https://github.com/siseko-d/TeachiQ" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300"
+                                    aria-label="GitHub Repository">
+                                    📂 GitHub
+                                </a>
+                                <a href="Documents/TeachiQ%20-%20Documentation.pdf" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300"
+                                    aria-label="Documentation">
+                                    📄 Docs
+                                </a>
+                            </div>
+
+                            <!-- Tech Stack -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Next.js 14</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">React</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">TypeScript</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">OpenAI API</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">GPT-4</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Prompt Engineering</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Tailwind CSS</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Vercel</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Serverless Functions</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">REST API</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Axios</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">React Query</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Zustand</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">LocalStorage</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Curriculum Standards</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Educational Tech</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">CAPS Alignment</span>
+                            </div>
+
+                            <!-- Status Badge - Under Maintenance -->
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Currently Under Maintenance - Being Fixed &
+                                    Updated</span>
+                            </div>
+
+                            <!-- Progress Note -->
+                            <div
+                                class="mt-2 text-xs text-yellow-500 bg-yellow-500 bg-opacity-10 rounded-lg p-2 border border-yellow-500/30">
+                                🔧 Updates in progress: Adding new features, improving response times, and enhancing
+                                content quality.
+                                Expected completion: March 2026.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More Projects Coming Soon - Card 1 (After TeachiQ) -->
+                    <div
+                        class="bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full opacity-90">
+                        <div class="relative">
+                            <img src="https://via.placeholder.com/400x200/333333/87CEEB?text=Coming+Soon" 
+     alt="Coming Soon Project" 
+     class="w-full h-48 object-cover filter blur-[2px]" />
+                            <!-- Coming Soon Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#87CEEB]/20 to-[#333333]/80 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div
+                                        class="inline-block bg-[#333333] bg-opacity-90 backdrop-blur-sm px-6 py-3 rounded-full border-2 border-[#87CEEB] shadow-xl">
+                                        <span class="text-[#87CEEB] font-bold text-xl tracking-wider">
+                                            🚀 COMING SOON
+                                        </span>
+                                    </div>
+                                    <div class="mt-3 flex justify-center gap-2">
+                                        <span class="w-2 h-2 bg-[#87CEEB] rounded-full animate-pulse"></span>
+                                        <span class="w-2 h-2 bg-[#87CEEB] rounded-full animate-pulse delay-150"></span>
+                                        <span class="w-2 h-2 bg-[#87CEEB] rounded-full animate-pulse delay-300"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-200">
+                                AI-Powered Code Review Assistant
+                            </h3>
+                            <p class="text-gray-400 text-sm mb-4 flex-grow">
+                                An intelligent code review tool that leverages machine learning to identify bugs,
+                                suggest optimizations,
+                                and enforce coding standards across multiple programming languages. Currently in active
+                                development.
+                            </p>
+
+                            <!-- Planned Features -->
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <h4 class="font-semibold text-[#87CEEB] mb-2 flex items-center gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 6v6l4 2" />
+                                        <circle cx="12" cy="12" r="10" />
+                                    </svg>
+                                    Planned Features:
+                                </h4>
+                                <ul class="list-disc list-inside space-y-1 opacity-75">
+                                    <li>✨ <span class="text-gray-300">Multi-language support (JavaScript, Python, C#,
+                                            Java)</span></li>
+                                    <li>✨ <span class="text-gray-300">Real-time code analysis with AST parsing</span>
+                                    </li>
+                                    <li>✨ <span class="text-gray-300">Security vulnerability detection (OWASP Top
+                                            10)</span></li>
+                                    <li>✨ <span class="text-gray-300">Performance optimization suggestions</span></li>
+                                    <li>✨ <span class="text-gray-300">GitHub/GitLab integration for PR reviews</span>
+                                    </li>
+                                    <li>✨ <span class="text-gray-300">Custom rule configuration per project</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Coming Soon Buttons (disabled) -->
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <button
+                                    class="inline-block bg-gray-600 text-gray-400 font-semibold py-2 px-4 rounded-full shadow-md cursor-not-allowed opacity-50"
+                                    disabled>
+                                    🚧 Live Demo
+                                </button>
+                                <button
+                                    class="inline-block text-gray-500 border border-gray-600 font-semibold py-2 px-4 rounded-full cursor-not-allowed opacity-50"
+                                    disabled>
+                                    📂 GitHub
+                                </button>
+                                <button
+                                    class="inline-block text-gray-500 border border-gray-600 font-semibold py-2 px-4 rounded-full cursor-not-allowed opacity-50"
+                                    disabled>
+                                    📄 Docs
+                                </button>
+                            </div>
+
+                            <!-- Planned Tech Stack -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-500 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">TypeScript</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Python</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">FastAPI</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">AST</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Machine Learning</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">ESLint</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Prettier</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">GitHub API</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Docker</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">PostgreSQL</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Redis</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Jest</span>
+                            </div>
+
+                            <!-- Status Badge - Coming Soon -->
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-500">In Development - Estimated Launch: Q2 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More Projects Coming Soon - Card 2 (After TeachiQ) -->
+                    <div
+                        class="bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full opacity-90">
+                        <div class="relative">
+                          <img src="https://via.placeholder.com/400x200/333333/87CEEB?text=More+Coming+Soon" 
+     alt="Coming Soon Project" 
+     class="w-full h-48 object-cover filter blur-[2px]" />
+                            <!-- Coming Soon Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#87CEEB]/20 to-[#333333]/80 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div
+                                        class="inline-block bg-[#333333] bg-opacity-90 backdrop-blur-sm px-6 py-3 rounded-full border-2 border-[#87CEEB] shadow-xl">
+                                        <span class="text-[#87CEEB] font-bold text-xl tracking-wider">
+                                            ⚡ IN DEVELOPMENT
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 text-white text-sm font-medium">
+                                        More projects on the way
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-200">
+                                Smart Campus IoT Dashboard
+                            </h3>
+                            <p class="text-gray-400 text-sm mb-4 flex-grow">
+                                A comprehensive IoT monitoring platform for educational institutions to track energy
+                                consumption,
+                                classroom occupancy, air quality, and predictive maintenance for campus facilities.
+                            </p>
+
+                            <!-- Planned Features -->
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <h4 class="font-semibold text-[#87CEEB] mb-2 flex items-center gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 6v6l4 2" />
+                                        <circle cx="12" cy="12" r="10" />
+                                    </svg>
+                                    Planned Features:
+                                </h4>
+                                <ul class="list-disc list-inside space-y-1 opacity-75">
+                                    <li>✨ <span class="text-gray-300">Real-time sensor data visualization with
+                                            MQTT</span></li>
+                                    <li>✨ <span class="text-gray-300">Energy consumption analytics and cost
+                                            optimization</span></li>
+                                    <li>✨ <span class="text-gray-300">Predictive maintenance alerts for campus
+                                            equipment</span></li>
+                                    <li>✨ <span class="text-gray-300">Room booking system with occupancy tracking</span>
+                                    </li>
+                                    <li>✨ <span class="text-gray-300">Air quality monitoring and ventilation
+                                            control</span></li>
+                                    <li>✨ <span class="text-gray-300">Mobile app for facility managers and staff</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Coming Soon Buttons (disabled) -->
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <button
+                                    class="inline-block bg-gray-600 text-gray-400 font-semibold py-2 px-4 rounded-full shadow-md cursor-not-allowed opacity-50"
+                                    disabled>
+                                    🚧 Live Demo
+                                </button>
+                                <button
+                                    class="inline-block text-gray-500 border border-gray-600 font-semibold py-2 px-4 rounded-full cursor-not-allowed opacity-50"
+                                    disabled>
+                                    📂 GitHub
+                                </button>
+                                <button
+                                    class="inline-block text-gray-500 border border-gray-600 font-semibold py-2 px-4 rounded-full cursor-not-allowed opacity-50"
+                                    disabled>
+                                    📄 Docs
+                                </button>
+                            </div>
+
+                            <!-- Planned Tech Stack -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-500 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">React</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Node.js</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Express</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">MongoDB</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">MQTT</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">WebSockets</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Chart.js</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">D3.js</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Raspberry Pi</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Arduino</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">InfluxDB</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Grafana</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">React Native</span>
+                            </div>
+
+                            <!-- Status Badge - Coming Soon -->
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-500">Planning Phase - More details coming soon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="software-web-projects" class="py-20 bg-gradient-to-br from-[#252525] to-[#2f2f2f] text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-header">Featured Software/Web Development Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <!-- Cash Flow Tracker Card -->
+                    <div
+                        class="bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full">
+                        <img src="images/cash-flow.png" srcset="images/cash-flow.png 1x, images/cash-flow.png 2x"
+                            alt="Screenshot of the Cash Flow Tracker project" class="w-full h-auto" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">
+                                Cash Flow Tracker - Track your finances with ease.
+                            </h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">
+                                Cash Flow Tracker is a sleek, interactive web application designed to help users
+                                monitor their income and expenses with ease. It features dynamic charts, transaction
+                                filtering, and PDF reporting for financial insights. Built with a dark-themed UI, it
+                                offers real-time balance updates and local storage for persistent data.
+                            </p>
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://cashtrackermoneyapp.netlify.app/" target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">Live
+                                    Demo</a>
+                                <a href="Documents/Cash%20Flow%20Tracker_Documentation.pdf" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">Documentation</a>
+                            </div>
+                            <!-- Tech Stack (small & aligned) -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">HTML</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">CSS</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">JavaScript</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Chart.js</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">LocalStorage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development Quiz System Card -->
+                    <div
+                        class="bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full">
+                        <img src="images/Dev-Quiz.PNG" srcset="images/Dev-Quiz.PNG 1x, images/Dev-Quiz.PNG 2x"
+                            alt="Screenshot of the Web Development Quiz System project" class="w-full h-auto" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">
+                                Web Development Quiz System - Test your knowledge of web development.
+                            </h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">
+                                Web Dev Quiz is an interactive quiz application designed to test and improve web
+                                development knowledge.
+                            </p>
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://web-quizv1.netlify.app/" target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">Live
+                                    Demo</a>
+                                <a href="Documents/Web%20Dev%20Quiz%20-%20Documentation.pdf" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">Documentation</a>
+                            </div>
+                            <!-- Tech Stack (small & aligned) -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">React</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">TypeScript</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Tailwind</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Vite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task Master Card -->
+                    <div
+                        class="bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full">
+                        <img src="images/TaskMaster.png" srcset="images/TaskMaster.png 1x, images/TaskMaster.png 2x"
+                            alt="Screenshot of the Task Master project" class="w-full h-auto" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">Task Master - Productivity Application.</h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">
+                                TaskMaster is a modern, feature-rich productivity application designed to help users
+                                manage their tasks efficiently with a beautiful and intuitive interface.
+                            </p>
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://taskmaster-todo-list-app.netlify.app/" target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">Live
+                                    Demo</a>
+                                <a href="Documents/TaskMaster%20-%20Documentation.pdf" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">Documentation</a>
+                            </div>
+                            <!-- Tech Stack (small & aligned) -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Angular</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">RxJS</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">SCSS</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">LocalStorage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="relative py-20 bg-[#2a2a2a] text-white overflow-hidden">
+            <canvas class="webgl-contact absolute top-0 left-0 w-full h-full"></canvas>
+            <div class="relative z-10 py-12 flex items-center justify-center">
+                <div class="container mx-auto px-4">
+                    <h2 class="section-header">Contact & Connect</h2>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 max-w-6xl mx-auto">
+                        <!-- Contact Information -->
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-2xl font-semibold mb-4 text-[#87CEEB]">Let's Connect</h3>
+                                <p class="text-lg">
+                                    I am actively seeking new opportunities in software development and web development.
+                                    Feel free to reach out for collaborations, job opportunities, or just to say hello!
+                                </p>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-[#87CEEB] bg-opacity-10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-300">Email</p>
+                                        <div class="email-tooltip">
+                                            <p class="text-white cursor-pointer">dlakavusiseko@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-[#87CEEB] bg-opacity-10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <path
+                                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-300">Phone</p>
+                                        <p class="text-white">Available upon request.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-[#87CEEB] bg-opacity-10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-300">Location</p>
+                                        <p class="text-white">Gauteng, Kempton Park, South Africa.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-4">
+                                <h4 class="text-lg font-semibold mb-4 text-[#87CEEB]">Follow Me</h4>
+                                <div class="flex space-x-4">
+                                    <a href="https://github.com/SiyamthandaD" target="_blank"
+                                        class="w-12 h-12 rounded-full bg-[#444444] flex items-center justify-center 
+                                      text-white hover:bg-[#87CEEB] hover:text-[#333333] transition-all duration-300 transform hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                                        </svg>
+                                    </a>
+
+                                    <a href="https://www.linkedin.com/in/siyamthandad/" target="_blank"
+                                        class="w-12 h-12 rounded-full bg-[#444444] flex items-center justify-center 
+                                      text-white hover:bg-[#87CEEB] hover:text-[#333333] transition-all duration-300 transform hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                            <rect width="4" height="12" x="2" y="9" />
+                                            <circle cx="4" cy="4" r="2" />
+                                        </svg>
+                                    </a>
+
+                                    <a href="Siyamthanda Dlakavu - Resume.pdf" target="_blank"
+                                        class="w-12 h-12 rounded-full bg-[#444444] flex items-center justify-center 
+                                      text-white hover:bg-[#87CEEB] hover:text-[#333333] transition-all duration-300 transform hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                                            <polyline points="14 2 14 8 20 8" />
+                                            <line x1="16" x2="8" y1="13" y2="13" />
+                                            <line x1="16" x2="8" y1="17" y2="17" />
+                                            <polyline points="10 9 9 9 8 9" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form with Formspree -->
+                        <div
+                            class="bg-[#444444] bg-opacity-50 backdrop-filter backdrop-blur-lg rounded-xl p-8 shadow-xl border border-[#555555]">
+                            <h3 class="text-2xl font-semibold mb-6 text-[#87CEEB]">Send Me a Message</h3>
+
+                            <form id="contact-form" action=https://formspree.io/f/mandgzqy method="POST">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="name" class="block text-sm font-medium text-gray-300">Your
+                                            Name</label>
+                                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-[#333333] border border-[#555555] rounded-lg text-white 
+                                           focus:outline-none focus:ring-2 focus:ring-[#87CEEB] focus:border-transparent 
+                                           transition-all duration-300" placeholder="Enter your name">
+                                        <p class="text-red-400 text-sm hidden" id="name-error">Please enter your name
+                                        </p>
+                                    </div>
+
+                                    <div class="space-y-2">
+                                        <label for="email" class="block text-sm font-medium text-gray-300">Your
+                                            Email</label>
+                                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-[#333333] border border-[#555555] rounded-lg text-white 
+                                           focus:outline-none focus:ring-2 focus:ring-[#87CEEB] focus:border-transparent 
+                                           transition-all duration-300" placeholder="Enter your email">
+                                        <p class="text-red-400 text-sm hidden" id="email-error">Please enter a valid
+                                            email</p>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="subject" class="block text-sm font-medium text-gray-300">Subject</label>
+                                    <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 bg-[#333333] border border-[#555555] rounded-lg text-white 
+                                       focus:outline-none focus:ring-2 focus:ring-[#87CEEB] focus:border-transparent 
+                                       transition-all duration-300" placeholder="What is this regarding?">
+                                    <p class="text-red-400 text-sm hidden" id="subject-error">Please enter a subject</p>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="message" class="block text-sm font-medium text-gray-300">Your
+                                        Message</label>
+                                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-[#333333] border border-[#555555] rounded-lg text-white 
+                                       focus:outline-none focus:ring-2 focus:ring-[#87CEEB] focus:border-transparent 
+                                       transition-all duration-300 resize-none"
+                                        placeholder="Tell me about your project or inquiry..."></textarea>
+                                    <p class="text-red-400 text-sm hidden" id="message-error">Please enter your message
+                                    </p>
+                                </div>
+
+                                <!-- Formspree honeypot field -->
+                                <input type="text" name="_gotcha" style="display:none">
+
+                                <!-- Optional: Redirect to thank you page -->
+                                <input type="hidden" name="_next"
+                                    value="https://siyamthanda-dlakavu-profile.netlify.app/">
+
+                                <button type="submit" class="w-full bg-[#87CEEB] text-[#333333] font-semibold py-3 px-6 rounded-lg 
+                                   hover:bg-[#6abfe1] transition-all duration-300 transform hover:scale-[1.02] 
+                                   shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
+                                    <span>Send Message</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="22" y1="2" x2="11" y2="13" />
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                    </svg>
+                                </button>
+                            </form>
+
+                            <div id="form-success"
+                                class="mt-4 p-4 bg-green-900 bg-opacity-30 text-green-300 rounded-lg hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Your message has been sent successfully! I'll get back to you soon.
+                            </div>
+
+                            <div id="form-error"
+                                class="mt-4 p-4 bg-red-900 bg-opacity-30 text-red-300 rounded-lg hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                There was an error sending your message. Please try again or email me directly.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#333333] text-gray-300 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2026 Siyamthanda Dlakavu. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/mobile-toggle.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/contact-particles.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/formspree.js"></script>
+</body>
+
+</html>

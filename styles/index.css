@@ -1,0 +1,1003 @@
+/* Custom CSS to override default scroll behavior and enable smooth scrolling */
+/* Removed smooth scrolling as it is no longer needed for a tabbed interface */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #333333;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Make sure the hero section is a positioning context for the canvas */
+#home {
+    position: relative;
+    width: 100%;
+}
+
+/* Style the Three.js canvas to cover the whole hero section */
+canvas.webgl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    z-index: 1;
+    display: block;
+}
+
+.section-header {
+    position: relative;
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Applying Playfair Display to prominent headings */
+h1 {
+    font-family: "Playfair Display", serif;
+}
+
+h3 {
+    font-family: "Playfair Display", serif;
+}
+
+.section-header::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #87ceeb;
+    border-radius: 9999px;
+}
+
+/* Card hover animation */
+.card-animation {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-animation:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.2),
+        0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes for a subtle background animation */
+@keyframes glowing-border {
+    0% {
+        border-color: rgba(135, 206, 235, 0.5);
+    }
+    50% {
+        border-color: rgba(135, 206, 235, 0.8);
+    }
+    100% {
+        border-color: rgba(135, 206, 235, 0.5);
+    }
+}
+
+.glowing-border-animation {
+    animation: glowing-border 3s infinite ease-in-out;
+}
+
+/* Ensure content in home section is above canvas */
+.home-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Contact Section Particles */
+#contact {
+    position: relative;
+}
+
+canvas.webgl-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+}
+
+#contact > div {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+/* ======== Enhanced Navbar with Premium Animations ======== */
+/* Navbar background with gradient animation */
+#navbar-header {
+    background: linear-gradient(135deg, rgba(51, 51, 51, 0.9) 0%, rgba(42, 42, 42, 0.9) 100%);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#navbar-header.scrolled {
+    background: linear-gradient(135deg, rgba(35, 35, 35, 0.98) 0%, rgba(25, 25, 25, 0.98) 100%);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+}
+
+/* Animated underline effect for nav links */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #87ceeb;
+    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transform-origin: left;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Navbar entrance animation */
+@keyframes navbarSlideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#navbar-header {
+    animation: navbarSlideDown 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* ===== Enhanced Footer ===== */
+footer {
+    position: relative;
+    background: linear-gradient(135deg, rgba(35, 35, 35, 0.98) 0%, rgba(25, 25, 25, 0.98) 100%);
+    backdrop-filter: blur(12px);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    padding: 3rem 0;
+    border-top: 1px solid rgba(135, 206, 235, 0.2);
+    z-index: 30;
+}
+
+footer:hover {
+    background: linear-gradient(135deg, rgba(40, 40, 40, 0.98) 0%, rgba(30, 30, 30, 0.98) 100%);
+    box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.3);
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #c0c0c0;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+footer:hover p {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(135, 206, 235, 0.1);
+    color: #87ceeb;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-social a:hover {
+    background: #87ceeb;
+    color: #1a1a1a;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(135, 206, 235, 0.3);
+}
+
+/* Add vertical separator and even spacing for about section */
+.about-columns {
+    position: relative;
+}
+
+.about-columns::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(135, 206, 235, 0.5), transparent);
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .about-columns::after {
+        display: none;
+    }
+}
+
+/* ===== Enhanced Profile Image Animation ===== */
+/* Base Styles */
+#about .rounded-full {
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+    z-index: 1;
+}
+
+/* Image Styles */
+#about .rounded-full img {
+    filter: grayscale(100%) contrast(110%);
+    transition:
+        filter 0.7s ease,
+        transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.5s ease;
+    will-change: transform, filter;
+    transform-style: preserve-3d;
+}
+
+/* Hover Effects */
+#about .rounded-full:hover {
+    animation: float-pulse 3s ease-in-out infinite;
+}
+
+#about .rounded-full:hover img {
+    filter: grayscale(0%) contrast(105%) brightness(105%);
+    transform: translateY(-15px) rotate(8deg) scale(1.03) perspective(500px) rotateY(5deg);
+    box-shadow:
+        0 25px 40px rgba(135, 206, 235, 0.3),
+        0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle 3D effect on container */
+#about .rounded-full::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    z-index: -1;
+}
+
+#about .rounded-full:hover::after {
+    opacity: 1;
+}
+
+/* Floating animation */
+@keyframes float-pulse {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Enhanced glowing border */
+@keyframes glowing-border-enhanced {
+    0% {
+        box-shadow:
+            0 0 5px rgba(135, 206, 235, 0.5),
+            0 0 10px rgba(135, 206, 235, 0.3);
+    }
+    50% {
+        box-shadow:
+            0 0 15px rgba(135, 206, 235, 0.8),
+            0 0 25px rgba(135, 206, 235, 0.5);
+    }
+    100% {
+        box-shadow:
+            0 0 5px rgba(135, 206, 235, 0.5),
+            0 0 10px rgba(135, 206, 235, 0.3);
+    }
+}
+
+/* ===== Project Image Enhancements ===== */
+/* Apply to all project images */
+#projects img,
+#software-web-projects img {
+    filter: grayscale(100%);
+    transition:
+        filter 0.5s ease,
+        transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: filter, transform;
+}
+
+/* Hover effects - restore color and enhance existing animations */
+#projects .card-animation:hover img,
+#software-web-projects .card-animation:hover img {
+    filter: grayscale(0%);
+}
+
+/* Enhance existing card hover animation */
+#projects .card-animation:hover,
+#software-web-projects .card-animation:hover {
+    transform: translateY(-8px); /* Slightly stronger lift */
+}
+
+/* Optional: Add color splash effect on hover */
+#projects .card-animation:hover::after,
+#software-web-projects .card-animation:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    border-radius: 0.75rem; /* Match your card rounding */
+}
+
+/* ===== Email Tooltip ===== */
+.email-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.email-tooltip::after {
+    content: "dlakavusiseko@gmail.com";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+    z-index: 100;
+    pointer-events: none;
+    font-family: "Open Sans", sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.email-tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+    z-index: 101;
+}
+
+.email-tooltip:hover::after,
+.email-tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-15px);
+}
+
+/* ===== Form Styling ===== */
+/* Form styling enhancements */
+#contact-form input,
+#contact-form textarea {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.2);
+}
+
+/* Floating labels effect */
+#contact-form .space-y-2 {
+    position: relative;
+}
+
+/* Button loading animation */
+button[type="submit"]:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+/* Success and error message animations */
+#form-success,
+#form-error {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Email tooltip enhancement */
+.email-tooltip:hover::after {
+    content: "Click to copy";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.email-tooltip:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2px);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+    z-index: 101;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    #contact .grid {
+        grid-template-columns: 1fr;
+    }
+
+    #contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* ===== Premium Mobile Navigation Redesign ===== */
+
+/* Enhanced Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(135, 206, 235, 0.15) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.menu-overlay.active .overlay-glow {
+    opacity: 1;
+}
+
+/* Premium Hamburger Button */
+.hamburger-container {
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-premium {
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        0 4px 12px rgba(135, 206, 235, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hamburger-premium:hover {
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.4),
+        0 6px 20px rgba(135, 206, 235, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Enhanced Hamburger Lines */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    position: relative;
+}
+
+.hamburger-line {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, #ffffff 0%, #87CEEB 100%);
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Active state animations */
+.hamburger-premium.active {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-color: #87CEEB;
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(135, 206, 235, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.hamburger-premium.active .hamburger-line {
+    background: #87CEEB;
+}
+
+.hamburger-premium.active .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg) scaleX(1.1);
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
+}
+
+.hamburger-premium.active .hamburger-line:nth-child(2) {
+    transform: scaleX(0);
+    opacity: 0;
+}
+
+.hamburger-premium.active .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg) scaleX(1.1);
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
+}
+
+/* Mobile Menu Background - FIXED */
+#mobile-menu {
+    background: linear-gradient(145deg, #1a1a1a 0%, #222222 50%, #1a1a1a 100%);
+    backdrop-filter: blur(20px);
+    box-shadow: 
+        -20px 0 60px rgba(0, 0, 0, 0.6),
+        inset 1px 0 0 rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(135, 206, 235, 0.15);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 85%;
+    max-width: 400px;
+    /* FIX: Ensure it's visible by default */
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+#mobile-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible !important;
+}
+
+/* FIX: Remove conflicting visibility setting */
+#mobile-menu:not(.active) {
+    transform: translateX(100%);
+    opacity: 0;
+    /* Do NOT set visibility: hidden here */
+}
+
+.menu-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(135, 206, 235, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(135, 206, 235, 0.03) 0%, transparent 50%);
+}
+
+/* Enhanced Menu Links */
+.nav-link-mobile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    margin: 4px 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(40, 40, 40, 0.8) 0%, rgba(30, 30, 30, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link-mobile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(135, 206, 235, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.nav-link-mobile:hover::before {
+    left: 100%;
+}
+
+.nav-link-mobile:hover {
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.9) 0%, rgba(40, 40, 40, 0.9) 100%);
+    border-color: rgba(135, 206, 235, 0.3);
+    transform: translateX(8px) scale(1.02);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.3),
+        0 4px 12px rgba(135, 206, 235, 0.2);
+}
+
+/* Icon Container */
+.icon-container {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.1) 0%, rgba(135, 206, 235, 0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(135, 206, 235, 0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-link-mobile:hover .icon-container {
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.2) 0%, rgba(135, 206, 235, 0.1) 100%);
+    border-color: rgba(135, 206, 235, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(135, 206, 235, 0.3);
+}
+
+.icon-container svg {
+    color: #87CEEB;
+    transition: all 0.3s ease;
+}
+
+.nav-link-mobile:hover .icon-container svg {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Link Text */
+.link-text {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link-mobile:hover .link-text {
+    color: #87CEEB;
+    letter-spacing: 0.5px;
+}
+
+/* Link Arrow */
+.link-arrow {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+    font-weight: 300;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-link-mobile:hover .link-arrow {
+    color: #87CEEB;
+    transform: translateX(5px);
+}
+
+/* Social Icons */
+.social-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(40, 40, 40, 0.8) 0%, rgba(30, 30, 30, 0.8) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #87CEEB;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.2) 0%, rgba(135, 206, 235, 0.1) 100%);
+    border-color: rgba(135, 206, 235, 0.3);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(135, 206, 235, 0.3);
+    color: #ffffff;
+}
+
+/* Close Button */
+.close-button {
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.close-button:hover {
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(135, 206, 235, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Active State for Menu Links */
+.nav-link-mobile.active {
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.15) 0%, rgba(135, 206, 235, 0.05) 100%);
+    border-color: rgba(135, 206, 235, 0.4);
+}
+
+.nav-link-mobile.active .icon-container {
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.3) 0%, rgba(135, 206, 235, 0.2) 100%);
+    border-color: rgba(135, 206, 235, 0.4);
+}
+
+.nav-link-mobile.active .link-text {
+    color: #87CEEB;
+    font-weight: 600;
+}
+
+.nav-link-mobile.active .link-arrow {
+    color: #87CEEB;
+}
+
+/* Menu Entrance Animation */
+@keyframes slideInRightPremium {
+    0% {
+        transform: translateX(100%) scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRightPremium {
+    0% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%) scale(0.95);
+        opacity: 0;
+    }
+}
+
+#mobile-menu.active {
+    animation: slideInRightPremium 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+#mobile-menu:not(.active) {
+    animation: slideOutRightPremium 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Link Stagger Animation */
+.nav-link-mobile:nth-child(1) { transition-delay: 0.1s; }
+.nav-link-mobile:nth-child(2) { transition-delay: 0.15s; }
+.nav-link-mobile:nth-child(3) { transition-delay: 0.2s; }
+.nav-link-mobile:nth-child(4) { transition-delay: 0.25s; }
+.nav-link-mobile:nth-child(5) { transition-delay: 0.3s; }
+
+/* Custom Scrollbar for Mobile Menu */
+#mobile-menu {
+    scrollbar-width: thin;
+    scrollbar-color: #87CEEB #222222;
+}
+
+#mobile-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+#mobile-menu::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+}
+
+#mobile-menu::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #87CEEB, #6abfe1);
+    border-radius: 2px;
+}
+
+#mobile-menu::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #6abfe1, #87CEEB);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 640px) {
+    .hamburger-premium {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .hamburger {
+        width: 20px;
+        height: 16px;
+    }
+    
+    .nav-link-mobile {
+        padding: 14px;
+        gap: 12px;
+    }
+    
+    .icon-container {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .link-text {
+        font-size: 14px;
+    }
+}
+
+/* Dark mode enhancement */
+@media (prefers-color-scheme: dark) {
+    .hamburger-premium {
+        background: linear-gradient(135deg, #222222 0%, #1a1a1a 100%);
+    }
+    
+    #mobile-menu {
+        background: linear-gradient(145deg, #151515 0%, #1a1a1a 50%, #151515 100%);
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .hamburger-line {
+        height: 3px;
+    }
+    
+    .nav-link-mobile {
+        border-width: 2px;
+    }
+}
+
+/* Remove duplicate and conflicting animations */
+.animate-fadeIn {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Ensure proper z-index stacking */
+#navbar-header {
+    z-index: 50;
+}
+
+.menu-overlay {
+    z-index: 45;
+}
+
+/* Fix for conflicting glow animation names */
+.glowing-border-animation {
+    animation: glowing-border 3s infinite ease-in-out;
+}
+
+/* Ensure mobile menu is properly hidden when not active */
+#mobile-menu:not(.active) {
+    pointer-events: none;
+}
+
+/* Fix for scroll behavior */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Fix for hamburger premium styling */
+.hamburger-premium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hamburger-premium.active {
+    transform: rotate(180deg);
+}
+
+/* Ensure mobile menu is visible */
+#mobile-menu {
+    visibility: visible !important;
+}
+
+/* Fix for body overflow when menu is open */
+body.overflow-hidden {
+    overflow: hidden;
+}
+
+/* Make sure overlay is above content */
+.menu-overlay {
+    z-index: 45;
+}
+
+#mobile-menu {
+    z-index: 50;
+}
+
+/* Debug styles - remove after testing */
+.debug-border {
+    border: 2px solid red !important;
+}
+
+/* FIX: Ensure overlay works correctly */
+.menu-overlay {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
