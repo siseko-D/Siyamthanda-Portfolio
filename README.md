@@ -1,6 +1,6 @@
 # Siyamthanda Dlakavu - Portfolio Website
 
-![Portfolio Preview](https://siyamthanda-dlakavu-profile.netlify.app/preview-image.jpg)
+![alt text](image.png)
 
 > **Live Site**: [siyamthanda-dlakavu-profile.netlify.app](https://siyamthanda-dlakavu-profile.netlify.app/)
 
