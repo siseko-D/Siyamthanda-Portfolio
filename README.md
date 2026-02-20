@@ -2,7 +2,7 @@
 
 ![alt text](image.png)
 
-> **Live Site**: [siyamthanda-dlakavu-profile.netlify.app](https://siyamthanda-dlakavu-profile.netlify.app/)
+> **Live Site**: <a href="https://siyamthanda-dlakavu-profile.netlify.app/" target="_blank">siyamthanda-dlakavu-profile.netlify.app</a>
 
 ## 🚀 About Me
 
@@ -116,10 +116,10 @@ My goal is to secure a full-time position as a Full Stack Developer, focusing on
 
 ## 📞 Contact & Links
 
-- **Portfolio**: [siyamthanda-dlakavu-profile.netlify.app](https://siyamthanda-dlakavu-profile.netlify.app/)
-- **GitHub**: https://github.com/siseko-D
-- **LinkedIn**: https://www.linkedin.com/in/siyamthandad/
-- **Email**: Dlakavusiskeo@gmail.com
+- **Portfolio**: <a href="https://siyamthanda-dlakavu-profile.netlify.app/" target="_blank">siyamthanda-dlakavu-profile.netlify.app</a>
+- **GitHub**: <a href="https://github.com/siseko-D" target="_blank">github.com/siseko-D</a>
+- **LinkedIn**: <a href="https://www.linkedin.com/in/siyamthandad/" target="_blank">linkedin.com/in/siyamthandad</a>
+- **Email**: <a href="mailto:Dlakavusiskeo@gmail.com">Dlakavusiskeo@gmail.com</a>
 
 ## 📄 License
 
