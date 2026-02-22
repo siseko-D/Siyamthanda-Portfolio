@@ -77,10 +77,6 @@ A specialized AI content generation tool creating high-quality educational mater
 - **Tech**: Next.js 14, React, TypeScript, OpenAI API (GPT-4), Tailwind CSS, Vercel
 - **Status**: Currently Under Maintenance (Being Fixed & Updated)
 
-### 5. Cash Flow Tracker
-A sleek, interactive web application to monitor income and expenses with dynamic charts and PDF reporting.
-- **Tech**: HTML, CSS, JavaScript, Chart.js, LocalStorage
-
 ### 6. Web Development Quiz System
 An interactive quiz application to test and improve web development knowledge.
 - **Tech**: React, TypeScript, Tailwind, Vite
