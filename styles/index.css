@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+.test {
+    font-family: "Playfair Display", serif;
+}
+
 /* Make sure the hero section is a positioning context for the canvas */
 #home {
     position: relative;
