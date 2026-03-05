@@ -1,6 +1,6 @@
 # Siyamthanda Dlakavu - Portfolio Website
 
-![alt text](image.png)
+<img width="1895" height="902" alt="image" src="https://github.com/user-attachments/assets/72b4f10f-898b-4c65-9290-db56752652aa" />
 
 > **Live Site**: <a href="https://siyamthanda-dlakavu-profile.netlify.app/" target="_blank">siyamthanda-dlakavu-profile.netlify.app</a>
 
