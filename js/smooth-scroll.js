@@ -30,6 +30,11 @@ document.querySelectorAll(".about-image-animate, .about-content-left, .about-con
     observer.observe(element);
 });
 
+// Observe contact section animations
+document.querySelectorAll(".contact-info-animate, .contact-form-animate").forEach((element) => {
+    observer.observe(element);
+});
+
 // Add CSS for fadeIn animation
 const style = document.createElement("style");
 style.textContent = `
