@@ -2,7 +2,7 @@
 
 <img width="1895" height="902" alt="image" src="https://github.com/user-attachments/assets/72b4f10f-898b-4c65-9290-db56752652aa" />
 
-> **Live Site**: <a href="https://siyamthanda-dlakavu-profile.netlify.app/" target="_blank">siyamthanda-dlakavu-profile.netlify.app</a>
+**Live Site**: <a href="https://siyamthanda-dlakavu.netlify.app/" target="_blank">siyamthanda-dlakavu.netlify.app</a>
 
 ## 🚀 About Me
 
@@ -38,7 +38,7 @@ My background managing Microsoft Azure environments means I think about deployme
 - **Version Control**: Git, GitHub
 
 ### Testing & Tools
-- Postman, Jest, ESLint, Prettier
+- Swagger, Jest, ESLint, Prettier
 - D3.js, Chart.js for data visualization
 
 ## 📂 Featured Projects
@@ -112,10 +112,10 @@ My goal is to secure a full-time position as a Full Stack Developer, focusing on
 
 ## 📞 Contact & Links
 
-- **Portfolio**: <a href="https://siyamthanda-dlakavu-profile.netlify.app/" target="_blank">siyamthanda-dlakavu-profile.netlify.app</a>
+- **Portfolio**: <a href="https://siyamthanda-dlakavu.netlify.app/" target="_blank">siyamthanda-dlakavu.netlify.app</a>
 - **GitHub**: <a href="https://github.com/siseko-D" target="_blank">github.com/siseko-D</a>
 - **LinkedIn**: <a href="https://www.linkedin.com/in/siyamthandad/" target="_blank">linkedin.com/in/siyamthandad</a>
-- **Email**: <a href="mailto:Dlakavusiskeo@gmail.com">Dlakavusiskeo@gmail.com</a>
+- **Email**: <a href="mailto:Dlakavusiseko@gmail.com">Dlakavusiseko@gmail.com</a>
 
 ## 📄 License
 
