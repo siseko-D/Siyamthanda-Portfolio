@@ -1061,3 +1061,196 @@ body.overflow-hidden {
     visibility: visible;
     pointer-events: auto;
 }
+
+/* ===== Skills Carousel Styles ===== */
+.skills-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.skills-carousel {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Carousel Cards - Absolute positioning for better control */
+.skills-carousel-card {
+    position: absolute;
+    width: 280px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Center card */
+.skills-carousel-card.center {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) scale(1);
+    left: 50%;
+    z-index: 10;
+}
+
+/* Left card (previous) */
+.skills-carousel-card.left {
+    opacity: 0.7;
+    visibility: visible;
+    pointer-events: none;
+    transform: translateX(calc(-50% - 140px)) scale(0.85);
+    left: 50%;
+    filter: blur(1px);
+    z-index: 5;
+}
+
+/* Right card (next) */
+.skills-carousel-card.right {
+    opacity: 0.7;
+    visibility: visible;
+    pointer-events: none;
+    transform: translateX(calc(-50% + 140px)) scale(0.85);
+    left: 50%;
+    filter: blur(1px);
+    z-index: 5;
+}
+
+/* Hide all other cards */
+.skills-carousel-card.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.2) 0%, rgba(135, 206, 235, 0.1) 100%);
+    border: 1px solid rgba(135, 206, 235, 0.3);
+    color: #87CEEB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 20;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-arrow:hover {
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.3) 0%, rgba(135, 206, 235, 0.2) 100%);
+    border-color: rgba(135, 206, 235, 0.6);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(135, 206, 235, 0.3);
+    color: white;
+}
+
+.carousel-arrow.left {
+    left: 0;
+}
+
+.carousel-arrow.right {
+    right: 0;
+}
+
+.carousel-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Preserve card inner styles */
+.skills-carousel-card .group {
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure hover effects work on center card */
+.skills-carousel-card.center .group:hover {
+    transform: scale(1.05) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-carousel-container {
+        padding: 0 40px;
+    }
+    
+    .skills-carousel-card {
+        width: 240px;
+    }
+    
+    .skills-carousel-card.left {
+        transform: translateX(calc(-50% - 120px)) scale(0.85);
+    }
+    
+    .skills-carousel-card.right {
+        transform: translateX(calc(-50% + 120px)) scale(0.85);
+    }
+}
+
+@media (max-width: 640px) {
+    .skills-carousel-card {
+        width: 200px;
+    }
+    
+    .skills-carousel-card.left {
+        transform: translateX(calc(-50% - 100px)) scale(0.85);
+    }
+    
+    .skills-carousel-card.right {
+        transform: translateX(calc(-50% + 100px)) scale(0.85);
+    }
+}
+
+/* ===== Contact Section Entrance Animations ===== */
+.contact-info-animate {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-info-animate.animate-fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contact-form-animate {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
+}
+
+.contact-form-animate.animate-fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Override the default fadeIn animation for contact elements */
+.contact-info-animate.animate-fadeIn,
+.contact-form-animate.animate-fadeIn {
+    animation: none;
+}
