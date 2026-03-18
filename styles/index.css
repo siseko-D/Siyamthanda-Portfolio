@@ -878,6 +878,62 @@ button[type="submit"]:disabled {
     background: linear-gradient(to bottom, #6abfe1, #87CEEB);
 }
 
+/* ===== About Section Entrance Animations ===== */
+.about-image-animate {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-image-animate.animate-fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-content-left {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
+}
+
+.about-content-left.animate-fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-content-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.4s;
+}
+
+.about-content-right.animate-fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-quote-animate {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.6s;
+}
+
+.about-quote-animate.animate-fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Override the default fadeIn animation for these elements */
+.about-image-animate.animate-fadeIn,
+.about-content-left.animate-fadeIn,
+.about-content-right.animate-fadeIn,
+.about-quote-animate.animate-fadeIn {
+    animation: none;
+}
+
 /* ===== Responsive Adjustments ===== */
 @media (max-width: 640px) {
     .hamburger-premium {
