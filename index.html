@@ -149,90 +149,90 @@
         </section>
 
         <section id="about" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white">
-            <div class="container mx-auto px-4">
-                <h2 class="section-header">About Me</h2>
+    <div class="container mx-auto px-4">
+        <h2 class="section-header">About Me</h2>
 
-                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 mt-12">
-                    <!-- Left Column - Profile Image (Mid Centered) -->
-                    <div class="lg:w-1/3 flex flex-col items-center justify-center lg:pt-16">
-                        <div class="w-64 h-64 rounded-full overflow-hidden shadow-xl glowing-border-animation">
-                            <img src="/images/Siyamthanda.jpg" alt="Siyamthanda Dlakavu"
-                                class="w-full h-full object-cover" />
+        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 mt-12">
+            <!-- Left Column - Profile Image (Animates from left) -->
+            <div class="lg:w-1/3 flex flex-col items-center justify-center lg:pt-16 about-image-animate">
+                <div class="w-64 h-64 rounded-full overflow-hidden shadow-xl glowing-border-animation">
+                    <img src="/images/Siyamthanda.jpg" alt="Siyamthanda Dlakavu"
+                        class="w-full h-full object-cover" />
+                </div>
+            </div>
+
+            <!-- Right Column - Split Content (Animates from right) -->
+            <div class="lg:w-2/3">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0">
+                    <!-- Introduction - Left Half -->
+                    <div class="about-content-left
+                        bg-gradient-to-br from-[#3a3a3a] to-[#404040] p-6 md:p-8 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none border-b md:border-b-0 border-r-0 md:border-r border-[#87CEEB]/30">
+                        <div class="mb-4">
+                            <span class="text-sm uppercase tracking-wider text-[#87CEEB] font-semibold">01 —
+                                About</span>
+                            <h3 class="text-2xl font-bold text-white mt-2">Introduction</h3>
                         </div>
+                        <p class="text-gray-200 leading-relaxed text-sm md:text-base">
+                            As a Junior Full Stack Developer, I combine that infrastructure mindset with modern
+                            development skills. <br /><br /> I build responsive frontends using Angular,
+                            TypeScript, HTML,
+                            and CSS, and I'm expanding into backend development with .NET and ASP.NET Core to
+                            create complete, end-to-end web solutions. <br /> My time managing Microsoft Azure
+                            environments means I think about deployment, scalability, and security from day one
+                            of a project. <br /><br /> I'm a lifelong learner who thrives in collaborative
+                            teams. Whether it's debugging a tricky API response or optimizing a frontend
+                            component, I approach every problem with patience, curiosity, and a drive to find
+                            the best solution
+                        </p>
                     </div>
 
-                    <!-- Right Column - Split Content -->
-                    <div class="lg:w-2/3">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0">
-                            <!-- Introduction - Left Half -->
-                            <div
-                                class="bg-gradient-to-br from-[#3a3a3a] to-[#404040] p-6 md:p-8 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none border-b md:border-b-0 border-r-0 md:border-r border-[#87CEEB]/30">
-                                <div class="mb-4">
-                                    <span class="text-sm uppercase tracking-wider text-[#87CEEB] font-semibold">01 —
-                                        About</span>
-                                    <h3 class="text-2xl font-bold text-white mt-2">Introduction</h3>
-                                </div>
-                                <p class="text-gray-200 leading-relaxed text-sm md:text-base">
-                                    As a Junior Full Stack Developer, I combine that infrastructure mindset with modern
-                                    development skills. <br /><br /> I build responsive frontends using Angular,
-                                    TypeScript, HTML,
-                                    and CSS, and I'm expanding into backend development with .NET and ASP.NET Core to
-                                    create complete, end-to-end web solutions. <br /> My time managing Microsoft Azure
-                                    environments means I think about deployment, scalability, and security from day one
-                                    of a project. <br /><br /> I'm a lifelong learner who thrives in collaborative
-                                    teams. Whether it's debugging a tricky API response or optimizing a frontend
-                                    component, I approach every problem with patience, curiosity, and a drive to find
-                                    the best solution
-                                </p>
-                            </div>
-
-                            <!-- Professional Biography - Right Half -->
-                            <div
-                                class="bg-gradient-to-br from-[#404040] to-[#3a3a3a] p-6 md:p-8 rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
-                                <div class="mb-4">
-                                    <span class="text-sm uppercase tracking-wider text-[#87CEEB] font-semibold">02 —
-                                        Goals</span>
-                                    <h3 class="text-2xl font-bold text-white mt-2">Career Objectives</h3>
-                                </div>
-                                <p class="text-gray-200 leading-relaxed text-sm md:text-base">
-                                    My goal is to secure a full-time position as a Full Stack Developer, where I can
-                                    continue to learn and grow. Currently, I'm focused on:<br /><br />
-                                    • Building SPAs with Angular and managing state with RxJS.<br />
-                                    • Developing RESTful APIs with .NET and documenting them with Swagger.<br />
-                                    • Designing databases in SQL Server and MySQL.<br />
-                                    • Testing APIs with Postman and writing clean, maintainable code.
-                                </p>
-
-                                <!-- Divider -->
-                                <div class="my-6 border-t border-[#87CEEB]/20"></div>
-
-                                <!-- Quick Stats -->
-                                <div class="flex justify-between">
-                                    <div>
-                                        <span class="block text-xl md:text-2xl font-bold text-[#87CEEB]">5+</span>
-                                        <span class="text-xs text-gray-400">Projects</span>
-                                    </div>
-                                    <div>
-                                        <span class="block text-xl md:text-2xl font-bold text-[#87CEEB]">∞</span>
-                                        <span class="text-xs text-gray-400">Learning</span>
-                                    </div>
-                                    <div>
-                                        <span class="block text-xl md:text-2xl font-bold text-[#87CEEB]">2026</span>
-                                        <span class="text-xs text-gray-400">Ready</span>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Professional Biography - Right Half -->
+                    <div class="about-content-right
+                        bg-gradient-to-br from-[#404040] to-[#3a3a3a] p-6 md:p-8 rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
+                        <div class="mb-4">
+                            <span class="text-sm uppercase tracking-wider text-[#87CEEB] font-semibold">02 —
+                                Goals</span>
+                            <h3 class="text-2xl font-bold text-white mt-2">Career Objectives</h3>
                         </div>
+                        <p class="text-gray-200 leading-relaxed text-sm md:text-base">
+                            My goal is to secure a full-time position as a Full Stack Developer, where I can
+                            continue to learn and grow. Currently, I'm focused on:<br /><br />
+                            • Building SPAs with Angular and managing state with RxJS.<br />
+                            • Developing RESTful APIs with .NET and documenting them with Swagger.<br />
+                            • Designing databases in SQL Server and MySQL.<br />
+                            • Testing APIs with Postman and writing clean, maintainable code.
+                        </p>
 
-                        <!-- Bottom Quote -->
-                        <div
-                            class="mt-6 text-center italic text-gray-300 border-l-4 border-[#87CEEB] pl-4 bg-[#3a3a3a] bg-opacity-50 p-4 rounded-r-lg">
-                            "Passionate about creating innovative solutions through AI and clean code."
+                        <!-- Divider -->
+                        <div class="my-6 border-t border-[#87CEEB]/20"></div>
+
+                        <!-- Quick Stats -->
+                        <div class="flex justify-between">
+                            <div>
+                                <span class="block text-xl md:text-2xl font-bold text-[#87CEEB]">5+</span>
+                                <span class="text-xs text-gray-400">Projects</span>
+                            </div>
+                            <div>
+                                <span class="block text-xl md:text-2xl font-bold text-[#87CEEB]">∞</span>
+                                <span class="text-xs text-gray-400">Learning</span>
+                            </div>
+                            <div>
+                                <span class="block text-xl md:text-2xl font-bold text-[#87CEEB]">2026</span>
+                                <span class="text-xs text-gray-400">Ready</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Bottom Quote -->
+                <div class="about-quote-animate
+                    mt-6 text-center italic text-gray-300 border-l-4 border-[#87CEEB] pl-4 bg-[#3a3a3a] bg-opacity-50 p-4 rounded-r-lg">
+                    "Passionate about creating innovative solutions through AI and clean code."
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <section id="skills" class="py-20 bg-gradient-to-br from-[#252525] to-[#2f2f2f] text-white">
             <div class="container mx-auto px-4">
