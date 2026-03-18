@@ -1,4 +1,3 @@
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -21,8 +20,14 @@ const observer = new IntersectionObserver(
     { threshold: 0.1 }
 );
 
+// Observe card animations
 document.querySelectorAll(".card-animation").forEach((box) => {
     observer.observe(box);
+});
+
+// Observe about section animations
+document.querySelectorAll(".about-image-animate, .about-content-left, .about-content-right, .about-quote-animate").forEach((element) => {
+    observer.observe(element);
 });
 
 // Add CSS for fadeIn animation
@@ -33,7 +38,7 @@ style.textContent = `
                 }
                 @keyframes fadeIn {
                     from { opacity: 0; transform: translateY(20px); }
-                    to { opacity: 1; transform: translateY(0); }
+                    to { opacity: 1; transform: transform: translateY(0); }
                 }
             `;
 document.head.appendChild(style);
