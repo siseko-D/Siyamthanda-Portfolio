@@ -6,7 +6,7 @@
 
 ## 🚀 About Me
 
-I'm a Junior Full Stack Developer combining infrastructure mindset with modern development skills. I build responsive frontends using Angular, TypeScript, HTML, and CSS, while expanding into backend development with .NET and ASP.NET Core to create complete, end-to-end web solutions.
+I'm a Full Stack Developer combining infrastructure mindset with modern development skills. I build responsive frontends using Angular, TypeScript, HTML, and CSS, while expanding into backend development with .NET and ASP.NET Core to create complete, end-to-end web solutions.
 
 My background managing Microsoft Azure environments means I think about deployment, scalability, and security from day one of every project. I'm a lifelong learner who thrives in collaborative teams, approaching every problem with patience, curiosity, and a drive to find the best solution.
 
