@@ -1100,7 +1100,6 @@ body.overflow-hidden {
 .skills-carousel {
     position: relative;
     width: 100%;
-    overflow: visible;
     min-height: 350px;
     display: flex;
     align-items: center;
@@ -1110,85 +1109,60 @@ body.overflow-hidden {
 .skills-carousel-track {
     position: relative;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 350px;
 }
 
 /* Carousel Cards - Base styles */
 .skills-carousel-card {
-    position: absolute;
     width: 260px;
     transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
 }
 
-/* Initial row state - all cards visible in a row */
-.skills-carousel-card.row-state {
-    opacity: 1;
-    visibility: visible;
-    position: relative;
-    flex: 0 0 auto; /* Prevent flex items from shrinking */
-    width: 260px; /* Fixed width for consistency */
-    margin: 0 5px;
-    pointer-events: none;
-}
-
-.skills-carousel-track.row-state {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: nowrap;
-    /* Changed from wrap to nowrap */
-    overflow-x: auto;
-    /* Allow horizontal scroll on mobile if needed */
-    padding: 20px 10px;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* Final carousel positions */
+/* Carousel positions */
 .skills-carousel-card.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
-    transform: translateX(-50%) scale(1);
-    left: 50%;
     z-index: 10;
     filter: blur(0);
 }
 
 .skills-carousel-card.left {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(calc(-50% - 140px), -50%) scale(0.85);
     opacity: 0.7;
     visibility: visible;
-    pointer-events: none;
-    transform: translateX(calc(-50% - 140px)) scale(0.85);
-    left: 50%;
     filter: blur(1px);
     z-index: 5;
 }
 
 .skills-carousel-card.right {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(calc(-50% + 140px), -50%) scale(0.85);
     opacity: 0.7;
     visibility: visible;
-    pointer-events: none;
-    transform: translateX(calc(-50% + 140px)) scale(0.85);
-    left: 50%;
     filter: blur(1px);
     z-index: 5;
 }
 
-/* Hide all other cards */
 .skills-carousel-card.hidden {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
 
-/* Carousel Arrows - initially hidden */
+/* Carousel Arrows */
 .carousel-arrow {
     position: absolute;
     top: 50%;
@@ -1209,13 +1183,11 @@ body.overflow-hidden {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
 }
 
 .carousel-arrow.visible {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
     animation: arrowAppear 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
@@ -1224,12 +1196,10 @@ body.overflow-hidden {
         opacity: 0;
         transform: translateY(-50%) scale(0);
     }
-
     50% {
         opacity: 0.8;
         transform: translateY(-50%) scale(1.1);
     }
-
     100% {
         opacity: 1;
         transform: translateY(-50%) scale(1);
@@ -1252,64 +1222,27 @@ body.overflow-hidden {
     right: 0;
 }
 
-.carousel-arrow svg {
-    width: 24px;
-    height: 24px;
-}
-
-/* Preserve card inner styles */
-.skills-carousel-card .group {
-    width: 100%;
-    height: 100%;
-}
-
-/* Ensure hover effects work on center card */
+/* Hover effect on center card */
 .skills-carousel-card.center .group:hover {
     transform: scale(1.05) !important;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .skills-carousel-container {
-        padding: 0 40px;
-    }
-
-    .skills-carousel-card {
-        width: 240px;
-    }
-
     .skills-carousel-card.left {
-        transform: translateX(calc(-50% - 120px)) scale(0.85);
+        transform: translate(calc(-50% - 120px), -50%) scale(0.85);
     }
-
     .skills-carousel-card.right {
-        transform: translateX(calc(-50% + 120px)) scale(0.85);
-    }
-
-    .skills-carousel-track.row-state {
-        gap: 10px;
-    }
-
-    .skills-carousel-card.row-state {
-        width: 200px;
+        transform: translate(calc(-50% + 120px), -50%) scale(0.85);
     }
 }
 
 @media (max-width: 640px) {
-    .skills-carousel-card {
-        width: 200px;
-    }
-
     .skills-carousel-card.left {
-        transform: translateX(calc(-50% - 100px)) scale(0.85);
+        transform: translate(calc(-50% - 100px), -50%) scale(0.85);
     }
-
     .skills-carousel-card.right {
-        transform: translateX(calc(-50% + 100px)) scale(0.85);
-    }
-
-    .skills-carousel-card.row-state {
-        width: 160px;
+        transform: translate(calc(-50% + 100px), -50%) scale(0.85);
     }
 }
 

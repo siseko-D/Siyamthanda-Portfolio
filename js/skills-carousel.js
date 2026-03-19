@@ -1,111 +1,137 @@
-// Skills Carousel for Technical & Soft Skills
+// Skills Carousel - Fade In Directly to Final State
 document.addEventListener('DOMContentLoaded', function() {
-    initSkillsCarousel('technical-skills-carousel', 'technical-skills-track');
-    initSkillsCarousel('soft-skills-carousel', 'soft-skills-track');
+    initCarousel('technical-skills-carousel', 'technical-skills-track');
+    initCarousel('soft-skills-carousel', 'soft-skills-track');
 });
 
-function initSkillsCarousel(containerId, trackId) {
+function initCarousel(containerId, trackId) {
     const container = document.getElementById(containerId);
     const track = document.getElementById(trackId);
     
-    if (!container || !track) {
-        console.error(`Carousel elements not found: ${containerId}, ${trackId}`);
-        return;
-    }
+    if (!container || !track) return;
     
     const leftArrow = container.querySelector('.carousel-arrow.left');
     const rightArrow = container.querySelector('.carousel-arrow.right');
     const cards = Array.from(track.children);
     
-    if (cards.length === 0) {
-        console.error('No cards found in carousel');
-        return;
-    }
+    if (cards.length === 0) return;
     
-    console.log(`Initializing carousel: ${containerId} with ${cards.length} cards`);
-    
-    let currentIndex = 0;
+    let currentIndex = 2; // Start with third card as center (adjust based on your card count)
     const totalCards = cards.length;
     
-    // Initial setup
-    updateCarousel();
+    // STEP 1: START INVISIBLE (but already in carousel formation)
+    track.style.position = 'relative';
+    track.style.height = '350px';
+    track.style.opacity = '0';
+    track.style.transition = 'opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1)';
     
-    // Event listeners for arrows
-    if (leftArrow) {
-        leftArrow.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Left arrow clicked');
-            currentIndex = (currentIndex - 1 + totalCards) % totalCards;
-            updateCarousel();
-        });
-    }
-    
-    if (rightArrow) {
-        rightArrow.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Right arrow clicked');
-            currentIndex = (currentIndex + 1) % totalCards;
-            updateCarousel();
-        });
-    }
-    
-    function updateCarousel() {
-        console.log(`Updating carousel to index: ${currentIndex}`);
+    // Position all cards in their FINAL CAROUSEL POSITIONS immediately
+    cards.forEach((card, index) => {
+        card.style.position = 'absolute';
+        card.style.left = '50%';
+        card.style.top = '50%';
+        card.style.width = '260px';
+        card.style.transition = 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        card.style.margin = '0';
         
-        // Remove all classes first
-        cards.forEach(card => {
-            card.classList.remove('center', 'left', 'right', 'hidden');
-        });
-        
-        // Calculate indices
-        const prevIndex = (currentIndex - 1 + totalCards) % totalCards;
-        const nextIndex = (currentIndex + 1) % totalCards;
-        
-        // Apply classes
-        cards[prevIndex].classList.add('left');
-        cards[currentIndex].classList.add('center');
-        cards[nextIndex].classList.add('right');
-        
-        // Hide all other cards
-        cards.forEach((card, index) => {
-            if (index !== prevIndex && index !== currentIndex && index !== nextIndex) {
-                card.classList.add('hidden');
-            }
-        });
-    }
-    
-    // Touch swipe support
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    container.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-    
-    container.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }, { passive: true });
-    
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const swipeDistance = touchEndX - touchStartX;
-        
-        if (Math.abs(swipeDistance) > swipeThreshold) {
-            if (swipeDistance > 0) {
-                // Swipe right - go to previous
-                currentIndex = (currentIndex - 1 + totalCards) % totalCards;
-            } else {
-                // Swipe left - go to next
-                currentIndex = (currentIndex + 1) % totalCards;
-            }
-            updateCarousel();
+        // Set initial positions based on index
+        if (index === currentIndex) {
+            // CENTER
+            card.style.transform = 'translate(-50%, -50%) scale(1)';
+            card.style.opacity = '1';
+            card.style.zIndex = '10';
+            card.style.filter = 'blur(0)';
+            card.style.visibility = 'visible';
         }
-    }
+        else if (index === currentIndex - 1 || (currentIndex === 0 && index === totalCards - 1)) {
+            // LEFT SIDE (previous)
+            card.style.transform = 'translate(calc(-50% - 140px), -50%) scale(0.85)';
+            card.style.opacity = '0.7';
+            card.style.zIndex = '5';
+            card.style.filter = 'blur(1px)';
+            card.style.visibility = 'visible';
+        }
+        else if (index === currentIndex + 1 || (currentIndex === totalCards - 1 && index === 0)) {
+            // RIGHT SIDE (next)
+            card.style.transform = 'translate(calc(-50% + 140px), -50%) scale(0.85)';
+            card.style.opacity = '0.7';
+            card.style.zIndex = '5';
+            card.style.filter = 'blur(1px)';
+            card.style.visibility = 'visible';
+        }
+        else {
+            // HIDDEN
+            card.style.opacity = '0';
+            card.style.visibility = 'hidden';
+        }
+    });
     
-    // Reset carousel on window resize
-    window.addEventListener('resize', function() {
-        // Force reflow to ensure positions update
+    // STEP 2: FADE IN WHEN VISIBLE
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // GENTLY FADE IN THE ENTIRE CAROUSEL
+                setTimeout(() => {
+                    track.style.opacity = '1';
+                    
+                    // Slightly delay arrows for extra smoothness
+                    setTimeout(() => {
+                        leftArrow.classList.add('visible');
+                        rightArrow.classList.add('visible');
+                    }, 400);
+                }, 200);
+                
+                observer.unobserve(container);
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    observer.observe(container);
+    
+    // STEP 3: CAROUSEL NAVIGATION
+    leftArrow.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentIndex = (currentIndex - 1 + totalCards) % totalCards;
         updateCarousel();
     });
+    
+    rightArrow.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentIndex = (currentIndex + 1) % totalCards;
+        updateCarousel();
+    });
+    
+    function updateCarousel() {
+        cards.forEach((card, index) => {
+            if (index === currentIndex) {
+                // CENTER
+                card.style.transform = 'translate(-50%, -50%) scale(1)';
+                card.style.opacity = '1';
+                card.style.zIndex = '10';
+                card.style.filter = 'blur(0)';
+                card.style.visibility = 'visible';
+            }
+            else if (index === currentIndex - 1 || (currentIndex === 0 && index === totalCards - 1)) {
+                // LEFT SIDE
+                card.style.transform = 'translate(calc(-50% - 140px), -50%) scale(0.85)';
+                card.style.opacity = '0.7';
+                card.style.zIndex = '5';
+                card.style.filter = 'blur(1px)';
+                card.style.visibility = 'visible';
+            }
+            else if (index === currentIndex + 1 || (currentIndex === totalCards - 1 && index === 0)) {
+                // RIGHT SIDE
+                card.style.transform = 'translate(calc(-50% + 140px), -50%) scale(0.85)';
+                card.style.opacity = '0.7';
+                card.style.zIndex = '5';
+                card.style.filter = 'blur(1px)';
+                card.style.visibility = 'visible';
+            }
+            else {
+                // HIDDEN
+                card.style.opacity = '0';
+                card.style.visibility = 'hidden';
+            }
+        });
+    }
 }
