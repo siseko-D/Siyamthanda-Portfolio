@@ -14,6 +14,11 @@ const observer = new IntersectionObserver(
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("animate-fadeIn");
+                
+                // Special handling for projects section to trigger tab animations
+                if (entry.target.id === 'projects') {
+                    entry.target.classList.add('visible');
+                }
             }
         });
     },
@@ -35,6 +40,12 @@ document.querySelectorAll(".contact-info-animate, .contact-form-animate").forEac
     observer.observe(element);
 });
 
+// Observe projects section for tab animations
+const projectsSection = document.getElementById('projects');
+if (projectsSection) {
+    observer.observe(projectsSection);
+}
+
 // Add CSS for fadeIn animation
 const style = document.createElement("style");
 style.textContent = `
@@ -43,7 +54,12 @@ style.textContent = `
                 }
                 @keyframes fadeIn {
                     from { opacity: 0; transform: translateY(20px); }
-                    to { opacity: 1; transform: transform: translateY(0); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                
+                /* Ensure projects section doesn't have conflicting animation */
+                #projects.animate-fadeIn {
+                    animation: none;
                 }
             `;
 document.head.appendChild(style);
