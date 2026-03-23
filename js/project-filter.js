@@ -10,8 +10,22 @@ function initProjectFilters() {
     
     if (!categoryTabs.length || !projectCards.length) return;
     
-    // Set initial active state (show all)
-    document.querySelector('.category-tab[data-category="all"]').classList.add('active');
+    // REMOVE any existing active classes first
+    categoryTabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Set initial active state (show all) - THIS ENSURES "All Projects" is active
+    const allTab = document.querySelector('.category-tab[data-category="all"]');
+    if (allTab) {
+        allTab.classList.add('active');
+    }
+    
+    // Initially show all projects (no filter)
+    projectCards.forEach(card => {
+        card.style.display = 'flex';
+        card.classList.remove('fade-out');
+    });
     
     // Add click handlers to each tab
     categoryTabs.forEach(tab => {
@@ -20,7 +34,7 @@ function initProjectFilters() {
             
             const category = this.getAttribute('data-category');
             
-            // Update active tab
+            // Update active tab - remove from all, add to clicked
             categoryTabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
             
@@ -43,13 +57,13 @@ function initProjectFilters() {
                 }, 50);
                 visibleCount++;
             } else {
-                // Hide card
+                // Hide card with fade out
                 card.classList.add('fade-out');
                 setTimeout(() => {
                     if (card.classList.contains('fade-out')) {
                         card.style.display = 'none';
                     }
-                }, 500);
+                }, 300);
             }
         });
         
@@ -78,7 +92,8 @@ function initProjectFilters() {
             'react': 'React',
             'python': 'Python',
             'html-css-js': 'HTML, CSS & JavaScript',
-            'figma': 'Figma Prototypes'
+            'figma': 'Figma Prototypes',
+            'development-phase': 'Development Phase'
         };
         
         const div = document.createElement('div');
