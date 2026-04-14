@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -30,6 +30,8 @@
                 <a href="#skills" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Skills</a>
                 <a href="#projects"
                     class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Projects</a>
+                <a href="#client-projects"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Client</a>
                 <a href="#contact" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Contact</a>
             </div>
 
@@ -110,6 +112,20 @@
                     </svg>
                 </div>
                 <span class="link-text">Projects</span>
+                <span class="link-arrow">→</span>
+            </a>
+
+            <a href="#client-projects" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+                <span class="link-text">Client Projects</span>
                 <span class="link-arrow">→</span>
             </a>
 
@@ -907,26 +923,26 @@
 
                     <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
                         data-categories="development-phase">
-                     <!-- Zen AI Development Phase -->
-                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full opacity-90"
-                        data-categories="development-phase">
-                        <div class="relative">
-                            <img src="images/ZenAI.PNG" alt="Zen AI Development"
-                                class="w-full h-48 object-cover filter blur-[2px]" />
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-[#87CEEB]/20 to-[#333333]/80 flex items-center justify-center">
-                                <span class="text-[#87CEEB] font-bold text-xl">🚀 DEVELOPMENT PHASE</span>
+                        <!-- Zen AI Development Phase -->
+                        <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full opacity-90"
+                            data-categories="development-phase">
+                            <div class="relative">
+                                <img src="images/ZenAI.PNG" alt="Zen AI Development"
+                                    class="w-full h-48 object-cover filter blur-[2px]" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-[#87CEEB]/20 to-[#333333]/80 flex items-center justify-center">
+                                    <span class="text-[#87CEEB] font-bold text-xl">🚀 DEVELOPMENT PHASE</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-semibold mb-2">Zen AI - From Prototype to Production</h3>
+                                <p class="text-gray-400 text-sm">Building the actual product from Figma prototype.</p>
+                                <div class="mt-3 flex items-center gap-2">
+                                    <span class="inline-block w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                                    <span class="text-xs text-gray-400">In Development - Beta Q3 2026</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold mb-2">Zen AI - From Prototype to Production</h3>
-                            <p class="text-gray-400 text-sm">Building the actual product from Figma prototype.</p>
-                            <div class="mt-3 flex items-center gap-2">
-                                <span class="inline-block w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-                                <span class="text-xs text-gray-400">In Development - Beta Q3 2026</span>
-                            </div>
-                        </div>
-                    </div>
                     </div>
 
                     <!-- TeachiQ - (keeping as is) -->
@@ -967,6 +983,136 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= NEW: CLIENT PROJECTS SECTION ========= -->
+        <section id="client-projects" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-header">Client Projects</h2>
+
+                <!-- Client Projects Grid (reusing same responsive grid) -->
+                <div class="projects-grid mt-12">
+
+                    <!-- Restructured Service Card for Pertunia Counselling and Wellness -->
+                    <div
+                        class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full">
+                        <!-- Image representing the service -->
+                        <img src="images/pertunia.png" alt="Family therapy session in a safe, confidential environment"
+                            class="w-full h-auto object-cover" loading="lazy" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <!-- Service Title (from the site) -->
+                            <h3 class="text-2xl font-semibold mb-2">Pertunia Counselling and Wellness</h3>
+                            <!-- Service Description (from the site) -->
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">
+                                Providing professional social work and Employee Assistance Program (EAP) services
+                                through therapeutic and supportive interventions. We offer a safe, confidential
+                                environment where individuals, groups, families, and organizations can address social
+                                and emotional challenges to improve overall well-being.
+                            </p>
+
+                            <!-- Key Features/Benefits (mirroring the structure of the placeholder, but with relevant content) -->
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">Improved family communication</span> patterns &
+                                        conflict resolution.</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Strengthened emotional bonds</span> & mutual
+                                        understanding.</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Tailored strategies</span> for your family's
+                                        unique dynamics.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Call to Action Buttons (updated for a counselling context) -->
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://pertunia.netlify.app/" target="_blank"
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">
+                                    <svg class="w-4 h-4 text-[#1a1a1a]" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                        </path>
+                                    </svg>
+                                    <span>Visit Website</span>
+                                </a>
+                            </div>
+
+                            <!-- Service Modalities / Therapeutic Approaches (replacing tech stack) -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">HTML5</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">CSS3</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">JavaScript</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Bootstrap</span>
+                            </div>
+
+                            <!-- Status Indicator (updated for a practitioner's availability) -->
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Live & Fully Operational</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Restructured Project Card for Ntlakuso Creative Agency -->
+                    <div
+                        class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full">
+                        <img src="images/ntlakuso.png" alt="ntlakuso" class="w-full h-auto object-cover"
+                            loading="lazy" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <!-- Project Title (from Ntlakuso site) -->
+                            <h3 class="text-2xl font-semibold mb-2">Ntlakuso Creative Agency</h3>
+                            <!-- Project Description (from Ntlakuso site) -->
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">
+                                Ideas that ignite
+                                brands & experiences
+                                We fuse UI/UX mastery, Digital Marketing & Web Development - crafting digital identities
+                                that resonate across South Africa and beyond.
+                            </p>
+                            <!-- Alternative: Reflecting Ntlakuso's agency value, not fake features -->
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <p class="text-gray-300 mb-2 font-semibold">What Ntlakuso delivered:</p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">UI/UX mastery</span> - user-centric interfaces &
+                                        seamless flows.</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Web development</span> - lightning-fast,
+                                        responsive platform.</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Creative strategy</span> that resonates &
+                                        converts.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Call to Action Buttons with COLORED SVG ICON -->
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://ntlakusocreativeagency.netlify.app/"
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">
+                                    <svg class="w-4 h-4 text-[#0055aa]" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                        </path>
+                                    </svg>
+                                    <span>Visit Website</span>
+                                </a>
+                            </div>
+
+                            <!-- Tech Stack / Services Used -->
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">HTML5</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">CSS3</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">JavaScript</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Tailwind CSS</span>
+                            </div>
+
+                            <!-- Status Indicator -->
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Live Platform</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
