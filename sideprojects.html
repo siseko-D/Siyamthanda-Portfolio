@@ -27,13 +27,15 @@
         class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
         <nav class="container mx-auto px-4 py-3 flex items-center justify-between md:justify-center relative">
             <div class="hidden md:flex space-x-4 md:space-x-8">
-                <a href="index.html"
-                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Home</a>
+                <a href="index.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Home</a>
                 <a href="about.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">About</a>
+                <a href="services.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Services</a>
                 <a href="skills.html"
                     class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Skills</a>
                 <a href="sideprojects.html"
-                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300 active">Personal Projects</a>
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300 active">Personal
+                    Projects</a>
                 <a href="clientwork.html"
                     class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Client Projects</a>
                 <a href="contactme.html"
@@ -82,6 +84,18 @@
                     </svg>
                 </div>
                 <span class="link-text">About</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="services.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                </div>
+                <span class="link-text">Services</span>
                 <span class="link-arrow">→</span>
             </a>
             <a href="skills.html" class="nav-link-mobile group">
@@ -139,10 +153,10 @@
         <section class="relative h-[40vh] md:h-[50vh] flex items-center justify-center text-white overflow-hidden">
             <!-- Background Image with Overlay -->
             <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1600&q=80"
-                    alt="Code on screen"
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1600&q=80" alt="Code on screen"
                     class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/85 via-[#2a2a2a]/75 to-[#0a0a0a]/90"></div>
+                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/85 via-[#2a2a2a]/75 to-[#0a0a0a]/90">
+                </div>
             </div>
 
             <!-- Hero Content -->
@@ -163,15 +177,19 @@
             <!-- Scroll indicator -->
             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
                 <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
             </div>
         </section>
 
         <!-- ===== PROJECTS SECTION – with grid-bg ===== -->
-        <section id="projects" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white relative grid-bg visible">
+        <section id="projects"
+            class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white relative grid-bg visible">
             <!-- Decorative top line -->
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30"></div>
+            <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30">
+            </div>
 
             <div class="container mx-auto px-4">
                 <!-- Section Header -->
@@ -201,7 +219,8 @@
                         <img src="images/TaskMaster.png" srcset="images/TaskMaster.png 1x, images/TaskMaster.png 2x"
                             alt="Screenshot of the FocusFlow project" class="w-full h-auto" loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">FocusFlow - Modern Productivity App</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">FocusFlow - Modern
+                                Productivity App</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">Feature-rich productivity application to
                                 help users manage tasks efficiently with a beautiful, intuitive interface.</p>
                             <div class="bg-[#333333]/60 rounded-lg p-3 mb-4 text-sm text-gray-300 backdrop-blur-sm">
@@ -214,9 +233,11 @@
                             </div>
                             <div class="flex flex-wrap gap-4 mb-3">
                                 <a href="https://focusflowv2.netlify.app/" target="_blank"
-                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀 Live Demo</a>
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀
+                                    Live Demo</a>
                                 <a href="https://github.com/siseko-D/FocusFlow" target="_blank"
-                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂 GitHub</a>
+                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂
+                                    GitHub</a>
                             </div>
                             <div
                                 class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
@@ -239,7 +260,8 @@
                             alt="Screenshot of the Web Development Quiz System project" class="w-full h-auto"
                             loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Web Development Quiz System</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Web Development Quiz
+                                System</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">Interactive, multi-topic quiz application to
                                 test knowledge of HTML, CSS, JavaScript, and React. Features instant feedback and
                                 detailed score tracking.</p>
@@ -254,9 +276,11 @@
                             </div>
                             <div class="flex flex-wrap gap-4 mb-3">
                                 <a href="https://web-dev-quizv2.netlify.app/" target="_blank"
-                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀 Live Demo</a>
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀
+                                    Live Demo</a>
                                 <a href="https://github.com/siseko-D/web-dev-quiz" target="_blank"
-                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂 GitHub</a>
+                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂
+                                    GitHub</a>
                             </div>
                             <div
                                 class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
@@ -277,7 +301,8 @@
                         <img src="images/Bias.PNG" srcset="images/Bias.PNG 1x, images/Bias.PNG 2x"
                             alt="Screenshot of the Bias Audit Report project" class="w-full h-auto" loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Bias Audit Report - Ethical ML Analysis</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Bias Audit Report -
+                                Ethical ML Analysis</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">AI Bias Audit Tool that detects biases in
                                 datasets and ML models. Analyzes data fairness and suggests mitigation strategies.</p>
                             <div class="bg-[#333333]/60 rounded-lg p-3 mb-4 text-sm text-gray-300 backdrop-blur-sm">
@@ -291,9 +316,11 @@
                             </div>
                             <div class="flex flex-wrap gap-4 mb-3">
                                 <a href="https://bias-audit-report.netlify.app/" target="_blank"
-                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀 Live Demo</a>
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀
+                                    Live Demo</a>
                                 <a href="https://github.com/siseko-D/bias-audit-report" target="_blank"
-                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂 GitHub</a>
+                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂
+                                    GitHub</a>
                             </div>
                             <div
                                 class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
@@ -316,7 +343,8 @@
                         <img src="images/Sentiment.PNG" srcset="images/Sentiment.PNG 1x, images/Sentiment.PNG 2x"
                             alt="Screenshot of the Sentiment Dashboard project" class="w-full h-auto" loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Sentiment Analyzer Dashboard</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Sentiment Analyzer
+                                Dashboard</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">Full-stack sentiment analysis application
                                 using VADER to analyze emotional tone in text. Features real-time analysis and batch
                                 processing.</p>
@@ -331,9 +359,11 @@
                             </div>
                             <div class="flex flex-wrap gap-4 mb-3">
                                 <a href="https://sentiment-analyzer-frontend-ijud.onrender.com" target="_blank"
-                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀 Live Demo</a>
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀
+                                    Live Demo</a>
                                 <a href="https://github.com/siseko-d/SentimentV3" target="_blank"
-                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂 GitHub</a>
+                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂
+                                    GitHub</a>
                             </div>
                             <div
                                 class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
@@ -355,7 +385,8 @@
                         <img src="images/ZenAI.PNG" srcset="images/ZenAI.PNG 1x, images/ZenAI.PNG 2x"
                             alt="Screenshot of the Zen AI project" class="w-full h-auto" loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Zen AI - Mental Wellness App (Figma)</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Zen AI - Mental Wellness
+                                App (Figma)</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">Comprehensive mental wellness application
                                 design with AI-powered behavioral insights, community networking, and reflective
                                 journaling.</p>
@@ -371,9 +402,11 @@
                             <div class="flex flex-wrap gap-4 mb-3">
                                 <a href="https://www.figma.com/proto/DapO9DD1rwjZznHEF0JMp9/AI-Powered-Mental-Health-Assistant?node-id=1-137&starting-point-node-id=1%3A137"
                                     target="_blank"
-                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🎨 Figma Prototype</a>
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🎨
+                                    Figma Prototype</a>
                                 <a href="documents/Zen AI - AI Insights for Inner Peace.pdf" target="_blank"
-                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📄 Product Spec</a>
+                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📄
+                                    Product Spec</a>
                             </div>
                             <div
                                 class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
@@ -427,7 +460,8 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Zen AI - From Prototype to Production</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Zen AI - From Prototype to
+                                Production</h3>
                             <p class="text-gray-400 text-sm">Building the actual product from Figma prototype.</p>
                             <div class="mt-3 flex items-center gap-2">
                                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
@@ -451,7 +485,8 @@
                             </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">TeachiQ - AI Education Tools</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">TeachiQ - AI Education
+                                Tools</h3>
                             <p class="text-gray-300 text-sm mb-4">AI content generation tool for educators with Next.js
                                 and OpenAI API.</p>
                             <div class="bg-[#333333]/60 rounded-lg p-3 mb-4 text-sm backdrop-blur-sm">

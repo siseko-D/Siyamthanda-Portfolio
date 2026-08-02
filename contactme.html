@@ -27,9 +27,10 @@
         class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
         <nav class="container mx-auto px-4 py-3 flex items-center justify-between md:justify-center relative">
             <div class="hidden md:flex space-x-4 md:space-x-8">
-                <a href="index.html"
-                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Home</a>
+                <a href="index.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Home</a>
                 <a href="about.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">About</a>
+                <a href="services.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Services</a>
                 <a href="skills.html"
                     class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Skills</a>
                 <a href="sideprojects.html"
@@ -82,6 +83,18 @@
                     </svg>
                 </div>
                 <span class="link-text">About</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="services.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                </div>
+                <span class="link-text">Services</span>
                 <span class="link-arrow">→</span>
             </a>
             <a href="skills.html" class="nav-link-mobile group">
@@ -140,9 +153,9 @@
             <!-- Background Image with Overlay -->
             <div class="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=80"
-                    alt="Connect with me"
-                    class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/85 via-[#2a2a2a]/75 to-[#0a0a0a]/90"></div>
+                    alt="Connect with me" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/85 via-[#2a2a2a]/75 to-[#0a0a0a]/90">
+                </div>
             </div>
 
             <!-- Hero Content -->
@@ -163,22 +176,27 @@
             <!-- Scroll indicator -->
             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
                 <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
             </div>
         </section>
 
         <!-- ===== CONTACT SECTION ===== -->
-        <section id="contact" class="relative py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white overflow-hidden">
+        <section id="contact"
+            class="relative py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white overflow-hidden">
             <!-- Decorative top line -->
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30"></div>
+            <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30">
+            </div>
 
             <div class="relative z-10 py-12 flex items-center justify-center">
                 <div class="container mx-auto px-4">
                     <!-- Section Header -->
                     <div class="text-center mb-16">
                         <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">Connect</span>
-                        <h2 class="text-3xl md:text-4xl font-bold mt-2 font-['Playfair_Display']">Contact &amp; Connect</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-2 font-['Playfair_Display']">Contact &amp; Connect
+                        </h2>
                         <div class="w-16 h-1 bg-[#87CEEB] mx-auto mt-4 rounded-full"></div>
                     </div>
 
@@ -186,58 +204,78 @@
                         <!-- Left: Contact Info -->
                         <div class="contact-info-animate space-y-8">
                             <div>
-                                <h3 class="text-2xl font-semibold mb-4 text-[#87CEEB] font-['Playfair_Display']">Let's Connect</h3>
+                                <h3 class="text-2xl font-semibold mb-4 text-[#87CEEB] font-['Playfair_Display']">Let's
+                                    Connect</h3>
                                 <p class="text-gray-300 leading-relaxed">
-                                    Whether you have a project in mind, a job opportunity, or just want to say hello — I'm always open to new conversations and collaborations.
+                                    Whether you have a project in mind, a job opportunity, or just want to say hello —
+                                    I'm always open to new conversations and collaborations.
                                 </p>
                             </div>
 
                             <!-- Contact Cards -->
                             <div class="space-y-4">
                                 <!-- Email -->
-                                <div class="contact-card group bg-[#3a3a3a]/50 rounded-xl p-4 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#87CEEB]/5">
+                                <div
+                                    class="contact-card group bg-[#3a3a3a]/50 rounded-xl p-4 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#87CEEB]/5">
                                     <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 rounded-full bg-[#87CEEB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                        <div
+                                            class="w-12 h-12 rounded-full bg-[#87CEEB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
                                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Email</p>
+                                            <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold">
+                                                Email</p>
                                             <div class="email-tooltip">
-                                                <p class="text-white font-medium cursor-pointer hover:text-[#87CEEB] transition-colors">dlakavusiseko@gmail.com</p>
+                                                <p
+                                                    class="text-white font-medium cursor-pointer hover:text-[#87CEEB] transition-colors">
+                                                    dlakavusiseko@gmail.com</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Phone -->
-                                <div class="contact-card group bg-[#3a3a3a]/50 rounded-xl p-4 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#87CEEB]/5">
+                                <div
+                                    class="contact-card group bg-[#3a3a3a]/50 rounded-xl p-4 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#87CEEB]/5">
                                     <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 rounded-full bg-[#87CEEB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
-                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                        <div
+                                            class="w-12 h-12 rounded-full bg-[#87CEEB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                                <path
+                                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Phone</p>
+                                            <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold">
+                                                Phone</p>
                                             <p class="text-white font-medium">078 880 4748</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Location -->
-                                <div class="contact-card group bg-[#3a3a3a]/50 rounded-xl p-4 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#87CEEB]/5">
+                                <div
+                                    class="contact-card group bg-[#3a3a3a]/50 rounded-xl p-4 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#87CEEB]/5">
                                     <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 rounded-full bg-[#87CEEB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                        <div
+                                            class="w-12 h-12 rounded-full bg-[#87CEEB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
                                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                                                 <circle cx="12" cy="10" r="3" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Location</p>
+                                            <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold">
+                                                Location</p>
                                             <p class="text-white font-medium">Cape Town, Western Cape, South Africa</p>
                                         </div>
                                     </div>
@@ -246,7 +284,8 @@
 
                             <!-- Social Links -->
                             <div class="pt-4">
-                                <h4 class="text-lg font-semibold mb-4 text-[#87CEEB] font-['Playfair_Display']">Follow Me</h4>
+                                <h4 class="text-lg font-semibold mb-4 text-[#87CEEB] font-['Playfair_Display']">Follow
+                                    Me</h4>
                                 <div class="flex space-x-3">
                                     <a href="https://github.com/siseko-D" target="_blank"
                                         class="w-12 h-12 rounded-full bg-[#444444] flex items-center justify-center text-white hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-[#87CEEB]/20">
@@ -266,67 +305,89 @@
 
                         <!-- Right: Contact Form -->
                         <div class="contact-form-animate">
-                            <div class="bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-[#87CEEB]/15 hover:border-[#87CEEB]/30 transition-all duration-500">
-                                <h3 class="text-2xl font-semibold mb-6 text-[#87CEEB] font-['Playfair_Display']">Send Me a Message</h3>
+                            <div
+                                class="bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-[#87CEEB]/15 hover:border-[#87CEEB]/30 transition-all duration-500">
+                                <h3 class="text-2xl font-semibold mb-6 text-[#87CEEB] font-['Playfair_Display']">Send Me
+                                    a Message</h3>
                                 <p class="text-gray-400 text-sm mb-6">I'll get back to you within 24 hours.</p>
 
                                 <form id="contact-form" action="https://formspree.io/f/mandgzqy" method="POST">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div class="space-y-1.5">
-                                            <label for="name" class="block text-sm font-medium text-gray-300">Your Name</label>
+                                            <label for="name" class="block text-sm font-medium text-gray-300">Your
+                                                Name</label>
                                             <input type="text" id="name" name="name" required
                                                 class="w-full px-4 py-3 bg-[#2a2a2a] border border-[#555555] rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#87CEEB] focus:border-transparent transition-all duration-300 placeholder-gray-500"
                                                 placeholder="Enter your name" />
-                                            <p class="text-red-400 text-sm hidden" id="name-error">Please enter your name</p>
+                                            <p class="text-red-400 text-sm hidden" id="name-error">Please enter your
+                                                name</p>
                                         </div>
                                         <div class="space-y-1.5">
-                                            <label for="email" class="block text-sm font-medium text-gray-300">Your Email</label>
+                                            <label for="email" class="block text-sm font-medium text-gray-300">Your
+                                                Email</label>
                                             <input type="email" id="email" name="email" required
                                                 class="w-full px-4 py-3 bg-[#2a2a2a] border border-[#555555] rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#87CEEB] focus:border-transparent transition-all duration-300 placeholder-gray-500"
                                                 placeholder="Enter your email" />
-                                            <p class="text-red-400 text-sm hidden" id="email-error">Please enter a valid email</p>
+                                            <p class="text-red-400 text-sm hidden" id="email-error">Please enter a valid
+                                                email</p>
                                         </div>
                                     </div>
 
                                     <div class="space-y-1.5 mt-5">
-                                        <label for="subject" class="block text-sm font-medium text-gray-300">Subject</label>
+                                        <label for="subject"
+                                            class="block text-sm font-medium text-gray-300">Subject</label>
                                         <input type="text" id="subject" name="subject" required
                                             class="w-full px-4 py-3 bg-[#2a2a2a] border border-[#555555] rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#87CEEB] focus:border-transparent transition-all duration-300 placeholder-gray-500"
                                             placeholder="What is this regarding?" />
-                                        <p class="text-red-400 text-sm hidden" id="subject-error">Please enter a subject</p>
+                                        <p class="text-red-400 text-sm hidden" id="subject-error">Please enter a subject
+                                        </p>
                                     </div>
 
                                     <div class="space-y-1.5 mt-5">
-                                        <label for="message" class="block text-sm font-medium text-gray-300">Your Message</label>
+                                        <label for="message" class="block text-sm font-medium text-gray-300">Your
+                                            Message</label>
                                         <textarea id="message" name="message" rows="5" required
                                             class="w-full px-4 py-3 bg-[#2a2a2a] border border-[#555555] rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#87CEEB] focus:border-transparent transition-all duration-300 resize-none placeholder-gray-500"
                                             placeholder="Tell me about your project or inquiry..."></textarea>
-                                        <p class="text-red-400 text-sm hidden" id="message-error">Please enter your message</p>
+                                        <p class="text-red-400 text-sm hidden" id="message-error">Please enter your
+                                            message</p>
                                     </div>
 
                                     <input type="text" name="_gotcha" style="display:none" />
-                                    <input type="hidden" name="_next" value="https://siyamthanda-dlakavu-profile.netlify.app/" />
+                                    <input type="hidden" name="_next"
+                                        value="https://siyamthanda-dlakavu-profile.netlify.app/" />
 
                                     <button type="submit"
                                         class="w-full bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] text-[#1a1a1a] font-semibold py-3.5 px-6 rounded-xl hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center space-x-3 mt-6 group">
                                         <span>Send Message</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="group-hover:translate-x-1 transition-transform duration-300">
                                             <line x1="22" y1="2" x2="11" y2="13" />
                                             <polygon points="22 2 15 22 11 13 2 9 22 2" />
                                         </svg>
                                     </button>
                                 </form>
 
-                                <div id="form-success" class="mt-4 p-4 bg-green-900/40 text-green-300 rounded-xl hidden border border-green-500/20">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                <div id="form-success"
+                                    class="mt-4 p-4 bg-green-900/40 text-green-300 rounded-xl hidden border border-green-500/20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     Your message has been sent successfully! I'll get back to you soon.
                                 </div>
 
-                                <div id="form-error" class="mt-4 p-4 bg-red-900/40 text-red-300 rounded-xl hidden border border-red-500/20">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                <div id="form-error"
+                                    class="mt-4 p-4 bg-red-900/40 text-red-300 rounded-xl hidden border border-red-500/20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     There was an error sending your message. Please try again or email me directly.
                                 </div>
@@ -355,7 +416,8 @@
                 <span class="w-px h-6 bg-gray-600 hidden sm:block"></span>
                 <span class="text-sm text-gray-400">
                     <i class="fas fa-envelope mr-1 text-[#87CEEB]"></i>
-                    <a href="mailto:dlakavusiseko@gmail.com" class="hover:text-[#87CEEB] transition-colors">dlakavusiseko@gmail.com</a>
+                    <a href="mailto:dlakavusiseko@gmail.com"
+                        class="hover:text-[#87CEEB] transition-colors">dlakavusiseko@gmail.com</a>
                 </span>
                 <span class="text-sm text-gray-400">
                     <i class="fas fa-phone mr-1 text-[#87CEEB]"></i>

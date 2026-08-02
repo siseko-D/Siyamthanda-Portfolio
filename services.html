@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Siyamthanda Dlakavu - About</title>
+    <title>Siyamthanda Dlakavu - Services</title>
     <link rel="icon" type="image/x-icon" href="images/Siyamthanda.jpg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="tailwind" content="none" />
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/services.css" />
 </head>
 
 <body class="antialiased">
@@ -27,12 +27,16 @@
     <header id="navbar-header"
         class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
         <nav class="container mx-auto px-4 py-3 flex items-center justify-between md:justify-center relative">
+            <div class="md:hidden flex-1 text-left">
+                <p class="text-xs text-gray-300 truncate max-w-[160px]">
+                    Designing, building &amp; scaling
+                </p>
+            </div>
             <div class="hidden md:flex space-x-4 md:space-x-8">
                 <a href="index.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Home</a>
-                <a href="about.html"
-                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300 active">About</a>
+                <a href="about.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">About</a>
                 <a href="services.html"
-                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Services</a>
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300 active">Services</a>
                 <a href="skills.html"
                     class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Skills</a>
                 <a href="sideprojects.html"
@@ -42,7 +46,6 @@
                 <a href="contactme.html"
                     class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Contact</a>
             </div>
-            <div class="md:hidden"></div>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none relative z-60"
                 aria-label="Toggle navigation">
                 <div
@@ -76,7 +79,7 @@
                 <span class="link-text">Home</span>
                 <span class="link-arrow">→</span>
             </a>
-            <a href="about.html" class="nav-link-mobile group active">
+            <a href="about.html" class="nav-link-mobile group">
                 <div class="icon-container">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -87,7 +90,7 @@
                 <span class="link-text">About</span>
                 <span class="link-arrow">→</span>
             </a>
-            <a href="services.html" class="nav-link-mobile group">
+            <a href="services.html" class="nav-link-mobile group active">
                 <div class="icon-container">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -151,30 +154,26 @@
 
     <main class="pt-20">
         <!-- ===== HERO BANNER ===== -->
-        <section class="relative h-[50vh] md:h-[60vh] flex items-center justify-center text-white overflow-hidden">
-            <!-- Background Image with Overlay -->
+        <section class="relative h-[40vh] md:h-[50vh] flex items-center justify-center text-white overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="images/about/about-hero.jpg" alt="Developer workspace" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/80 via-[#2a2a2a]/70 to-[#0a0a0a]/90">
+                <img src="images/service/service-hero.jpg" alt="Services"
+                    class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/85 via-[#2a2a2a]/75 to-[#0a0a0a]/90">
                 </div>
             </div>
-
-            <!-- Hero Content -->
             <div class="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto hero-banner-content">
-                <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">About Me</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mt-3 mb-4 drop-shadow-lg">
-                    Crafting Digital Excellence
+                <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">What I Do</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-3 mb-4 drop-shadow-lg">
+                    My Services
                 </h1>
                 <p class="text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed drop-shadow-md text-gray-300">
-                    Building digital products that empower entrepreneurs &amp; startups
+                    From landing pages to full‑scale systems — I build digital solutions that drive results.
                 </p>
                 <div class="mt-6 flex items-center justify-center gap-4">
                     <span class="inline-block w-2 h-2 bg-[#87CEEB] rounded-full animate-pulse"></span>
-                    <span class="text-sm text-gray-300">Open for opportunities</span>
+                    <span class="text-sm text-gray-300">Let's bring your vision to life</span>
                 </div>
             </div>
-
-            <!-- Scroll indicator -->
             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
                 <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -183,153 +182,163 @@
             </div>
         </section>
 
-        <!-- ===== ABOUT SECTION – with grid-bg class added ===== -->
-        <section id="about" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white relative grid-bg">
-            <!-- Decorative element -->
+        <!-- ===== SERVICES SECTION ===== -->
+        <section id="services" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white relative grid-bg">
             <div
                 class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30">
             </div>
-
             <div class="container mx-auto px-4">
-                <!-- Section Header -->
                 <div class="text-center mb-16">
-                    <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">Who I Am</span>
-                    <h2 class="text-4xl md:text-5xl font-bold mt-2 font-['Playfair_Display']">More About Me</h2>
+                    <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">Offerings</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 font-['Playfair_Display']">What I Can Build For You
+                    </h2>
                     <div class="w-16 h-1 bg-[#87CEEB] mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
-                    <!-- Left Column - Profile Image -->
-                    <div class="lg:w-1/3 flex flex-col items-center about-image-animate">
-                        <div class="relative">
-                            <!-- Glow ring behind image -->
-                            <div class="absolute -inset-4 bg-[#87CEEB]/20 rounded-full blur-2xl opacity-50"></div>
-                            <div
-                                class="w-64 h-64 rounded-full overflow-hidden shadow-2xl glowing-border-animation relative">
-                                <img src="/images/Siyamthanda.jpg" alt="Siyamthanda Dlakavu"
-                                    class="w-full h-full object-cover" />
-                            </div>
-                        </div>
-                        <!-- Name badge -->
-                        <div class="mt-6 text-center">
-                            <p class="text-xl font-bold text-white font-['Playfair_Display']">Siyamthanda Dlakavu</p>
-                            <p class="text-sm text-[#87CEEB]">Full Stack Developer</p>
-                        </div>
-                        <!-- Location -->
-                        <div class="mt-3 flex items-center gap-2 text-sm text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="text-[#87CEEB]">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                                <circle cx="12" cy="10" r="3" />
-                            </svg>
-                            Cape Town, South Africa
-                        </div>
-                    </div>
-
-                    <!-- Right Column - Content -->
-                    <div class="lg:w-2/3">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <!-- Summary Card -->
-                            <div
-                                class="about-content-left bg-gradient-to-br from-[#3a3a3a] to-[#404040] p-6 md:p-8 rounded-2xl border border-[#87CEEB]/20 shadow-xl hover:shadow-[#87CEEB]/10 transition-all duration-300">
-                                <div class="mb-4">
-                                    <span
-                                        class="text-xs uppercase tracking-wider text-[#87CEEB] font-semibold">01</span>
-                                    <h3 class="text-xl font-bold text-white mt-1 font-['Playfair_Display']">Summary</h3>
-                                </div>
-                                <p class="text-gray-200 leading-relaxed text-sm">
-                                    Full Stack Developer &amp; Project Coordinator specializing in Angular, TypeScript,
-                                    C#,
-                                    and .NET.<br /><br />
-                                    Leveraging AI and generative tools to reduce development time by 25% and accelerate
-                                    delivery; builds responsive single-page applications with 95%+ mobile
-                                    responsiveness,
-                                    designs secure RESTful APIs.<br /><br />
-                                    Former IT Administrator with hands-on experience supporting 3+ systems and cloud
-                                    fundamentals,
-                                    bridging development and operations to deliver scalable, maintainable solutions.
-                                </p>
-                            </div>
-
-                            <!-- Goals Card -->
-                            <div
-                                class="about-content-right bg-gradient-to-br from-[#404040] to-[#3a3a3a] p-6 md:p-8 rounded-2xl border border-[#87CEEB]/20 shadow-xl hover:shadow-[#87CEEB]/10 transition-all duration-300">
-                                <div class="mb-4">
-                                    <span
-                                        class="text-xs uppercase tracking-wider text-[#87CEEB] font-semibold">02</span>
-                                    <h3 class="text-xl font-bold text-white mt-1 font-['Playfair_Display']">Career Goals
-                                    </h3>
-                                </div>
-                                <p class="text-gray-200 leading-relaxed text-sm">
-                                    My goal is to secure a full-time position as a Full Stack Developer, where I can
-                                    continue to learn and grow. Currently, I'm focused on:
-                                </p>
-                                <ul class="mt-4 space-y-2 text-sm text-gray-300">
-                                    <li class="flex items-start gap-3">
-                                        <span class="text-[#87CEEB] mt-1">▸</span>
-                                        Building SPAs with Angular and managing state with RxJS
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <span class="text-[#87CEEB] mt-1">▸</span>
-                                        Developing RESTful APIs with .NET and documenting with Swagger
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <span class="text-[#87CEEB] mt-1">▸</span>
-                                        Designing databases in SQL Server and MySQL
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <span class="text-[#87CEEB] mt-1">▸</span>
-                                        Writing clean, maintainable code with best practices
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Stats Row -->
-                        <div class="grid grid-cols-3 gap-4 mt-6 about-quote-animate">
-                            <div
-                                class="bg-[#3a3a3a]/50 rounded-xl p-4 text-center border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300">
-                                <span class="block text-2xl font-bold text-[#87CEEB]">2</span>
-                                <span class="text-xs text-gray-400">Client Projects</span>
-                            </div>
-                            <div
-                                class="bg-[#3a3a3a]/50 rounded-xl p-4 text-center border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300">
-                                <span class="block text-2xl font-bold text-[#87CEEB]">∞</span>
-                                <span class="text-xs text-gray-400">Learning</span>
-                            </div>
-                            <div
-                                class="bg-[#3a3a3a]/50 rounded-xl p-4 text-center border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300">
-                                <span class="block text-2xl font-bold text-[#87CEEB]">2026</span>
-                                <span class="text-xs text-gray-400">Ready</span>
-                            </div>
-                        </div>
-
-                        <!-- Quote -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Card 1: Websites -->
+                    <div
+                        class="service-card bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#87CEEB]/5 group">
                         <div
-                            class="about-quote-animate mt-8 text-center italic text-gray-300 border-l-4 border-[#87CEEB] pl-6 py-4 bg-[#3a3a3a]/30 rounded-r-xl">
-                            <p class="text-lg font-light">"Passionate about creating innovative solutions through AI and
-                                clean code."</p>
+                            class="service-icon w-14 h-14 rounded-xl bg-[#87CEEB]/10 flex items-center justify-center mb-5 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
+                            <i class="fas fa-globe text-[#87CEEB] text-2xl"></i>
                         </div>
-
-                        <!-- CTA Buttons -->
-                        <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
-                            <a href="contactme.html"
-                                class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2.5 px-6 rounded-full shadow-lg hover:bg-[#6abfe1] transition-all duration-300 transform hover:scale-105">
-                                Let's Connect
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12" />
-                                    <polyline points="12 5 19 12 12 19" />
-                                </svg>
-                            </a>
-                            <a href="sideprojects.html"
-                                class="inline-flex items-center gap-2 border border-[#87CEEB] text-white font-semibold py-2.5 px-6 rounded-full hover:bg-[#87CEEB]/10 transition-all duration-300">
-                                View My Work
-                            </a>
-                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-['Playfair_Display']">Websites</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Landing pages, business websites, blogs, and content‑driven sites. Clean, responsive, and
+                            designed to convert.
+                        </p>
+                        <ul class="mt-4 space-y-1 text-xs text-gray-400">
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Landing Pages</li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Business &amp;
+                                Portfolio</li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Blogs &amp; News
+                            </li>
+                        </ul>
                     </div>
+
+                    <!-- Card 2: Systems -->
+                    <div
+                        class="service-card bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#87CEEB]/5 group">
+                        <div
+                            class="service-icon w-14 h-14 rounded-xl bg-[#87CEEB]/10 flex items-center justify-center mb-5 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
+                            <i class="fas fa-server text-[#87CEEB] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-['Playfair_Display']">Custom Systems</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Full‑scale digital systems tailored to your business — booking engines, CRM, email services,
+                            and more.
+                        </p>
+                        <ul class="mt-4 space-y-1 text-xs text-gray-400">
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Booking Systems
+                            </li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Email &amp;
+                                Automation</li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Custom Dashboards
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Apps -->
+                    <div
+                        class="service-card bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#87CEEB]/5 group">
+                        <div
+                            class="service-icon w-14 h-14 rounded-xl bg-[#87CEEB]/10 flex items-center justify-center mb-5 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
+                            <i class="fas fa-mobile-alt text-[#87CEEB] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-['Playfair_Display']">Mobile Apps</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Native and cross‑platform mobile apps for iOS and Android. Built with performance and user
+                            experience in mind.
+                        </p>
+                        <ul class="mt-4 space-y-1 text-xs text-gray-400">
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> iOS &amp; Android
+                            </li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Cross‑Platform
+                            </li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Progressive Web
+                                Apps</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 4: Redesign / Revamp -->
+                    <div
+                        class="service-card bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#87CEEB]/5 group">
+                        <div
+                            class="service-icon w-14 h-14 rounded-xl bg-[#87CEEB]/10 flex items-center justify-center mb-5 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
+                            <i class="fas fa-paint-brush text-[#87CEEB] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-['Playfair_Display']">Redesign &amp; Revamp
+                        </h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Give your existing website a fresh look and improved performance. Modern, fast, and
+                            mobile‑optimised.
+                        </p>
+                        <ul class="mt-4 space-y-1 text-xs text-gray-400">
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> UI/UX Overhaul
+                            </li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Speed Optimisation
+                            </li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Full Re‑design
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 5: Page Edits -->
+                    <div
+                        class="service-card bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#87CEEB]/5 group">
+                        <div
+                            class="service-icon w-14 h-14 rounded-xl bg-[#87CEEB]/10 flex items-center justify-center mb-5 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
+                            <i class="fas fa-edit text-[#87CEEB] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-['Playfair_Display']">Page Edits</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Quick updates, content changes, new sections, or bug fixes. Fast, reliable, and affordable.
+                        </p>
+                        <ul class="mt-4 space-y-1 text-xs text-gray-400">
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Content Updates
+                            </li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> New Sections</li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Bug Fixes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 6: Full Systems -->
+                    <div
+                        class="service-card bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#87CEEB]/5 group">
+                        <div
+                            class="service-icon w-14 h-14 rounded-xl bg-[#87CEEB]/10 flex items-center justify-center mb-5 group-hover:bg-[#87CEEB]/20 transition-all duration-300">
+                            <i class="fas fa-cubes text-[#87CEEB] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-['Playfair_Display']">Full Business Systems
+                        </h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            End‑to‑end digital ecosystems — from booking and invoicing to email automation and client
+                            management.
+                        </p>
+                        <ul class="mt-4 space-y-1 text-xs text-gray-400">
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Booking + Payment
+                            </li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> CRM &amp;
+                                Automation</li>
+                            <li class="flex items-center gap-2"><span class="text-[#87CEEB]">✓</span> Custom
+                                Integrations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CTA at bottom -->
+                <div class="text-center mt-16">
+                    <p class="text-gray-300 mb-6">Have a specific project in mind? Let's talk.</p>
+                    <a href="contactme.html"
+                        class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300 transform hover:scale-105">
+                        Get in Touch
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
@@ -345,6 +354,7 @@
             <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 order-1 md:order-2">
                 <a href="index.html" class="text-sm hover:text-[#87CEEB] transition-colors">Home</a>
                 <a href="about.html" class="text-sm hover:text-[#87CEEB] transition-colors">About</a>
+                <a href="services.html" class="text-sm hover:text-[#87CEEB] transition-colors">Services</a>
                 <a href="skills.html" class="text-sm hover:text-[#87CEEB] transition-colors">Skills</a>
                 <a href="sideprojects.html" class="text-sm hover:text-[#87CEEB] transition-colors">Personal Projects</a>
                 <a href="clientwork.html" class="text-sm hover:text-[#87CEEB] transition-colors">Client Projects</a>
