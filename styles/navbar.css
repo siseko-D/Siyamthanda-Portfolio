@@ -44,35 +44,9 @@
         transform: translateY(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-/* ===== Back to Landing Page Link – BLUE, NO UNDERLINE ===== */
-.nav-link-back {
-    color: #87CEEB !important;
-    transition: color 0.3s ease;
-    text-decoration: none !important;
-}
-
-.nav-link-back:hover {
-    color: #87CEEB !important;
-    text-decoration: none !important;
-}
-
-/* Remove the underline animation for this link */
-.nav-link-back::after {
-    display: none !important;
-}
-
-/* Keep the SVG icon blue too */
-.nav-link-back svg {
-    stroke: #87CEEB !important;
-    transition: stroke 0.3s ease;
-}
-
-.nav-link-back:hover svg {
-    stroke: #87CEEB !important;
 }

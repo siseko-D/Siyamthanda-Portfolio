@@ -27,7 +27,8 @@
         class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
         <nav class="container mx-auto px-4 py-3 flex items-center justify-between md:justify-center relative">
             <div class="hidden md:flex space-x-4 md:space-x-8">
-                <a href="index.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Home</a>
+                <a href="index.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Home</a>
                 <a href="about.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">About</a>
                 <a href="skills.html"
                     class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Skills</a>
@@ -37,15 +38,6 @@
                     class="nav-link text-white hover:text-[#87CEEB] transition duration-300 active">Client Projects</a>
                 <a href="contactme.html"
                     class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Contact</a>
-                <!-- Blue back link -->
-                <a href="https://siyamthanda-landing-page.netlify.app/" target="_blank"
-                    class="nav-link-back flex items-center gap-1 border-l border-[#87CEEB]/30 pl-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                    Back to Landing Page
-                </a>
             </div>
             <div class="md:hidden"></div>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none relative z-60"
@@ -89,7 +81,7 @@
                         <circle cx="12" cy="7" r="4" />
                     </svg>
                 </div>
-                <span class="link-text">Introduction</span>
+                <span class="link-text">About</span>
                 <span class="link-arrow">→</span>
             </a>
             <a href="skills.html" class="nav-link-mobile group">
@@ -147,10 +139,10 @@
         <section class="relative h-[40vh] md:h-[50vh] flex items-center justify-center text-white overflow-hidden">
             <!-- Background Image with Overlay -->
             <div class="absolute inset-0 z-0">
-                <img src="images/client/client-hero.jpg"
-                    alt="Client projects showcase"
+                <img src="images/client/client-hero.jpg" alt="Client projects showcase"
                     class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/85 via-[#2a2a2a]/75 to-[#0a0a0a]/90"></div>
+                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/85 via-[#2a2a2a]/75 to-[#0a0a0a]/90">
+                </div>
             </div>
 
             <!-- Hero Content -->
@@ -171,15 +163,19 @@
             <!-- Scroll indicator -->
             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
                 <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
             </div>
         </section>
 
         <!-- ===== CLIENT PROJECTS SECTION – with grid-bg ===== -->
-        <section id="client-projects" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white relative grid-bg">
+        <section id="client-projects"
+            class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white relative grid-bg">
             <!-- Decorative top line -->
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30"></div>
+            <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30">
+            </div>
 
             <div class="container mx-auto px-4">
                 <!-- Section Header -->
@@ -196,7 +192,8 @@
                         <img src="images/pertunia.png" alt="Pertunia Counselling" class="w-full h-auto object-cover"
                             loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Pertunia Counselling and Wellness</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Pertunia Counselling and
+                                Wellness</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">Providing professional social work and
                                 Employee Assistance Program (EAP) services through therapeutic and supportive
                                 interventions. We offer a safe, confidential environment where individuals, groups,
@@ -243,7 +240,8 @@
                         <img src="images/ntlakuso.png" alt="Ntlakuso" class="w-full h-auto object-cover"
                             loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Ntlakuso Creative Agency</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Ntlakuso Creative Agency
+                            </h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">Ideas that ignite brands & experiences. We
                                 fuse UI/UX mastery, Digital Marketing & Web Development - crafting digital identities
                                 that resonate across South Africa and beyond.</p>
@@ -287,9 +285,12 @@
         </section>
 
         <!-- ===== CLIENT TESTIMONIALS SECTION ===== -->
-        <section id="testimonials" class="py-20 bg-gradient-to-br from-[#252525] to-[#2f2f2f] text-white relative grid-bg">
+        <section id="testimonials"
+            class="py-20 bg-gradient-to-br from-[#252525] to-[#2f2f2f] text-white relative grid-bg">
             <!-- Decorative top line -->
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30"></div>
+            <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30">
+            </div>
 
             <div class="container mx-auto px-4">
                 <!-- Section Header -->
@@ -301,24 +302,33 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     <!-- Testimonial 1 - Ndhavuko Bornwise Baloyi -->
-                    <div class="testimonial-card bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#87CEEB]/5 group">
+                    <div
+                        class="testimonial-card bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#87CEEB]/5 group">
                         <!-- Quote Icon -->
-                        <div class="text-[#87CEEB] text-4xl mb-4 opacity-30 group-hover:opacity-60 transition-opacity duration-300">
+                        <div
+                            class="text-[#87CEEB] text-4xl mb-4 opacity-30 group-hover:opacity-60 transition-opacity duration-300">
                             <i class="fas fa-quote-left"></i>
                         </div>
 
                         <!-- Testimonial Text -->
                         <p class="text-gray-300 leading-relaxed text-sm md:text-base italic mb-6">
-                            "Had the pleasure of working with Siyamthanda on the development of our website, and I can confidently say he delivered beyond expectations. He is highly skilled, detail-oriented, and very professional in his approach. From the initial concept to the final product, he ensured that everything was clean, modern, and aligned with our brand vision.
+                            "Had the pleasure of working with Siyamthanda on the development of our website, and I can
+                            confidently say he delivered beyond expectations. He is highly skilled, detail-oriented, and
+                            very professional in his approach. From the initial concept to the final product, he ensured
+                            that everything was clean, modern, and aligned with our brand vision.
                             <br /><br />
-                            What stood out the most was his ability to understand our needs and turn them into a functional and visually appealing website. Communication was smooth throughout the process, and he was always open to feedback and quick to implement changes.
+                            What stood out the most was his ability to understand our needs and turn them into a
+                            functional and visually appealing website. Communication was smooth throughout the process,
+                            and he was always open to feedback and quick to implement changes.
                             <br /><br />
-                            I would highly recommend Siyamthanda to anyone looking for a reliable and talented web developer. Looking forward to working with him again in the future."
+                            I would highly recommend Siyamthanda to anyone looking for a reliable and talented web
+                            developer. Looking forward to working with him again in the future."
                         </p>
 
                         <!-- Client Info -->
                         <div class="flex items-center gap-4 mt-4 pt-4 border-t border-[#555555]/30">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#87CEEB]/20 to-[#87CEEB]/5 flex items-center justify-center text-[#87CEEB] font-bold text-lg">
+                            <div
+                                class="w-12 h-12 rounded-full bg-gradient-to-br from-[#87CEEB]/20 to-[#87CEEB]/5 flex items-center justify-center text-[#87CEEB] font-bold text-lg">
                                 NB
                             </div>
                             <div>
@@ -336,22 +346,28 @@
                     </div>
 
                     <!-- Testimonial 2 - Sinaye Magxala -->
-                    <div class="testimonial-card bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#87CEEB]/5 group">
+                    <div
+                        class="testimonial-card bg-[#3a3a3a]/60 backdrop-blur-sm rounded-2xl p-8 border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-500 hover:shadow-xl hover:shadow-[#87CEEB]/5 group">
                         <!-- Quote Icon -->
-                        <div class="text-[#87CEEB] text-4xl mb-4 opacity-30 group-hover:opacity-60 transition-opacity duration-300">
+                        <div
+                            class="text-[#87CEEB] text-4xl mb-4 opacity-30 group-hover:opacity-60 transition-opacity duration-300">
                             <i class="fas fa-quote-left"></i>
                         </div>
 
                         <!-- Testimonial Text -->
                         <p class="text-gray-300 leading-relaxed text-sm md:text-base italic mb-6">
-                            "Siyamthanda is an incredibly helpful and supportive developer. What stands out most is how he backs his words with action — he delivers on what he commits to, and does so promptly.
+                            "Siyamthanda is an incredibly helpful and supportive developer. What stands out most is how
+                            he backs his words with action — he delivers on what he commits to, and does so promptly.
                             <br /><br />
-                            Working with him as a client, I found him reliable, professional, and easy to collaborate with. I would highly recommend him to anyone looking for a skilled and dependable Full Stack Developer."
+                            Working with him as a client, I found him reliable, professional, and easy to collaborate
+                            with. I would highly recommend him to anyone looking for a skilled and dependable Full Stack
+                            Developer."
                         </p>
 
                         <!-- Client Info -->
                         <div class="flex items-center gap-4 mt-4 pt-4 border-t border-[#555555]/30">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#87CEEB]/20 to-[#87CEEB]/5 flex items-center justify-center text-[#87CEEB] font-bold text-lg">
+                            <div
+                                class="w-12 h-12 rounded-full bg-gradient-to-br from-[#87CEEB]/20 to-[#87CEEB]/5 flex items-center justify-center text-[#87CEEB] font-bold text-lg">
                                 SM
                             </div>
                             <div>
