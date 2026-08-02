@@ -169,7 +169,6 @@
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
@@ -220,11 +219,9 @@
     0% {
         width: 0%;
     }
-
     50% {
         width: 70%;
     }
-
     100% {
         width: 0%;
     }
@@ -235,7 +232,6 @@
     .project-categories {
         gap: 8px;
     }
-
     .category-tab {
         padding: 8px 16px;
         font-size: 0.85rem;
@@ -252,21 +248,105 @@
         scrollbar-width: thin;
         scrollbar-color: #87CEEB #333333;
     }
-
     .project-categories::-webkit-scrollbar {
         height: 4px;
     }
-
     .project-categories::-webkit-scrollbar-track {
         background: #333333;
     }
-
     .project-categories::-webkit-scrollbar-thumb {
         background: #87CEEB;
         border-radius: 10px;
     }
-
     .category-tab {
         flex: 0 0 auto;
     }
+}
+
+/* ===== Hero Banner Animation ===== */
+.hero-banner-content {
+    opacity: 0;
+    animation: heroFadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-banner-content span {
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-banner-content h1 {
+    animation-delay: 0.4s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-banner-content p {
+    animation-delay: 0.6s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-banner-content .flex {
+    animation-delay: 0.8s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ===== Premium Abstract Background – Grid + Glow ===== */
+.grid-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+        linear-gradient(rgba(135, 206, 235, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(135, 206, 235, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+.grid-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(circle at 15% 25%, rgba(135, 206, 235, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 70%, rgba(135, 206, 235, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(135, 206, 235, 0.05) 0%, transparent 30%);
+    pointer-events: none;
+}
+
+.grid-bg .container,
+.grid-bg .relative.z-10 {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Card Enhancements ===== */
+.card-animation {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-animation:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(135, 206, 235, 0.08);
+    border-color: rgba(135, 206, 235, 0.3);
 }

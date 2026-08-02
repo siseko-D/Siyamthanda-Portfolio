@@ -144,10 +144,53 @@
     </div>
 
     <main class="pt-20">
-        <!-- Projects section -->
-        <section id="projects" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white visible">
+        <!-- ===== HERO BANNER ===== -->
+        <section class="relative h-[40vh] md:h-[50vh] flex items-center justify-center text-white overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1600&q=80"
+                    alt="Code on screen"
+                    class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/85 via-[#2a2a2a]/75 to-[#0a0a0a]/90"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto hero-banner-content">
+                <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">Portfolio</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-3 mb-4 drop-shadow-lg">
+                    Personal Projects
+                </h1>
+                <p class="text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed drop-shadow-md text-gray-300">
+                    Exploring new technologies and building creative solutions.
+                </p>
+                <div class="mt-6 flex items-center justify-center gap-4">
+                    <span class="inline-block w-2 h-2 bg-[#87CEEB] rounded-full animate-pulse"></span>
+                    <span class="text-sm text-gray-300">Passion projects in action</span>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+                <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS SECTION – with grid-bg ===== -->
+        <section id="projects" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white relative grid-bg visible">
+            <!-- Decorative top line -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30"></div>
+
             <div class="container mx-auto px-4">
-                <h2 class="section-header">Personal Projects</h2>
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">Code</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 font-['Playfair_Display']">Personal Projects</h2>
+                    <div class="w-16 h-1 bg-[#87CEEB] mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Category Tabs -->
                 <div class="project-categories">
                     <button class="category-tab active" data-category="all">All Projects</button>
                     <button class="category-tab" data-category="html-css-js">HTML, CSS & JS</button>
@@ -158,17 +201,19 @@
                     <button class="category-tab" data-category="figma">Figma Prototypes</button>
                     <button class="category-tab" data-category="development-phase">Development Phase</button>
                 </div>
+
+                <!-- Projects Grid -->
                 <div id="projects-grid" class="projects-grid mt-12">
                     <!-- FocusFlow -->
-                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                    <div class="project-card bg-[#444444]/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#555555] hover:border-[#87CEEB]/30 overflow-hidden card-animation flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:shadow-[#87CEEB]/5"
                         data-categories="html-css-js">
                         <img src="images/TaskMaster.png" srcset="images/TaskMaster.png 1x, images/TaskMaster.png 2x"
                             alt="Screenshot of the FocusFlow project" class="w-full h-auto" loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2">FocusFlow - Modern Productivity App</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">FocusFlow - Modern Productivity App</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">Feature-rich productivity application to
                                 help users manage tasks efficiently with a beautiful, intuitive interface.</p>
-                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="bg-[#333333]/60 rounded-lg p-3 mb-4 text-sm text-gray-300 backdrop-blur-sm">
                                 <ul class="list-disc list-inside space-y-1">
                                     <li>✅ <span class="text-[#87CEEB]">Complete task management</span> with CRUD
                                         operations</li>
@@ -178,11 +223,9 @@
                             </div>
                             <div class="flex flex-wrap gap-4 mb-3">
                                 <a href="https://focusflowv2.netlify.app/" target="_blank"
-                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">🚀
-                                    Live Demo</a>
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀 Live Demo</a>
                                 <a href="https://github.com/siseko-D/FocusFlow" target="_blank"
-                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">📂
-                                    GitHub</a>
+                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂 GitHub</a>
                             </div>
                             <div
                                 class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
@@ -197,18 +240,19 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Web Dev Quiz -->
-                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                    <div class="project-card bg-[#444444]/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#555555] hover:border-[#87CEEB]/30 overflow-hidden card-animation flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:shadow-[#87CEEB]/5"
                         data-categories="react">
                         <img src="images/Dev-Quiz.PNG" srcset="images/Dev-Quiz.PNG 1x, images/Dev-Quiz.PNG 2x"
                             alt="Screenshot of the Web Development Quiz System project" class="w-full h-auto"
                             loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2">Web Development Quiz System</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Web Development Quiz System</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">Interactive, multi-topic quiz application to
                                 test knowledge of HTML, CSS, JavaScript, and React. Features instant feedback and
                                 detailed score tracking.</p>
-                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="bg-[#333333]/60 rounded-lg p-3 mb-4 text-sm text-gray-300 backdrop-blur-sm">
                                 <ul class="list-disc list-inside space-y-1">
                                     <li>✅ <span class="text-[#87CEEB]">50+ comprehensive questions</span> covering web
                                         dev fundamentals</li>
@@ -219,11 +263,9 @@
                             </div>
                             <div class="flex flex-wrap gap-4 mb-3">
                                 <a href="https://web-dev-quizv2.netlify.app/" target="_blank"
-                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">🚀
-                                    Live Demo</a>
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀 Live Demo</a>
                                 <a href="https://github.com/siseko-D/web-dev-quiz" target="_blank"
-                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">📂
-                                    GitHub</a>
+                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂 GitHub</a>
                             </div>
                             <div
                                 class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
@@ -237,16 +279,17 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Bias Audit Report -->
-                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                    <div class="project-card bg-[#444444]/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#555555] hover:border-[#87CEEB]/30 overflow-hidden card-animation flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:shadow-[#87CEEB]/5"
                         data-categories="react">
                         <img src="images/Bias.PNG" srcset="images/Bias.PNG 1x, images/Bias.PNG 2x"
                             alt="Screenshot of the Bias Audit Report project" class="w-full h-auto" loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2">Bias Audit Report - Ethical ML Analysis</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Bias Audit Report - Ethical ML Analysis</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">AI Bias Audit Tool that detects biases in
                                 datasets and ML models. Analyzes data fairness and suggests mitigation strategies.</p>
-                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="bg-[#333333]/60 rounded-lg p-3 mb-4 text-sm text-gray-300 backdrop-blur-sm">
                                 <ul class="list-disc list-inside space-y-1">
                                     <li>✅ <span class="text-[#87CEEB]">Comprehensive bias detection</span> across
                                         multiple dimensions</li>
@@ -257,11 +300,9 @@
                             </div>
                             <div class="flex flex-wrap gap-4 mb-3">
                                 <a href="https://bias-audit-report.netlify.app/" target="_blank"
-                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">🚀
-                                    Live Demo</a>
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀 Live Demo</a>
                                 <a href="https://github.com/siseko-D/bias-audit-report" target="_blank"
-                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">📂
-                                    GitHub</a>
+                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂 GitHub</a>
                             </div>
                             <div
                                 class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
@@ -277,17 +318,18 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Sentiment Analyzer -->
-                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                    <div class="project-card bg-[#444444]/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#555555] hover:border-[#87CEEB]/30 overflow-hidden card-animation flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:shadow-[#87CEEB]/5"
                         data-categories="python">
                         <img src="images/Sentiment.PNG" srcset="images/Sentiment.PNG 1x, images/Sentiment.PNG 2x"
                             alt="Screenshot of the Sentiment Dashboard project" class="w-full h-auto" loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2">Sentiment Analyzer Dashboard</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Sentiment Analyzer Dashboard</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">Full-stack sentiment analysis application
                                 using VADER to analyze emotional tone in text. Features real-time analysis and batch
                                 processing.</p>
-                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="bg-[#333333]/60 rounded-lg p-3 mb-4 text-sm text-gray-300 backdrop-blur-sm">
                                 <ul class="list-disc list-inside space-y-1">
                                     <li>✅ <span class="text-[#87CEEB]">Zero-cost deployment</span> on Render free tier
                                     </li>
@@ -298,11 +340,9 @@
                             </div>
                             <div class="flex flex-wrap gap-4 mb-3">
                                 <a href="https://sentiment-analyzer-frontend-ijud.onrender.com" target="_blank"
-                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">🚀
-                                    Live Demo</a>
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🚀 Live Demo</a>
                                 <a href="https://github.com/siseko-d/SentimentV3" target="_blank"
-                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">📂
-                                    GitHub</a>
+                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📂 GitHub</a>
                             </div>
                             <div
                                 class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
@@ -317,17 +357,18 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Zen AI Figma -->
-                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                    <div class="project-card bg-[#444444]/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#555555] hover:border-[#87CEEB]/30 overflow-hidden card-animation flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:shadow-[#87CEEB]/5"
                         data-categories="figma">
                         <img src="images/ZenAI.PNG" srcset="images/ZenAI.PNG 1x, images/ZenAI.PNG 2x"
                             alt="Screenshot of the Zen AI project" class="w-full h-auto" loading="lazy" />
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2">Zen AI - Mental Wellness App (Figma)</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Zen AI - Mental Wellness App (Figma)</h3>
                             <p class="text-gray-300 text-sm mb-4 flex-grow">Comprehensive mental wellness application
                                 design with AI-powered behavioral insights, community networking, and reflective
                                 journaling.</p>
-                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                            <div class="bg-[#333333]/60 rounded-lg p-3 mb-4 text-sm text-gray-300 backdrop-blur-sm">
                                 <ul class="list-disc list-inside space-y-1">
                                     <li>✅ <span class="text-[#87CEEB]">AI-powered behavioral insights</span> with
                                         predictive wellness</li>
@@ -339,11 +380,9 @@
                             <div class="flex flex-wrap gap-4 mb-3">
                                 <a href="https://www.figma.com/proto/DapO9DD1rwjZznHEF0JMp9/AI-Powered-Mental-Health-Assistant?node-id=1-137&starting-point-node-id=1%3A137"
                                     target="_blank"
-                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">🎨
-                                    Figma Prototype</a>
+                                    class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] hover:shadow-lg hover:shadow-[#87CEEB]/30 transition-all duration-300">🎨 Figma Prototype</a>
                                 <a href="documents/Zen AI - AI Insights for Inner Peace.pdf" target="_blank"
-                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">📄
-                                    Product Spec</a>
+                                    class="inline-flex items-center gap-2 border border-[#87CEEB] text-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#1a1a1a] transition-all duration-300">📄 Product Spec</a>
                             </div>
                             <div
                                 class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
@@ -358,32 +397,35 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Coming Soon - Angular -->
-                    <div class="project-card coming-soon-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                    <div class="project-card coming-soon-card bg-[#444444]/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#555555] hover:border-[#87CEEB]/30 overflow-hidden card-animation flex flex-col h-full transition-all duration-300"
                         data-categories="angular">
                         <div class="coming-soon-content">
                             <div class="coming-soon-icon">🅰️</div>
-                            <h3 class="text-2xl font-semibold mb-2">Angular Projects</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Angular Projects</h3>
                             <p class="text-gray-300 mb-4">Coming Soon! Building modern SPAs with Angular.</p>
                             <div class="coming-soon-progress">
                                 <div class="coming-soon-progress-bar"></div>
                             </div>
                         </div>
                     </div>
+
                     <!-- Coming Soon - C# .NET -->
-                    <div class="project-card coming-soon-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                    <div class="project-card coming-soon-card bg-[#444444]/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#555555] hover:border-[#87CEEB]/30 overflow-hidden card-animation flex flex-col h-full transition-all duration-300"
                         data-categories="csharp">
                         <div class="coming-soon-content">
                             <div class="coming-soon-icon">🔷</div>
-                            <h3 class="text-2xl font-semibold mb-2">C# .NET Projects</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">C# .NET Projects</h3>
                             <p class="text-gray-300 mb-4">Coming Soon! Building robust backend APIs with .NET.</p>
                             <div class="coming-soon-progress">
                                 <div class="coming-soon-progress-bar"></div>
                             </div>
                         </div>
                     </div>
+
                     <!-- Development Phase -->
-                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                    <div class="project-card bg-[#444444]/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#555555] hover:border-[#87CEEB]/30 overflow-hidden card-animation flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:shadow-[#87CEEB]/5"
                         data-categories="development-phase">
                         <div class="relative">
                             <img src="images/ZenAI.PNG" alt="Zen AI Development"
@@ -394,7 +436,7 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-2xl font-semibold mb-2">Zen AI - From Prototype to Production</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">Zen AI - From Prototype to Production</h3>
                             <p class="text-gray-400 text-sm">Building the actual product from Figma prototype.</p>
                             <div class="mt-3 flex items-center gap-2">
                                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
@@ -402,8 +444,9 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- TeachiQ -->
-                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                    <div class="project-card bg-[#444444]/80 backdrop-blur-sm rounded-xl shadow-lg border border-[#555555] hover:border-[#87CEEB]/30 overflow-hidden card-animation flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:shadow-[#87CEEB]/5"
                         data-categories="react nextjs">
                         <div class="relative">
                             <img src="images/TeachiQ.png" srcset="images/TeachiQ.png 1x, images/TeachiQ.png 2x"
@@ -417,10 +460,10 @@
                             </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-semibold mb-2">TeachiQ - AI Education Tools</h3>
+                            <h3 class="text-2xl font-semibold mb-2 font-['Playfair_Display']">TeachiQ - AI Education Tools</h3>
                             <p class="text-gray-300 text-sm mb-4">AI content generation tool for educators with Next.js
                                 and OpenAI API.</p>
-                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm">
+                            <div class="bg-[#333333]/60 rounded-lg p-3 mb-4 text-sm backdrop-blur-sm">
                                 <ul class="list-disc list-inside space-y-1">
                                     <li>✅ <span class="text-[#87CEEB]">AI-powered lesson plans</span> aligned with CAPS
                                     </li>
@@ -444,7 +487,7 @@
         </section>
     </main>
 
-    <!-- Premium Footer – MOVED OUTSIDE <main> -->
+    <!-- Premium Footer -->
     <footer id="footer" class="bg-[#222222] text-gray-300 py-8 border-t border-[#87CEEB]/20 footer-animate">
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="text-center order-2 md:order-1">
