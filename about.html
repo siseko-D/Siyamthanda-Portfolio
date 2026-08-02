@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siyamthanda Dlakavu - About</title>
+    <link rel="icon" type="image/x-icon" href="images/Siyamthanda.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="tailwind" content="none" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+</head>
+
+<body class="antialiased">
+    <!-- Mobile Menu Overlay -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <header id="navbar-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between md:justify-center relative">
+            <div class="hidden md:flex space-x-4 md:space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Home</a>
+                <a href="about.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300 active">About</a>
+                <a href="skills.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Skills</a>
+                <a href="sideprojects.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Personal Projects</a>
+                <a href="clientwork.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Client Projects</a>
+                <a href="contactme.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Contact</a>
+                <a href="https://siyamthanda-landing-page.netlify.app/" target="_blank"
+                    class="nav-link-back flex items-center gap-1 border-l border-[#87CEEB]/30 pl-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    Back to Landing Page
+                </a>
+            </div>
+            <div class="md:hidden"></div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none relative z-60"
+                aria-label="Toggle navigation">
+                <div
+                    class="hamburger-premium w-12 h-12 rounded-xl bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] border border-[#87CEEB]/30 shadow-lg hover:shadow-[#87CEEB]/20 hover:border-[#87CEEB]/50 transition-all duration-300 flex items-center justify-center">
+                    <div class="hamburger w-6 h-5 relative">
+                        <span class="hamburger-line hamburger-line-top"></span>
+                        <span class="hamburger-line hamburger-line-middle"></span>
+                        <span class="hamburger-line hamburger-line-bottom"></span>
+                    </div>
+                </div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-sm bg-gradient-to-b from-[#1a1a1a] via-[#222222] to-[#1a1a1a] backdrop-blur-2xl shadow-2xl transform translate-x-full duration-500 ease-out z-50 border-l border-[#87CEEB]/20 overflow-hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-menu"
+                class="close-button w-10 h-10 rounded-lg bg-gradient-to-br from-[#333333] to-[#2a2a2a] border border-[#87CEEB]/20 flex items-center justify-center text-white hover:text-[#87CEEB] text-2xl transition-all duration-300 hover:rotate-90 hover:border-[#87CEEB]/40 hover:shadow-lg">&times;</button>
+        </div>
+        <div class="flex flex-col space-y-2 p-6">
+            <a href="index.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                </div>
+                <span class="link-text">Home</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="about.html" class="nav-link-mobile group active">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </div>
+                <span class="link-text">Introduction</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="skills.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m12 8 4 4-4 4M8 12h8" />
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                    </svg>
+                </div>
+                <span class="link-text">Skills</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="sideprojects.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                        <line x1="8" x2="16" y1="21" y2="21" />
+                        <line x1="12" x2="12" y1="17" y2="21" />
+                    </svg>
+                </div>
+                <span class="link-text">Personal Projects</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="clientwork.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+                <span class="link-text">Client Projects</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="contactme.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </div>
+                <span class="link-text">Contact</span>
+                <span class="link-arrow">→</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="pt-20">
+        <!-- ===== HERO BANNER ===== -->
+        <section class="relative h-[50vh] md:h-[60vh] flex items-center justify-center text-white overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="images/about/about-hero.jpg"
+                    alt="Developer workspace"
+                    class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/80 via-[#2a2a2a]/70 to-[#0a0a0a]/90"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto hero-banner-content">
+                <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">About Me</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mt-3 mb-4 drop-shadow-lg">
+                    Crafting Digital Excellence
+                </h1>
+                <p class="text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed drop-shadow-md text-gray-300">
+                    Building digital products that empower entrepreneurs &amp; startups
+                </p>
+                <div class="mt-6 flex items-center justify-center gap-4">
+                    <span class="inline-block w-2 h-2 bg-[#87CEEB] rounded-full animate-pulse"></span>
+                    <span class="text-sm text-gray-300">Open for opportunities</span>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+                <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION – with grid-bg class added ===== -->
+        <section id="about" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white relative grid-bg">
+            <!-- Decorative element -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30"></div>
+
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">Who I Am</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-2 font-['Playfair_Display']">More About Me</h2>
+                    <div class="w-16 h-1 bg-[#87CEEB] mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+                    <!-- Left Column - Profile Image -->
+                    <div class="lg:w-1/3 flex flex-col items-center about-image-animate">
+                        <div class="relative">
+                            <!-- Glow ring behind image -->
+                            <div class="absolute -inset-4 bg-[#87CEEB]/20 rounded-full blur-2xl opacity-50"></div>
+                            <div class="w-64 h-64 rounded-full overflow-hidden shadow-2xl glowing-border-animation relative">
+                                <img src="/images/Siyamthanda.jpg" alt="Siyamthanda Dlakavu"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                        <!-- Name badge -->
+                        <div class="mt-6 text-center">
+                            <p class="text-xl font-bold text-white font-['Playfair_Display']">Siyamthanda Dlakavu</p>
+                            <p class="text-sm text-[#87CEEB]">Full Stack Developer</p>
+                        </div>
+                        <!-- Location -->
+                        <div class="mt-3 flex items-center gap-2 text-sm text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#87CEEB]">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Cape Town, South Africa
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Content -->
+                    <div class="lg:w-2/3">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Summary Card -->
+                            <div class="about-content-left bg-gradient-to-br from-[#3a3a3a] to-[#404040] p-6 md:p-8 rounded-2xl border border-[#87CEEB]/20 shadow-xl hover:shadow-[#87CEEB]/10 transition-all duration-300">
+                                <div class="mb-4">
+                                    <span class="text-xs uppercase tracking-wider text-[#87CEEB] font-semibold">01</span>
+                                    <h3 class="text-xl font-bold text-white mt-1 font-['Playfair_Display']">Summary</h3>
+                                </div>
+                                <p class="text-gray-200 leading-relaxed text-sm">
+                                    Full Stack Developer &amp; Project Coordinator specializing in Angular, TypeScript, C#,
+                                    and .NET.<br /><br />
+                                    Leveraging AI and generative tools to reduce development time by 25% and accelerate
+                                    delivery; builds responsive single-page applications with 95%+ mobile responsiveness,
+                                    designs secure RESTful APIs.<br /><br />
+                                    Former IT Administrator with hands-on experience supporting 3+ systems and cloud fundamentals,
+                                    bridging development and operations to deliver scalable, maintainable solutions.
+                                </p>
+                            </div>
+
+                            <!-- Goals Card -->
+                            <div class="about-content-right bg-gradient-to-br from-[#404040] to-[#3a3a3a] p-6 md:p-8 rounded-2xl border border-[#87CEEB]/20 shadow-xl hover:shadow-[#87CEEB]/10 transition-all duration-300">
+                                <div class="mb-4">
+                                    <span class="text-xs uppercase tracking-wider text-[#87CEEB] font-semibold">02</span>
+                                    <h3 class="text-xl font-bold text-white mt-1 font-['Playfair_Display']">Career Goals</h3>
+                                </div>
+                                <p class="text-gray-200 leading-relaxed text-sm">
+                                    My goal is to secure a full-time position as a Full Stack Developer, where I can
+                                    continue to learn and grow. Currently, I'm focused on:
+                                </p>
+                                <ul class="mt-4 space-y-2 text-sm text-gray-300">
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[#87CEEB] mt-1">▸</span>
+                                        Building SPAs with Angular and managing state with RxJS
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[#87CEEB] mt-1">▸</span>
+                                        Developing RESTful APIs with .NET and documenting with Swagger
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[#87CEEB] mt-1">▸</span>
+                                        Designing databases in SQL Server and MySQL
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[#87CEEB] mt-1">▸</span>
+                                        Writing clean, maintainable code with best practices
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Stats Row -->
+                        <div class="grid grid-cols-3 gap-4 mt-6 about-quote-animate">
+                            <div class="bg-[#3a3a3a]/50 rounded-xl p-4 text-center border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300">
+                                <span class="block text-2xl font-bold text-[#87CEEB]">2</span>
+                                <span class="text-xs text-gray-400">Client Projects</span>
+                            </div>
+                            <div class="bg-[#3a3a3a]/50 rounded-xl p-4 text-center border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300">
+                                <span class="block text-2xl font-bold text-[#87CEEB]">∞</span>
+                                <span class="text-xs text-gray-400">Learning</span>
+                            </div>
+                            <div class="bg-[#3a3a3a]/50 rounded-xl p-4 text-center border border-[#87CEEB]/10 hover:border-[#87CEEB]/30 transition-all duration-300">
+                                <span class="block text-2xl font-bold text-[#87CEEB]">2026</span>
+                                <span class="text-xs text-gray-400">Ready</span>
+                            </div>
+                        </div>
+
+                        <!-- Quote -->
+                        <div class="about-quote-animate mt-8 text-center italic text-gray-300 border-l-4 border-[#87CEEB] pl-6 py-4 bg-[#3a3a3a]/30 rounded-r-xl">
+                            <p class="text-lg font-light">"Passionate about creating innovative solutions through AI and clean code."</p>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+                            <a href="contactme.html"
+                                class="inline-flex items-center gap-2 bg-[#87CEEB] text-[#1a1a1a] font-semibold py-2.5 px-6 rounded-full shadow-lg hover:bg-[#6abfe1] transition-all duration-300 transform hover:scale-105">
+                                Let's Connect
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </a>
+                            <a href="sideprojects.html"
+                                class="inline-flex items-center gap-2 border border-[#87CEEB] text-white font-semibold py-2.5 px-6 rounded-full hover:bg-[#87CEEB]/10 transition-all duration-300">
+                                View My Work
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Premium Footer -->
+    <footer id="footer" class="bg-[#222222] text-gray-300 py-8 border-t border-[#87CEEB]/20 footer-animate">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center order-2 md:order-1">
+                <p class="text-xl font-bold text-white font-['Playfair_Display']">Siyamthanda Dlakavu</p>
+                <p class="text-sm text-gray-400">Designing, building &amp; scaling for the bold.</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 order-1 md:order-2">
+                <a href="index.html" class="text-sm hover:text-[#87CEEB] transition-colors">Home</a>
+                <a href="about.html" class="text-sm hover:text-[#87CEEB] transition-colors">About</a>
+                <a href="skills.html" class="text-sm hover:text-[#87CEEB] transition-colors">Skills</a>
+                <a href="sideprojects.html" class="text-sm hover:text-[#87CEEB] transition-colors">Personal Projects</a>
+                <a href="clientwork.html" class="text-sm hover:text-[#87CEEB] transition-colors">Client Projects</a>
+                <a href="contactme.html" class="text-sm hover:text-[#87CEEB] transition-colors">Contact</a>
+                <span class="w-px h-6 bg-gray-600 hidden sm:block"></span>
+                <span class="text-sm text-gray-400">
+                    <i class="fas fa-envelope mr-1 text-[#87CEEB]"></i>
+                    <a href="mailto:dlakavusiseko@gmail.com"
+                        class="hover:text-[#87CEEB] transition-colors">dlakavusiseko@gmail.com</a>
+                </span>
+                <span class="text-sm text-gray-400">
+                    <i class="fas fa-phone mr-1 text-[#87CEEB]"></i>
+                    <a href="tel:+27878804748" class="hover:text-[#87CEEB] transition-colors">078 880 4748</a>
+                </span>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-2 text-center text-xs text-gray-500" style="padding-top: 0.5rem;">
+            &copy; 2026 Siyamthanda Dlakavu. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/mobile-toggle.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/footer-scroll-trigger.js"></script>
+</body>
+
+</html>

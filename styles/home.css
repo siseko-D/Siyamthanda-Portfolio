@@ -1,0 +1,73 @@
+/* ===== Home Hero Section ===== */
+#home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero content typography enhancements */
+#home h1 {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+#home p {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Subtle animation on load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home .relative.z-10 {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* ===== Hero Content – Bottom-up Staggered Animation ===== */
+.hero-content {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUpFade 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-content .delay-1 {
+    animation-delay: 0.1s;
+}
+
+.hero-content .delay-2 {
+    animation-delay: 0.25s;
+}
+
+.hero-content .delay-3 {
+    animation-delay: 0.4s;
+}
+
+.hero-content .delay-4 {
+    animation-delay: 0.55s;
+}
+
+.hero-content .delay-5 {
+    animation-delay: 0.7s;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

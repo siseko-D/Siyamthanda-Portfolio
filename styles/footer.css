@@ -1,0 +1,83 @@
+/* ===== Premium Footer – Standalone ===== */
+footer {
+    position: relative;
+    background: linear-gradient(145deg, #1f1f1f 0%, #2a2a2a 100%);
+    backdrop-filter: blur(12px);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.4);
+    padding: 3rem 0;
+    border-top: 1px solid rgba(135, 206, 235, 0.2);
+    z-index: 30;
+}
+
+footer:hover {
+    background: linear-gradient(145deg, #2a2a2a 0%, #333333 100%);
+    box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.3);
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #c0c0c0;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+footer:hover p {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .border-t {
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ===== Footer – Scroll-triggered Bottom-up Animation ===== */
+.footer-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.footer-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments for footer links */
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    footer .order-1,
+    footer .order-2,
+    footer .order-3 {
+        order: unset;
+    }
+
+    footer .flex-wrap {
+        justify-content: center;
+        gap: 0.75rem 1.25rem;
+    }
+
+    footer .hidden.sm\:block {
+        display: none;
+    }
+}

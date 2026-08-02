@@ -1,0 +1,220 @@
+/* ===== About Page Styles ===== */
+
+/* ===== Hero Banner ===== */
+.hero-banner-content {
+    opacity: 0;
+    animation: heroFadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-banner-content span {
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-banner-content h1 {
+    animation-delay: 0.4s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-banner-content p {
+    animation-delay: 0.6s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-banner-content .flex {
+    animation-delay: 0.8s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ===== About Section Animations ===== */
+.about-image-animate {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-image-animate.animate-fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-content-left {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.15s;
+}
+
+.about-content-left.animate-fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-content-right {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.3s;
+}
+
+.about-content-right.animate-fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-quote-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.45s;
+}
+
+.about-quote-animate.animate-fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-image-animate.animate-fadeIn,
+.about-content-left.animate-fadeIn,
+.about-content-right.animate-fadeIn,
+.about-quote-animate.animate-fadeIn {
+    animation: none;
+}
+
+/* ===== Profile Image Styles ===== */
+.glowing-border-animation {
+    animation: glowing-border 3s infinite ease-in-out;
+}
+
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 15px rgba(135, 206, 235, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(135, 206, 235, 0.5), 0 0 60px rgba(135, 206, 235, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(135, 206, 235, 0.2);
+    }
+}
+
+#about .rounded-full {
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+    z-index: 1;
+}
+
+#about .rounded-full img {
+    filter: grayscale(100%) contrast(110%);
+    transition: filter 0.7s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease;
+    will-change: transform, filter;
+    transform-style: preserve-3d;
+}
+
+#about .rounded-full:hover {
+    animation: float-pulse 3s ease-in-out infinite;
+}
+
+#about .rounded-full:hover img {
+    filter: grayscale(0%) contrast(105%) brightness(105%);
+    transform: translateY(-15px) rotate(8deg) scale(1.03) perspective(500px) rotateY(5deg);
+    box-shadow: 0 25px 40px rgba(135, 206, 235, 0.3), 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+#about .rounded-full::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    z-index: -1;
+}
+
+#about .rounded-full:hover::after {
+    opacity: 1;
+}
+
+@keyframes float-pulse {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ===== Stats Cards Hover ===== */
+.stats-card {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stats-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ===== Premium Abstract Background – Grid + Glow ===== */
+.grid-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+        linear-gradient(rgba(135, 206, 235, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(135, 206, 235, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+.grid-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(circle at 15% 25%, rgba(135, 206, 235, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 70%, rgba(135, 206, 235, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(135, 206, 235, 0.05) 0%, transparent 30%);
+    pointer-events: none;
+}
+
+.grid-bg .container,
+.grid-bg .relative.z-10 {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    .hero-banner-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-banner-content p {
+        font-size: 1rem;
+    }
+}

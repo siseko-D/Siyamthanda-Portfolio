@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siyamthanda Dlakavu - Skills</title>
+    <link rel="icon" type="image/x-icon" href="images/Siyamthanda.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="tailwind" content="none" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/skills.css" />
+</head>
+
+<body class="antialiased">
+    <!-- Header and mobile menu (same as other pages, with active link set to Skills) -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+    <header id="navbar-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between md:justify-center relative">
+            <div class="hidden md:flex space-x-4 md:space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Home</a>
+                <a href="about.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">About</a>
+                <a href="skills.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300 active">Skills</a>
+                <a href="sideprojects.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Personal Projects</a>
+                <a href="clientwork.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Client Projects</a>
+                <a href="contactme.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Contact</a>
+                <!-- Blue back link -->
+                <a href="https://siyamthanda-landing-page.netlify.app/" target="_blank"
+                    class="nav-link-back flex items-center gap-1 border-l border-[#87CEEB]/30 pl-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    Back to Landing Page
+                </a>
+            </div>
+            <div class="md:hidden"></div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none relative z-60"
+                aria-label="Toggle navigation">
+                <div
+                    class="hamburger-premium w-12 h-12 rounded-xl bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] border border-[#87CEEB]/30 shadow-lg hover:shadow-[#87CEEB]/20 hover:border-[#87CEEB]/50 transition-all duration-300 flex items-center justify-center">
+                    <div class="hamburger w-6 h-5 relative">
+                        <span class="hamburger-line hamburger-line-top"></span>
+                        <span class="hamburger-line hamburger-line-middle"></span>
+                        <span class="hamburger-line hamburger-line-bottom"></span>
+                    </div>
+                </div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-sm bg-gradient-to-b from-[#1a1a1a] via-[#222222] to-[#1a1a1a] backdrop-blur-2xl shadow-2xl transform translate-x-full duration-500 ease-out z-50 border-l border-[#87CEEB]/20 overflow-hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-menu"
+                class="close-button w-10 h-10 rounded-lg bg-gradient-to-br from-[#333333] to-[#2a2a2a] border border-[#87CEEB]/20 flex items-center justify-center text-white hover:text-[#87CEEB] text-2xl transition-all duration-300 hover:rotate-90 hover:border-[#87CEEB]/40 hover:shadow-lg">&times;</button>
+        </div>
+        <div class="flex flex-col space-y-2 p-6">
+            <a href="index.html" class="nav-link-mobile group active">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                </div>
+                <span class="link-text">Home</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="about.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </div>
+                <span class="link-text">Introduction</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="skills.html" class="nav-link-mobile group active">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m12 8 4 4-4 4M8 12h8" />
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                    </svg>
+                </div>
+                <span class="link-text">Skills</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="sideprojects.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                        <line x1="8" x2="16" y1="21" y2="21" />
+                        <line x1="12" x2="12" y1="17" y2="21" />
+                    </svg>
+                </div>
+                <span class="link-text">Personal Projects</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="clientwork.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+                <span class="link-text">Client Projects</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="contactme.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </div>
+                <span class="link-text">Contact</span>
+                <span class="link-arrow">→</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="pt-20">
+        <!-- ===== HERO BANNER ===== -->
+        <section class="relative h-[40vh] md:h-[50vh] flex items-center justify-center text-white overflow-hidden">
+            <!-- Background Image with Overlay (optional, replace URL if desired) -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80"
+                    alt="Technology background"
+                    class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/85 via-[#2a2a2a]/75 to-[#0a0a0a]/90"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto hero-banner-content">
+                <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">Expertise</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-3 mb-4 drop-shadow-lg">
+                    My Skills &amp; Technologies
+                </h1>
+                <p class="text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed drop-shadow-md text-gray-300">
+                    The tools, frameworks, and mindsets I use to build exceptional digital products.
+                </p>
+                <div class="mt-6 flex items-center justify-center gap-4">
+                    <span class="inline-block w-2 h-2 bg-[#87CEEB] rounded-full animate-pulse"></span>
+                    <span class="text-sm text-gray-300">Always learning, always growing</span>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+                <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ===== TECHNICAL SKILLS ===== -->
+        <section id="skills" class="py-20 bg-gradient-to-br from-[#252525] to-[#2f2f2f] text-white relative">
+            <!-- Decorative top line -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30"></div>
+
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">Technical</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 font-['Playfair_Display']">Tech Stack</h2>
+                    <div class="w-16 h-1 bg-[#87CEEB] mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div id="technical-skills-carousel" class="skills-carousel-container mt-8">
+                    <!-- Left Arrow -->
+                    <button class="carousel-arrow left" aria-label="Previous skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <!-- Right Arrow -->
+                    <button class="carousel-arrow right" aria-label="Next skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="skills-carousel">
+                        <div id="technical-skills-track" class="skills-carousel-track">
+                            <!-- Artificial Intelligence Card -->
+                            <div class="skills-carousel-card">
+                                <div class="group relative w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                                    </div>
+                                    <div
+                                        class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-16 h-16 mb-4 relative">
+                                                <div
+                                                    class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                                </div>
+                                                <div
+                                                    class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="text-[#87CEEB]">
+                                                        <path
+                                                            d="M14 6a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4z" />
+                                                        <path d="M12 2v2" />
+                                                        <path d="M12 20v2" />
+                                                        <path d="M22 12h-2" />
+                                                        <path d="M4 12h-2" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <h3
+                                                class="text-lg font-bold text-white mb-1 group-hover:text-[#87CEEB] transition-colors">
+                                                Artificial Intelligence</h3>
+                                            <div class="flex flex-wrap gap-1 justify-center mt-2">
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">NLP</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">ML</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">LLM</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Deep
+                                                    Learning</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Programming Card -->
+                            <div class="skills-carousel-card">
+                                <div class="group relative w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                                    </div>
+                                    <div
+                                        class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-16 h-16 mb-4 relative">
+                                                <div
+                                                    class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                                </div>
+                                                <div
+                                                    class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="text-[#87CEEB]">
+                                                        <polyline points="16 18 22 12 16 6" />
+                                                        <polyline points="8 6 2 12 8 18" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <h3
+                                                class="text-lg font-bold text-white mb-1 group-hover:text-[#87CEEB] transition-colors">
+                                                Programming</h3>
+                                            <div class="flex flex-wrap gap-1 justify-center mt-2">
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">HTML</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">CSS</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">JS</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">C#</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">TypeScript</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Deployment Card -->
+                            <div class="skills-carousel-card">
+                                <div class="group relative w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                                    </div>
+                                    <div
+                                        class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-16 h-16 mb-4 relative">
+                                                <div
+                                                    class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                                </div>
+                                                <div
+                                                    class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="text-[#87CEEB]">
+                                                        <path
+                                                            d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+                                                        <path d="M12 12v9" />
+                                                        <path d="m8 16 4-4 4 4" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <h3
+                                                class="text-lg font-bold text-white mb-1 group-hover:text-[#87CEEB] transition-colors">
+                                                Deployment</h3>
+                                            <div class="flex flex-wrap gap-1 justify-center mt-2">
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Netlify</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Vercel</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Render</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Frameworks Card -->
+                            <div class="skills-carousel-card">
+                                <div class="group relative w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                                    </div>
+                                    <div
+                                        class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-16 h-16 mb-4 relative">
+                                                <div
+                                                    class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                                </div>
+                                                <div
+                                                    class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="text-[#87CEEB]">
+                                                        <rect width="7" height="9" x="3" y="3" rx="1" />
+                                                        <rect width="7" height="5" x="14" y="3" rx="1" />
+                                                        <rect width="7" height="9" x="14" y="12" rx="1" />
+                                                        <rect width="7" height="5" x="3" y="16" rx="1" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <h3
+                                                class="text-lg font-bold text-white mb-1 group-hover:text-[#87CEEB] transition-colors">
+                                                Frameworks</h3>
+                                            <div class="flex flex-wrap gap-1 justify-center mt-2">
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Bootstrap</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Tailwind</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Node.js</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Angular</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SOFT SKILLS ===== -->
+        <section id="soft-skills" class="py-20 bg-gradient-to-br from-[#252525] to-[#2f2f2f] text-white relative">
+            <!-- Decorative top line -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#87CEEB] to-transparent opacity-30"></div>
+
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="text-sm uppercase tracking-[0.3em] text-[#87CEEB] font-semibold">Interpersonal</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 font-['Playfair_Display']">Soft Stack</h2>
+                    <div class="w-16 h-1 bg-[#87CEEB] mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div id="soft-skills-carousel" class="skills-carousel-container mt-8">
+                    <!-- Left Arrow -->
+                    <button class="carousel-arrow left" aria-label="Previous soft skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <!-- Right Arrow -->
+                    <button class="carousel-arrow right" aria-label="Next soft skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="skills-carousel">
+                        <div id="soft-skills-track" class="skills-carousel-track">
+                            <!-- Collaboration Card -->
+                            <div class="skills-carousel-card">
+                                <div class="group relative w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                                    </div>
+                                    <div
+                                        class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-16 h-16 mb-4 relative">
+                                                <div
+                                                    class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                                </div>
+                                                <div
+                                                    class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="text-[#87CEEB]">
+                                                        <path d="m12 10 2 2 4-4" />
+                                                        <path
+                                                            d="M18 10a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H9.8l-2.4 2.4c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2.1L7.8 14H18z" />
+                                                        <path d="m2 20 2 2 4-4" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <h3
+                                                class="text-lg font-bold text-white mb-2 group-hover:text-[#87CEEB] transition-colors">
+                                                Collaboration</h3>
+                                            <div class="flex flex-wrap gap-1 justify-center mt-1">
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Communication</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Diverse
+                                                    Groups</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Cooperation</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Communication Card -->
+                            <div class="skills-carousel-card">
+                                <div class="group relative w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                                    </div>
+                                    <div
+                                        class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-16 h-16 mb-4 relative">
+                                                <div
+                                                    class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                                </div>
+                                                <div
+                                                    class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="text-[#87CEEB]">
+                                                        <path
+                                                            d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <h3
+                                                class="text-lg font-bold text-white mb-2 group-hover:text-[#87CEEB] transition-colors">
+                                                Communication</h3>
+                                            <div class="flex flex-wrap gap-1 justify-center mt-1">
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Clear</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Articulate</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Technical</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Active
+                                                    Listener</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Up-skilling Card -->
+                            <div class="skills-carousel-card">
+                                <div class="group relative w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                                    </div>
+                                    <div
+                                        class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-16 h-16 mb-4 relative">
+                                                <div
+                                                    class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                                </div>
+                                                <div
+                                                    class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="text-[#87CEEB]">
+                                                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                                                        <polyline points="16 7 22 7 22 13" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <h3
+                                                class="text-lg font-bold text-white mb-2 group-hover:text-[#87CEEB] transition-colors">
+                                                Up-skilling</h3>
+                                            <div class="flex flex-wrap gap-1 justify-center mt-1">
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Adaptable</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Curious</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Self-motivated</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Problem Solving Card -->
+                            <div class="skills-carousel-card">
+                                <div class="group relative w-full">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-[#87CEEB] to-[#6abfe1] rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500">
+                                    </div>
+                                    <div
+                                        class="relative bg-gradient-to-br from-[#3a3a3a] to-[#2a2a2a] rounded-3xl p-6 border border-[#87CEEB]/20 group-hover:border-[#87CEEB] transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-16 h-16 mb-4 relative">
+                                                <div
+                                                    class="absolute inset-0 bg-[#87CEEB] rounded-2xl animate-ping opacity-20 group-hover:opacity-30">
+                                                </div>
+                                                <div
+                                                    class="relative w-16 h-16 rounded-2xl bg-[#87CEEB]/10 flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="text-[#87CEEB]">
+                                                        <circle cx="12" cy="12" r="10" />
+                                                        <path d="M12 16v-4" />
+                                                        <path d="M12 8h.01" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <h3
+                                                class="text-lg font-bold text-white mb-2 group-hover:text-[#87CEEB] transition-colors">
+                                                Problem Solving</h3>
+                                            <div class="flex flex-wrap gap-1 justify-center mt-1">
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Analytical</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Creative</span>
+                                                <span
+                                                    class="text-xs px-2 py-1 bg-[#87CEEB]/10 rounded-full text-gray-300 group-hover:bg-[#87CEEB]/20 transition-colors">Resourceful</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Premium Footer -->
+    <footer id="footer" class="bg-[#222222] text-gray-300 py-8 border-t border-[#87CEEB]/20 footer-animate">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center order-2 md:order-1">
+                <p class="text-xl font-bold text-white font-['Playfair_Display']">Siyamthanda Dlakavu</p>
+                <p class="text-sm text-gray-400">Designing, building &amp; scaling for the bold.</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 order-1 md:order-2">
+                <a href="index.html" class="text-sm hover:text-[#87CEEB] transition-colors">Home</a>
+                <a href="about.html" class="text-sm hover:text-[#87CEEB] transition-colors">About</a>
+                <a href="skills.html" class="text-sm hover:text-[#87CEEB] transition-colors">Skills</a>
+                <a href="sideprojects.html" class="text-sm hover:text-[#87CEEB] transition-colors">Personal Projects</a>
+                <a href="clientwork.html" class="text-sm hover:text-[#87CEEB] transition-colors">Client Projects</a>
+                <a href="contactme.html" class="text-sm hover:text-[#87CEEB] transition-colors">Contact</a>
+                <span class="w-px h-6 bg-gray-600 hidden sm:block"></span>
+                <span class="text-sm text-gray-400">
+                    <i class="fas fa-envelope mr-1 text-[#87CEEB]"></i>
+                    <a href="mailto:dlakavusiseko@gmail.com"
+                        class="hover:text-[#87CEEB] transition-colors">dlakavusiseko@gmail.com</a>
+                </span>
+                <span class="text-sm text-gray-400">
+                    <i class="fas fa-phone mr-1 text-[#87CEEB]"></i>
+                    <a href="tel:+27878804748" class="hover:text-[#87CEEB] transition-colors">078 880 4748</a>
+                </span>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-2 text-center text-xs text-gray-500" style="padding-top: 0.5rem;">
+            &copy; 2026 Siyamthanda Dlakavu. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/mobile-toggle.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/skills-carousel.js"></script>
+    <script src="js/footer-scroll-trigger.js"></script>
+</body>
+
+</html>

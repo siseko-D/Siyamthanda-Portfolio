@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siyamthanda Dlakavu – Full Stack Developer</title>
+    <link rel="icon" type="image/x-icon" href="images/Siyamthanda.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="tailwind" content="none" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+</head>
+
+<body class="antialiased">
+    <!-- Mobile Menu Overlay -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <header id="navbar-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between md:justify-center relative">
+            <div class="hidden md:flex space-x-4 md:space-x-8">
+                <a href="index.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300 active">Home</a>
+                <a href="about.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">About</a>
+                <a href="skills.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Skills</a>
+                <a href="sideprojects.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Personal Projects</a>
+                <a href="clientwork.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Client Projects</a>
+                <a href="contactme.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Contact</a>
+                <!-- THIS LINK IS NOW BLUE AND STAYS BLUE -->
+                <a href="https://siyamthanda-landing-page.netlify.app/" target="_blank"
+                    class="nav-link-back flex items-center gap-1 border-l border-[#87CEEB]/30 pl-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    Back to Landing Page
+                </a>
+            </div>
+            <div class="md:hidden"></div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none relative z-60"
+                aria-label="Toggle navigation">
+                <div
+                    class="hamburger-premium w-12 h-12 rounded-xl bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] border border-[#87CEEB]/30 shadow-lg hover:shadow-[#87CEEB]/20 hover:border-[#87CEEB]/50 transition-all duration-300 flex items-center justify-center">
+                    <div class="hamburger w-6 h-5 relative">
+                        <span class="hamburger-line hamburger-line-top"></span>
+                        <span class="hamburger-line hamburger-line-middle"></span>
+                        <span class="hamburger-line hamburger-line-bottom"></span>
+                    </div>
+                </div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-sm bg-gradient-to-b from-[#1a1a1a] via-[#222222] to-[#1a1a1a] backdrop-blur-2xl shadow-2xl transform translate-x-full duration-500 ease-out z-50 border-l border-[#87CEEB]/20 overflow-hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-menu"
+                class="close-button w-10 h-10 rounded-lg bg-gradient-to-br from-[#333333] to-[#2a2a2a] border border-[#87CEEB]/20 flex items-center justify-center text-white hover:text-[#87CEEB] text-2xl transition-all duration-300 hover:rotate-90 hover:border-[#87CEEB]/40 hover:shadow-lg">&times;</button>
+        </div>
+        <div class="flex flex-col space-y-2 p-6">
+            <a href="index.html" class="nav-link-mobile group active">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                </div>
+                <span class="link-text">Home</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="about.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </div>
+                <span class="link-text">Introduction</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="skills.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m12 8 4 4-4 4M8 12h8" />
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                    </svg>
+                </div>
+                <span class="link-text">Skills</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="sideprojects.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                        <line x1="8" x2="16" y1="21" y2="21" />
+                        <line x1="12" x2="12" y1="17" y2="21" />
+                    </svg>
+                </div>
+                <span class="link-text">Personal Projects</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="clientwork.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+                <span class="link-text">Client Projects</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="contactme.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </div>
+                <span class="link-text">Contact</span>
+                <span class="link-arrow">→</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="pt-20">
+        <!-- Home Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-white overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="images/home/hero-home.jpg" alt="Developer workspace" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            </div>
+            <div class="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto hero-content">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 drop-shadow-lg delay-1">
+                    Siyamthanda Dlakavu
+                </h1>
+                <p class="text-xl md:text-2xl font-light mb-3 drop-shadow-md delay-2">
+                    Full Stack Developer for Entrepreneurs &amp; Startups
+                </p>
+                <p class="text-lg md:text-xl font-light mb-8 text-[#87CEEB] drop-shadow-md delay-3">
+                    Websites, Systems &amp; Apps – designed to scale, built to perform.
+                </p>
+                <p class="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md delay-4">
+                    I partner with visionaries to turn complex ideas into powerful digital realities.
+                    From concept to launch, I deliver creative, scalable solutions that drive real results.
+                    Let's build something amazing together.
+                </p>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center delay-5">
+                    <a href="clientwork.html"
+                        class="inline-block bg-[#87CEEB] text-[#1a1a1a] font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#6abfe1] transition duration-300 transform hover:scale-105">
+                        View Client Work
+                    </a>
+                    <a href="contactme.html"
+                        class="inline-block bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:text-[#1a1a1a] transition duration-300 transform hover:scale-105">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Premium Footer -->
+    <footer id="footer" class="bg-[#222222] text-gray-300 py-8 border-t border-[#87CEEB]/20 footer-animate">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center order-2 md:order-1">
+                <p class="text-xl font-bold text-white font-['Playfair_Display']">Siyamthanda Dlakavu</p>
+                <p class="text-sm text-gray-400">Designing, building &amp; scaling for the bold.</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 order-1 md:order-2">
+                <a href="index.html" class="text-sm hover:text-[#87CEEB] transition-colors">Home</a>
+                <a href="about.html" class="text-sm hover:text-[#87CEEB] transition-colors">About</a>
+                <a href="skills.html" class="text-sm hover:text-[#87CEEB] transition-colors">Skills</a>
+                <a href="sideprojects.html" class="text-sm hover:text-[#87CEEB] transition-colors">Personal Projects</a>
+                <a href="clientwork.html" class="text-sm hover:text-[#87CEEB] transition-colors">Client Projects</a>
+                <a href="contactme.html" class="text-sm hover:text-[#87CEEB] transition-colors">Contact</a>
+                <span class="w-px h-6 bg-gray-600 hidden sm:block"></span>
+                <span class="text-sm text-gray-400">
+                    <i class="fas fa-envelope mr-1 text-[#87CEEB]"></i>
+                    <a href="mailto:dlakavusiseko@gmail.com"
+                        class="hover:text-[#87CEEB] transition-colors">dlakavusiseko@gmail.com</a>
+                </span>
+                <span class="text-sm text-gray-400">
+                    <i class="fas fa-phone mr-1 text-[#87CEEB]"></i>
+                    <a href="tel:+27878804748" class="hover:text-[#87CEEB] transition-colors">078 880 4748</a>
+                </span>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-2 text-center text-xs text-gray-500" style="padding-top: 0.5rem;">
+            &copy; 2026 Siyamthanda Dlakavu. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/mobile-toggle.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/footer-scroll-trigger.js"></script>
+</body>
+
+</html>

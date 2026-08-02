@@ -1,0 +1,229 @@
+/* ===== Contact Section ===== */
+
+/* ===== Hero Banner Animation ===== */
+.hero-banner-content {
+    opacity: 0;
+    animation: heroFadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-banner-content span {
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-banner-content h1 {
+    animation-delay: 0.4s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-banner-content p {
+    animation-delay: 0.6s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-banner-content .flex {
+    animation-delay: 0.8s;
+    opacity: 0;
+    animation: heroFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ===== Contact Info Animation ===== */
+.contact-info-animate {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-info-animate.animate-fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contact-form-animate {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
+}
+
+.contact-form-animate.animate-fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contact-info-animate.animate-fadeIn,
+.contact-form-animate.animate-fadeIn {
+    animation: none;
+}
+
+/* ===== Contact Cards ===== */
+.contact-card {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== Email Tooltip ===== */
+.email-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.email-tooltip::after {
+    content: "dlakavusiseko@gmail.com";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+    pointer-events: none;
+    font-family: "Open Sans", sans-serif;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.email-tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 101;
+}
+
+.email-tooltip:hover::after,
+.email-tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-15px);
+}
+
+.email-tooltip:hover::after {
+    content: "Click to copy";
+    padding: 6px 14px;
+    font-size: 12px;
+}
+
+.email-tooltip:hover::before {
+    border-width: 5px;
+}
+
+/* ===== Form ===== */
+#contact-form input,
+#contact-form textarea {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.15);
+    border-color: #87CEEB;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: #666;
+    font-weight: 300;
+}
+
+button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#form-success,
+#form-error {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .contact-info-animate {
+        transform: translateY(30px);
+    }
+    .contact-form-animate {
+        transform: translateY(30px);
+    }
+    .contact-info-animate.animate-fadeIn,
+    .contact-form-animate.animate-fadeIn {
+        transform: translateY(0);
+    }
+    #contact .grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Add to contactme.css */
+
+/* ===== Premium Abstract Background – Grid + Glow ===== */
+#contact {
+    position: relative;
+    overflow: hidden;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+        linear-gradient(rgba(135, 206, 235, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(135, 206, 235, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+#contact::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(135, 206, 235, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(135, 206, 235, 0.06) 0%, transparent 40%);
+}
+
+#contact .relative.z-10 {
+    position: relative;
+    z-index: 1;
+}

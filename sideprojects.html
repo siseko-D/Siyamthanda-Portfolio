@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siyamthanda Dlakavu - Projects</title>
+    <link rel="icon" type="image/x-icon" href="images/Siyamthanda.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="tailwind" content="none" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/sideprojects.css" />
+</head>
+
+<body class="antialiased">
+    <!-- Header (active Projects) and mobile menu -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+    <header id="navbar-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between md:justify-center relative">
+            <div class="hidden md:flex space-x-4 md:space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Home</a>
+                <a href="about.html" class="nav-link text-white hover:text-[#87CEEB] transition duration-300">About</a>
+                <a href="skills.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Skills</a>
+                <a href="sideprojects.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300 active">Personal
+                    Projects</a>
+                <a href="clientwork.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Client Projects</a>
+                <a href="contactme.html"
+                    class="nav-link text-white hover:text-[#87CEEB] transition duration-300">Contact</a>
+                <!-- THIS LINK IS NOW BLUE AND STAYS BLUE -->
+                <a href="https://siyamthanda-landing-page.netlify.app/" target="_blank"
+                    class="nav-link-back flex items-center gap-1 border-l border-[#87CEEB]/30 pl-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    Back to Landing Page
+                </a>
+            </div>
+            <div class="md:hidden"></div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none relative z-60"
+                aria-label="Toggle navigation">
+                <div
+                    class="hamburger-premium w-12 h-12 rounded-xl bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] border border-[#87CEEB]/30 shadow-lg hover:shadow-[#87CEEB]/20 hover:border-[#87CEEB]/50 transition-all duration-300 flex items-center justify-center">
+                    <div class="hamburger w-6 h-5 relative">
+                        <span class="hamburger-line hamburger-line-top"></span>
+                        <span class="hamburger-line hamburger-line-middle"></span>
+                        <span class="hamburger-line hamburger-line-bottom"></span>
+                    </div>
+                </div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="md:hidden fixed top-0 right-0 h-full w-4/5 max-w-sm bg-gradient-to-b from-[#1a1a1a] via-[#222222] to-[#1a1a1a] backdrop-blur-2xl shadow-2xl transform translate-x-full duration-500 ease-out z-50 border-l border-[#87CEEB]/20 overflow-hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-menu"
+                class="close-button w-10 h-10 rounded-lg bg-gradient-to-br from-[#333333] to-[#2a2a2a] border border-[#87CEEB]/20 flex items-center justify-center text-white hover:text-[#87CEEB] text-2xl transition-all duration-300 hover:rotate-90 hover:border-[#87CEEB]/40 hover:shadow-lg">&times;</button>
+        </div>
+        <div class="flex flex-col space-y-2 p-6">
+            <a href="index.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                </div>
+                <span class="link-text">Home</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="about.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </div>
+                <span class="link-text">Introduction</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="skills.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m12 8 4 4-4 4M8 12h8" />
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                    </svg>
+                </div>
+                <span class="link-text">Skills</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="sideprojects.html" class="nav-link-mobile group active">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                        <line x1="8" x2="16" y1="21" y2="21" />
+                        <line x1="12" x2="12" y1="17" y2="21" />
+                    </svg>
+                </div>
+                <span class="link-text">Personal Projects</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="clientwork.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+                <span class="link-text">Client Projects</span>
+                <span class="link-arrow">→</span>
+            </a>
+            <a href="contactme.html" class="nav-link-mobile group">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </div>
+                <span class="link-text">Contact</span>
+                <span class="link-arrow">→</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="pt-20">
+        <!-- Projects section -->
+        <section id="projects" class="py-20 bg-gradient-to-br from-[#2e2e2e] to-[#383838] text-white visible">
+            <div class="container mx-auto px-4">
+                <h2 class="section-header">Personal Projects</h2>
+                <div class="project-categories">
+                    <button class="category-tab active" data-category="all">All Projects</button>
+                    <button class="category-tab" data-category="html-css-js">HTML, CSS & JS</button>
+                    <button class="category-tab" data-category="react">React</button>
+                    <button class="category-tab" data-category="angular">Angular</button>
+                    <button class="category-tab" data-category="python">Python</button>
+                    <button class="category-tab" data-category="csharp">C# .NET</button>
+                    <button class="category-tab" data-category="figma">Figma Prototypes</button>
+                    <button class="category-tab" data-category="development-phase">Development Phase</button>
+                </div>
+                <div id="projects-grid" class="projects-grid mt-12">
+                    <!-- FocusFlow -->
+                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                        data-categories="html-css-js">
+                        <img src="images/TaskMaster.png" srcset="images/TaskMaster.png 1x, images/TaskMaster.png 2x"
+                            alt="Screenshot of the FocusFlow project" class="w-full h-auto" loading="lazy" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">FocusFlow - Modern Productivity App</h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">Feature-rich productivity application to
+                                help users manage tasks efficiently with a beautiful, intuitive interface.</p>
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">Complete task management</span> with CRUD
+                                        operations</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Reactive state management</span> with RxJS</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Persistent storage</span> with LocalStorage</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://focusflowv2.netlify.app/" target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">🚀
+                                    Live Demo</a>
+                                <a href="https://github.com/siseko-D/FocusFlow" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">📂
+                                    GitHub</a>
+                            </div>
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">HTML5</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">CSS3</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">JavaScript</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">RxJS</span>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Live & Fully Operational</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Web Dev Quiz -->
+                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                        data-categories="react">
+                        <img src="images/Dev-Quiz.PNG" srcset="images/Dev-Quiz.PNG 1x, images/Dev-Quiz.PNG 2x"
+                            alt="Screenshot of the Web Development Quiz System project" class="w-full h-auto"
+                            loading="lazy" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">Web Development Quiz System</h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">Interactive, multi-topic quiz application to
+                                test knowledge of HTML, CSS, JavaScript, and React. Features instant feedback and
+                                detailed score tracking.</p>
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">50+ comprehensive questions</span> covering web
+                                        dev fundamentals</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Real-time answer validation</span> with detailed
+                                        explanations</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Responsive, mobile-first design</span></li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://web-dev-quizv2.netlify.app/" target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">🚀
+                                    Live Demo</a>
+                                <a href="https://github.com/siseko-D/web-dev-quiz" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">📂
+                                    GitHub</a>
+                            </div>
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">React 18</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">TypeScript</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Tailwind</span>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Live & Fully Operational</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bias Audit Report -->
+                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                        data-categories="react">
+                        <img src="images/Bias.PNG" srcset="images/Bias.PNG 1x, images/Bias.PNG 2x"
+                            alt="Screenshot of the Bias Audit Report project" class="w-full h-auto" loading="lazy" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">Bias Audit Report - Ethical ML Analysis</h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">AI Bias Audit Tool that detects biases in
+                                datasets and ML models. Analyzes data fairness and suggests mitigation strategies.</p>
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">Comprehensive bias detection</span> across
+                                        multiple dimensions</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Real-time fairness metrics</span> with D3.js
+                                        visualizations</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Automated mitigation strategies</span></li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://bias-audit-report.netlify.app/" target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">🚀
+                                    Live Demo</a>
+                                <a href="https://github.com/siseko-D/bias-audit-report" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">📂
+                                    GitHub</a>
+                            </div>
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">React</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">TypeScript</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">D3.js</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Python</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">scikit-learn</span>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Live & Fully Operational</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sentiment Analyzer -->
+                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                        data-categories="python">
+                        <img src="images/Sentiment.PNG" srcset="images/Sentiment.PNG 1x, images/Sentiment.PNG 2x"
+                            alt="Screenshot of the Sentiment Dashboard project" class="w-full h-auto" loading="lazy" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">Sentiment Analyzer Dashboard</h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">Full-stack sentiment analysis application
+                                using VADER to analyze emotional tone in text. Features real-time analysis and batch
+                                processing.</p>
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">Zero-cost deployment</span> on Render free tier
+                                    </li>
+                                    <li>✅ <span class="text-[#87CEEB]">95% accuracy</span> using NLTK's VADER</li>
+                                    <li>✅ <span class="text-[#87CEEB]">6 emotion dimensions</span> visualized with
+                                        Chart.js</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://sentiment-analyzer-frontend-ijud.onrender.com" target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">🚀
+                                    Live Demo</a>
+                                <a href="https://github.com/siseko-d/SentimentV3" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">📂
+                                    GitHub</a>
+                            </div>
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Flask</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Python</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">NLTK</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Chart.js</span>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Live & Fully Operational</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Zen AI Figma -->
+                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                        data-categories="figma">
+                        <img src="images/ZenAI.PNG" srcset="images/ZenAI.PNG 1x, images/ZenAI.PNG 2x"
+                            alt="Screenshot of the Zen AI project" class="w-full h-auto" loading="lazy" />
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">Zen AI - Mental Wellness App (Figma)</h3>
+                            <p class="text-gray-300 text-sm mb-4 flex-grow">Comprehensive mental wellness application
+                                design with AI-powered behavioral insights, community networking, and reflective
+                                journaling.</p>
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm text-gray-300">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">AI-powered behavioral insights</span> with
+                                        predictive wellness</li>
+                                    <li>✅ <span class="text-[#87CEEB]">Multi-tiered support ecosystem</span></li>
+                                    <li>✅ <span class="text-[#87CEEB]">AA Standard accessibility</span> with 44pt touch
+                                        targets</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-4 mb-3">
+                                <a href="https://www.figma.com/proto/DapO9DD1rwjZznHEF0JMp9/AI-Powered-Mental-Health-Assistant?node-id=1-137&starting-point-node-id=1%3A137"
+                                    target="_blank"
+                                    class="inline-block bg-[#87CEEB] text-[#333333] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#6abfe1] transition duration-300">🎨
+                                    Figma Prototype</a>
+                                <a href="documents/Zen AI - AI Insights for Inner Peace.pdf" target="_blank"
+                                    class="inline-block text-[#87CEEB] border border-[#87CEEB] font-semibold py-2 px-4 rounded-full hover:bg-[#87CEEB] hover:text-[#333333] transition duration-300">📄
+                                    Product Spec</a>
+                            </div>
+                            <div
+                                class="flex flex-wrap gap-2 mt-auto pt-2 text-xs text-gray-300 border-t border-[#555555]/50">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Figma</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">UI/UX</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Wireframing</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Prototyping</span>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Prototype Design Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coming Soon - Angular -->
+                    <div class="project-card coming-soon-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                        data-categories="angular">
+                        <div class="coming-soon-content">
+                            <div class="coming-soon-icon">🅰️</div>
+                            <h3 class="text-2xl font-semibold mb-2">Angular Projects</h3>
+                            <p class="text-gray-300 mb-4">Coming Soon! Building modern SPAs with Angular.</p>
+                            <div class="coming-soon-progress">
+                                <div class="coming-soon-progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coming Soon - C# .NET -->
+                    <div class="project-card coming-soon-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                        data-categories="csharp">
+                        <div class="coming-soon-content">
+                            <div class="coming-soon-icon">🔷</div>
+                            <h3 class="text-2xl font-semibold mb-2">C# .NET Projects</h3>
+                            <p class="text-gray-300 mb-4">Coming Soon! Building robust backend APIs with .NET.</p>
+                            <div class="coming-soon-progress">
+                                <div class="coming-soon-progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Development Phase -->
+                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                        data-categories="development-phase">
+                        <div class="relative">
+                            <img src="images/ZenAI.PNG" alt="Zen AI Development"
+                                class="w-full h-48 object-cover filter blur-[2px]" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#87CEEB]/20 to-[#333333]/80 flex items-center justify-center">
+                                <span class="text-[#87CEEB] font-bold text-xl">🚀 DEVELOPMENT PHASE</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2">Zen AI - From Prototype to Production</h3>
+                            <p class="text-gray-400 text-sm">Building the actual product from Figma prototype.</p>
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">In Development - Beta Q3 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TeachiQ -->
+                    <div class="project-card bg-[#444444] rounded-xl shadow-lg border border-[#555555] overflow-hidden card-animation flex flex-col h-full"
+                        data-categories="react nextjs">
+                        <div class="relative">
+                            <img src="images/TeachiQ.png" srcset="images/TeachiQ.png 1x, images/TeachiQ.png 2x"
+                                alt="Screenshot of the TeachiQ project" class="w-full h-auto" loading="lazy" />
+                            <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                                <div class="text-center transform rotate-[-5deg]">
+                                    <span
+                                        class="inline-block bg-yellow-500 text-[#333333] font-bold text-2xl py-3 px-6 rounded-lg shadow-lg border-2 border-yellow-400">⚠️
+                                        UNDER MAINTENANCE ⚠️</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold mb-2">TeachiQ - AI Education Tools</h3>
+                            <p class="text-gray-300 text-sm mb-4">AI content generation tool for educators with Next.js
+                                and OpenAI API.</p>
+                            <div class="bg-[#333333] rounded-lg p-3 mb-4 text-sm">
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>✅ <span class="text-[#87CEEB]">AI-powered lesson plans</span> aligned with CAPS
+                                    </li>
+                                    <li>✅ <span class="text-[#87CEEB]">OpenAI API integration</span> with prompt
+                                        engineering</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-2 text-xs">
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">Next.js 14</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">React</span>
+                                <span class="px-2 py-1 bg-[#333333] rounded-full">OpenAI API</span>
+                            </div>
+                            <div class="mt-3 flex items-center gap-2">
+                                <span class="inline-block w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs text-gray-400">Under Maintenance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Premium Footer – MOVED OUTSIDE <main> -->
+    <footer id="footer" class="bg-[#222222] text-gray-300 py-8 border-t border-[#87CEEB]/20 footer-animate">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center order-2 md:order-1">
+                <p class="text-xl font-bold text-white font-['Playfair_Display']">Siyamthanda Dlakavu</p>
+                <p class="text-sm text-gray-400">Designing, building &amp; scaling for the bold.</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 order-1 md:order-2">
+                <a href="index.html" class="text-sm hover:text-[#87CEEB] transition-colors">Home</a>
+                <a href="about.html" class="text-sm hover:text-[#87CEEB] transition-colors">About</a>
+                <a href="skills.html" class="text-sm hover:text-[#87CEEB] transition-colors">Skills</a>
+                <a href="sideprojects.html" class="text-sm hover:text-[#87CEEB] transition-colors">Personal Projects</a>
+                <a href="clientwork.html" class="text-sm hover:text-[#87CEEB] transition-colors">Client Projects</a>
+                <a href="contactme.html" class="text-sm hover:text-[#87CEEB] transition-colors">Contact</a>
+                <span class="w-px h-6 bg-gray-600 hidden sm:block"></span>
+                <span class="text-sm text-gray-400">
+                    <i class="fas fa-envelope mr-1 text-[#87CEEB]"></i>
+                    <a href="mailto:dlakavusiseko@gmail.com"
+                        class="hover:text-[#87CEEB] transition-colors">dlakavusiseko@gmail.com</a>
+                </span>
+                <span class="text-sm text-gray-400">
+                    <i class="fas fa-phone mr-1 text-[#87CEEB]"></i>
+                    <a href="tel:+27878804748" class="hover:text-[#87CEEB] transition-colors">078 880 4748</a>
+                </span>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-2 text-center text-xs text-gray-500" style="padding-top: 0.5rem;">
+            &copy; 2026 Siyamthanda Dlakavu. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/mobile-toggle.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/footer-scroll-trigger.js"></script>
+    <script src="js/project-filter.js"></script>
+</body>
+
+</html>

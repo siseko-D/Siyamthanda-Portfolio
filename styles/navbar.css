@@ -1,0 +1,78 @@
+/* ===== Navbar ===== */
+#navbar-header {
+    background: linear-gradient(135deg, rgba(51, 51, 51, 0.9) 0%, rgba(42, 42, 42, 0.9) 100%);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#navbar-header.scrolled {
+    background: linear-gradient(135deg, rgba(35, 35, 35, 0.98) 0%, rgba(25, 25, 25, 0.98) 100%);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #87ceeb;
+    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transform-origin: left;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+#navbar-header {
+    animation: navbarSlideDown 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes navbarSlideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== Back to Landing Page Link – BLUE, NO UNDERLINE ===== */
+.nav-link-back {
+    color: #87CEEB !important;
+    transition: color 0.3s ease;
+    text-decoration: none !important;
+}
+
+.nav-link-back:hover {
+    color: #87CEEB !important;
+    text-decoration: none !important;
+}
+
+/* Remove the underline animation for this link */
+.nav-link-back::after {
+    display: none !important;
+}
+
+/* Keep the SVG icon blue too */
+.nav-link-back svg {
+    stroke: #87CEEB !important;
+    transition: stroke 0.3s ease;
+}
+
+.nav-link-back:hover svg {
+    stroke: #87CEEB !important;
+}
