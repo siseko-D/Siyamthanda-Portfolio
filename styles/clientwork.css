@@ -164,3 +164,47 @@
         padding: 1.5rem;
     }
 }
+
+/* ===== Caviaré – Premium Luxury Project Card Accent ===== */
+.project-card[data-project="caviare"] {
+    position: relative;
+}
+
+.project-card[data-project="caviare"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    padding: 1px;
+    background: linear-gradient(
+        135deg,
+        rgba(198, 168, 124, 0.6) 0%,
+        rgba(198, 168, 124, 0.05) 40%,
+        rgba(198, 168, 124, 0.05) 60%,
+        rgba(198, 168, 124, 0.5) 100%
+    );
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-card[data-project="caviare"]:hover::before {
+    opacity: 1;
+}
+
+/* Ensure the Caviaré image area scales gracefully */
+.project-card[data-project="caviare"] img {
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .project-card[data-project="caviare"] > div:first-child {
+        aspect-ratio: 4 / 3;
+    }
+}
